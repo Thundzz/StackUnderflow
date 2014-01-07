@@ -1,3 +1,20 @@
-<h1 class="green">success</h1>
+<h1> Edition du post : <%= @post.title %>  </h1>
 
-<% 	redirect_to posts_path   %>
+
+<div class="form-group">
+
+<%= form_for @post do |f| %>
+	<p>
+		Titre : 
+		<%= f.text_field :title, class:"form-control" %>
+	</p>
+	<p>
+		Contenu : 
+		<%= f.text_area :content, class:"form-control", rows:"3" %>
+	</p>
+	<p>
+		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+	</p>
+<% end %>
+
+</div>
