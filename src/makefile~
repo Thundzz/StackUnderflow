@@ -1,0 +1,4 @@
+
+
+compile_assets:
+	bundle exec rake assets:precompile
