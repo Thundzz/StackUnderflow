@@ -26410,3 +26410,1890 @@ Served asset /application.css - 304 Not Modified (3ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 00:34:01 +0100
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:35:08 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 75ms (Views: 38.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:08 +0100
+Served asset /application.css - 304 Not Modified (336ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:08 +0100
+Served asset /application.js - 304 Not Modified (261ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:35:11 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:11 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:11 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:35:14 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:14 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:35:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:15 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:15 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:35:18 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:18 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:18 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 10:35:29 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Coucou, je suis un post", "content"=>"Hellooooooooooooooo"}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (112.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Hellooooooooooooooo"], ["created_at", Wed, 08 Jan 2014 09:35:29 UTC +00:00], ["editionNo", 0], ["title", "Coucou, je suis un post"], ["updated_at", Wed, 08 Jan 2014 09:35:29 UTC +00:00]]
+  [1m[36m (223.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 341ms (ActiveRecord: 335.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:35:29 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:29 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:29 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/posts/9/edit" for 127.0.0.1 at 2014-01-08 10:35:40 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:40 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started PUT "/posts/9" for 127.0.0.1 at 2014-01-08 10:35:47 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Coucou, je suis un post", "content"=>"Hellooooooooooooooo \r\n\r\nJ'aime les o"}, "commit"=>"Envoyer !", "id"=>"9"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  UPDATE "posts" SET "content" = 'Hellooooooooooooooo 
+
+J''aime les o', "editionNo" = 1, "updated_at" = '2014-01-08 09:35:47.992750' WHERE "posts"."id" = 9
+  [1m[36m (146.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 152ms (ActiveRecord: 147.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:35:48 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:35:48 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:35:48 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/posts/9" for 127.0.0.1 at 2014-01-08 10:36:02 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (171.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 174ms (ActiveRecord: 171.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:36:02 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:02 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:02 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:36:09 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:09 +0100
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:09 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:36:12 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:12 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:13 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:15 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:36:17 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:17 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 10:36:24 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "posts" SET "content" = 'Ceci est mon premier post, hé hé', "editionNo" = 41, "updated_at" = '2014-01-08 09:36:24.684764' WHERE "posts"."id" = 1
+  [1m[36m (476.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 480ms (ActiveRecord: 476.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:36:25 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:36:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:36:25 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:40:11 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:40:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:40:12 +0100
+Served asset /application.js - 304 Not Modified (28ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:40:13 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `[]' for #<Class:0xb5b18d38>):
+  app/controllers/posts_controller.rb:10:in `show'
+
+
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:41:04 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant PostsController::Posts):
+  app/controllers/posts_controller.rb:10:in `show'
+
+
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:41:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:41:18 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:41:18 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:41:21 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:41:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:41:21 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:41:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:41:22 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:41:22 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:41:24 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:41:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:41:24 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:42:27 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:42:27 +0100
+Compiled application.css  (3ms)  (pid 4499)
+Served asset /application.css - 200 OK (102ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:42:28 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:42:36 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:42:36 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:42:36 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:43:03 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (297.8ms)
+Completed 500 Internal Server Error in 300ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0xb66d3f10>:0x94c9740>):
+    1: <div class="post">
+    2: <h2> <%=  link_to post.title, post_path(post) %> </h2>
+    3: <p> <%= @post.content%>  </p>
+    4: <p> Ce post a été édité <%= @post.editionNo%>  fois </br>
+    5:  <%= link_to "Editer ce post", edit_post_path(@post) %>  | 
+  app/views/posts/show.html.erb:2:in `_app_views_posts_show_html_erb__253311359_78005400'
+
+
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:43:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:43:19 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:43:19 +0100
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:43:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:43:21 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:43:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:43:22 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:43:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:43:22 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 10:43:40 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé.\r\nNE PLUS M'EDITER SVP"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "posts" SET "content" = 'Ceci est mon premier post, hé hé.
+NE PLUS M''EDITER SVP', "editionNo" = 42, "updated_at" = '2014-01-08 09:43:40.239922' WHERE "posts"."id" = 1
+  [1m[36m (508.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 516ms (ActiveRecord: 508.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:43:40 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:43:40 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:43:40 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 10:43:47 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:43:48 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:43:48 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:43:59 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:44:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:44:00 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 10:44:19 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé. <br/>\r\nNE PLUS M'EDITER SVP"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "posts" SET "content" = 'Ceci est mon premier post, hé hé. <br/>
+NE PLUS M''EDITER SVP', "editionNo" = 43, "updated_at" = '2014-01-08 09:44:19.198904' WHERE "posts"."id" = 1[0m
+  [1m[35m (427.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 432ms (ActiveRecord: 428.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:44:19 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:44:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:44:19 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:44:22 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:44:22 +0100
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:44:22 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 10:44:28 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé. \r\n\r\nNE PLUS M'EDITER SVP"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'Ceci est mon premier post, hé hé. 
+
+NE PLUS M''EDITER SVP', "editionNo" = 44, "updated_at" = '2014-01-08 09:44:28.753798' WHERE "posts"."id" = 1[0m
+  [1m[35m (143.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 146ms (ActiveRecord: 143.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:44:28 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:44:28 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:44:29 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:45:06 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:45:06 +0100
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:45:06 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:45:11 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:45:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:45:11 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:47:43 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:47:44 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:47:44 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 10:47:48 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:47:48 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:47:48 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 10:47:53 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé. \r\n\r\nNE PLUS M'EDITER SVP\r\nlol"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "posts" SET "content" = 'Ceci est mon premier post, hé hé. 
+
+NE PLUS M''EDITER SVP
+lol', "editionNo" = 45, "updated_at" = '2014-01-08 09:47:53.575742' WHERE "posts"."id" = 1
+  [1m[36m (167.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 171ms (ActiveRecord: 167.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:47:53 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:47:53 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:47:53 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:48:09 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:48:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:48:10 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2014-01-08 10:49:01 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:49:02 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:49:02 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/posts/3" for 127.0.0.1 at 2014-01-08 10:49:05 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"3ème post", "content"=>"Je suis le troisième post?!"}, "commit"=>"Envoyer !", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "posts" SET "editionNo" = 3, "updated_at" = '2014-01-08 09:49:05.608549' WHERE "posts"."id" = 3[0m
+  [1m[35m (148.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 154ms (ActiveRecord: 149.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:49:05 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:49:05 +0100
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:49:05 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:49:07 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:49:07 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:49:07 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 10:49:53 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"This is the story of a man named Stanley.", "content"=>"Stanley worked in a big company, where he was pushing buttons all day long."}, "commit"=>"Envoyer !"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Stanley worked in a big company, where he was pushing buttons all day long."], ["created_at", Wed, 08 Jan 2014 09:49:53 UTC +00:00], ["editionNo", 0], ["title", "This is the story of a man named Stanley."], ["updated_at", Wed, 08 Jan 2014 09:49:53 UTC +00:00]]
+  [1m[35m (293.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 299ms (ActiveRecord: 294.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:49:53 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:49:53 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:49:53 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:50:05 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:05 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:05 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:50:07 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:07 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2014-01-08 10:50:14 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered posts/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:14 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/2" for 127.0.0.1 at 2014-01-08 10:50:31 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Félicitations", "content"=>"Je suis un post"}, "commit"=>"Envoyer !", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "posts" SET "title" = 'Félicitations', "editionNo" = 36, "updated_at" = '2014-01-08 09:50:31.904566' WHERE "posts"."id" = 2[0m
+  [1m[35m (299.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 303ms (ActiveRecord: 300.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:50:32 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:32 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:50:39 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:39 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:40 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:50:40 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:40 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:40 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:50:42 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:50:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:50:42 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-01-08 10:51:41 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:51:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:51:41 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/10" for 127.0.0.1 at 2014-01-08 10:51:57 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"The Stanley Parable", "content"=>"This is the story of a man named Stanley. Stanley worked for a company in a big building where he was employee number 427. Employee Number 427's job was simple: he sat at his desk in room 427, and he pushed buttons on a keyboard. Orders came to him through a monitor on his desk, telling him what buttons to push, how long to push them, and in what order. This is what Employee 427 did every day of every month and every year, and although others might have considered it soul-rending, Stanley relished every moment that the orders came in, as though he had been made exactly for this job. And Stanley was happy."}, "commit"=>"Envoyer !", "id"=>"10"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  UPDATE "posts" SET "content" = 'This is the story of a man named Stanley. Stanley worked for a company in a big building where he was employee number 427. Employee Number 427''s job was simple: he sat at his desk in room 427, and he pushed buttons on a keyboard. Orders came to him through a monitor on his desk, telling him what buttons to push, how long to push them, and in what order. This is what Employee 427 did every day of every month and every year, and although others might have considered it soul-rending, Stanley relished every moment that the orders came in, as though he had been made exactly for this job. And Stanley was happy.', "title" = 'The Stanley Parable', "editionNo" = 1, "updated_at" = '2014-01-08 09:51:57.051546' WHERE "posts"."id" = 10
+  [1m[36m (249.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 254ms (ActiveRecord: 250.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:51:57 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:51:57 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:51:57 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/posts/2" for 127.0.0.1 at 2014-01-08 10:52:02 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (165.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 170ms (ActiveRecord: 166.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:52:02 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:02 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:02 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/posts/3" for 127.0.0.1 at 2014-01-08 10:52:06 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (141.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 144ms (ActiveRecord: 141.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:52:06 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:06 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:06 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:52:08 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:08 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:08 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 10:52:17 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Test", "content"=>"Suis-je après?"}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Suis-je après?"], ["created_at", Wed, 08 Jan 2014 09:52:17 UTC +00:00], ["editionNo", 0], ["title", "Test"], ["updated_at", Wed, 08 Jan 2014 09:52:17 UTC +00:00]]
+  [1m[36m (231.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 255ms (ActiveRecord: 231.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:52:17 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:17 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:17 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-01-08 10:52:21 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:21 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/posts/11" for 127.0.0.1 at 2014-01-08 10:52:29 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Test", "content"=>"Suis-je après?\r\nSPOILER : OUI"}, "commit"=>"Envoyer !", "id"=>"11"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "posts" SET "content" = 'Suis-je après?
+SPOILER : OUI', "editionNo" = 1, "updated_at" = '2014-01-08 09:52:29.132926' WHERE "posts"."id" = 11
+  [1m[36m (439.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 444ms (ActiveRecord: 439.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:52:29 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:29 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:52:52 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:52:52 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:52:52 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 10:54:21 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:54:21 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:54:21 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 10:57:34 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Template c++", "content"=>"Bonjour,\r\n\r\nJe souhaite m'adonner à la programmation générique en c++. Il s'agirait, ici, d'une classe modélisant une fonction linéaire.\r\nJ'ai donc joyeusement préfixé ma classe par template <float coefficient>, et j'utilise coefficient pour évaluer la fonction, mais le compilateur génère une erreur :(\r\nQue faire ?\r\nAidez-moi, je vous en prie !\r\n\r\nkthxbai."}, "commit"=>"Envoyer !"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Bonjour,\r\n\r\nJe souhaite m'adonner à la programmation générique en c++. Il s'agirait, ici, d'une classe modélisant une fonction linéaire.\r\nJ'ai donc joyeusement préfixé ma classe par template <float coefficient>, et j'utilise coefficient pour évaluer la fonction, mais le compilateur génère une erreur :(\r\nQue faire ?\r\nAidez-moi, je vous en prie !\r\n\r\nkthxbai."], ["created_at", Wed, 08 Jan 2014 09:57:34 UTC +00:00], ["editionNo", 0], ["title", "Template c++"], ["updated_at", Wed, 08 Jan 2014 09:57:34 UTC +00:00]]
+  [1m[35m (547.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 551ms (ActiveRecord: 548.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:57:35 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:57:35 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:57:35 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 10:58:30 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:58:30 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:58:30 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:58:32 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:58:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:58:32 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 10:59:47 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 10:59:47 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 10:59:47 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-01-08 11:04:51 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:04:52 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:04:52 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:05:09 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:05:09 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:05:09 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:05:10 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:05:10 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:05:10 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:05:12 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:05:12 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:05:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:06:37 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:06:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:06:37 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:10:37 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:10:37 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:10:37 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:10:44 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:10:45 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:10:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:10:48 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:10:48 +0100
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:10:48 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:10:49 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:10:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:10:49 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:11:17 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x839c7b0>:0x93714ec>):
+    1: <div class="post">
+    2: <h2> <%=  link_to @post.title, post_path(@post) %> </h2>
+    3: <p> <%= simple_format(post.content()) %>  </p>
+    4: <p> Ce post a été édité <%= @post.editionNo%>  fois </br>
+    5:  <%= link_to "Editer ce post", edit_post_path(@post) %>  | 
+    6:  <%= link_to "Supprimer ce post", post_path(@post), :confirm => "Êtes vous sûr de vouloir supprimer ce post?", :method => :delete %>  
+  app/views/posts/show.html.erb:3:in `_app_views_posts_show_html_erb__253311359_77300690'
+
+
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-01-08 11:11:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x839c7b0>:0x95c070c>):
+    1: <div class="post">
+    2: <h2> <%=  link_to @post.title, post_path(@post) %> </h2>
+    3: <p> <%= simple_format(post.content()) %>  </p>
+    4: <p> Ce post a été édité <%= @post.editionNo%>  fois </br>
+    5:  <%= link_to "Editer ce post", edit_post_path(@post) %>  | 
+    6:  <%= link_to "Supprimer ce post", post_path(@post), :confirm => "Êtes vous sûr de vouloir supprimer ce post?", :method => :delete %>  
+  app/views/posts/show.html.erb:3:in `_app_views_posts_show_html_erb__253311359_77300690'
+
+
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/yacine/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-01-08 11:11:31 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:11:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:11:32 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:11:35 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:11:35 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:11:35 +0100
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:11:37 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:11:37 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:11:37 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:12:16 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:16 +0100
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:16 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:17 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:17 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:12:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:22 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:22 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 11:12:24 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:24 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 11:12:28 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye hahahah", "content"=>"Ceci est mon premier post, hé hé. \r\n\r\nNE PLUS M'EDITER SVP\r\nlol"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "posts" SET "title" = 'Je suis le premier post. Je suis un cobaye hahahah', "editionNo" = 46, "updated_at" = '2014-01-08 10:12:28.085879' WHERE "posts"."id" = 1[0m
+  [1m[35m (290.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 298ms (ActiveRecord: 291.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:28 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:28 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:28 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-01-08 11:12:30 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:30 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:31 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started PUT "/posts/1" for 127.0.0.1 at 2014-01-08 11:12:35 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Je suis le premier post. Je suis un cobaye", "content"=>"Ceci est mon premier post, hé hé. \r\n\r\nNE PLUS M'EDITER SVP\r\nlol"}, "commit"=>"Envoyer !", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "posts" SET "title" = 'Je suis le premier post. Je suis un cobaye', "editionNo" = 47, "updated_at" = '2014-01-08 10:12:35.241669' WHERE "posts"."id" = 1[0m
+  [1m[35m (208.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 212ms (ActiveRecord: 208.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:35 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:35 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:35 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 11:12:37 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:37 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:37 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 11:12:41 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"eifujzeifuhze", "content"=>"hello"}, "commit"=>"Envoyer !"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "hello"], ["created_at", Wed, 08 Jan 2014 10:12:41 UTC +00:00], ["editionNo", 0], ["title", "eifujzeifuhze"], ["updated_at", Wed, 08 Jan 2014 10:12:41 UTC +00:00]]
+  [1m[35m (393.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 399ms (ActiveRecord: 394.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:42 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:42 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:42 +0100
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:46 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:46 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:46 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/posts/13" for 127.0.0.1 at 2014-01-08 11:12:53 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 13]]
+  [1m[35m (428.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 435ms (ActiveRecord: 429.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:12:54 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:12:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:12:54 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-01-08 11:13:41 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:13:42 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:13:42 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-08 11:13:48 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:13:48 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:13:48 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-08 11:13:55 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "post"=>{"title"=>"Coucou", "content"=>"\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at magna interdum, ultrices magna ac, venenatis mauris. Suspendisse eu venenatis ante, at dapibus eros. Aliquam vestibulum convallis metus, vel iaculis felis feugiat quis. In commodo quam non augue accumsan, non eleifend purus euismod. Sed in arcu porta, mollis leo a, volutpat tellus. Sed commodo sed ante ut commodo. Nullam gravida quam leo, pretium venenatis odio cursus at.\r\n\r\nPraesent placerat libero enim, a mattis magna euismod in. Sed sollicitudin, sem et sagittis ultrices, ipsum enim pellentesque massa, sit amet eleifend nisl dui a dolor. Quisque et viverra dui. In sit amet felis eu turpis ullamcorper auctor. Aliquam erat volutpat. Integer rhoncus velit bibendum, aliquam diam a, pellentesque quam. Quisque ut nibh rutrum elit ultricies faucibus sed ac lacus. Suspendisse tristique nibh odio, eu consectetur urna scelerisque vitae. Donec semper orci eu ultrices ornare. Praesent eget purus odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu urna lectus. In hac habitasse platea dictumst.\r\n\r\nProin a auctor sem. Proin id neque quis magna molestie dignissim. Maecenas tincidunt lectus id nisl vehicula pharetra. Duis a elit vehicula, vulputate mauris ut, cursus felis. Pellentesque ut placerat mi. Nunc quis erat massa. Suspendisse potenti. Integer congue consectetur est, a egestas sapien dictum pellentesque. Maecenas id viverra dui, nec commodo leo. Ut placerat commodo nulla et cursus. Donec scelerisque, turpis faucibus bibendum hendrerit, justo orci congue odio, ac imperdiet metus purus ut erat. Nunc blandit, nisl nec auctor volutpat, tortor neque pretium lacus, eu ultricies lacus dui ac elit. Vivamus est velit, tempor vitae sapien eu, pretium rutrum turpis. Quisque nec vestibulum neque. In in mollis tortor, vitae semper massa.\r\n\r\nPraesent sit amet lorem congue, pellentesque risus in, commodo ipsum. Phasellus massa augue, ornare ac lacus non, vulputate porttitor erat. Proin sodales quam sit amet pretium dignissim. Morbi tincidunt nisi in sem cursus aliquam. Suspendisse vulputate mattis nunc, sit amet facilisis elit malesuada non. Curabitur vestibulum vel orci eget rhoncus. Ut dignissim libero non nunc iaculis, ut tempus dolor tincidunt.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec egestas leo, quis posuere enim. Etiam commodo semper mauris. Vestibulum condimentum tortor odio, et congue ipsum ullamcorper lobortis. Pellentesque non semper risus. Nullam vel tortor quis tellus rutrum tempus. Etiam pulvinar tincidunt erat, eget dignissim lorem sodales nec.\r\n\r\nUt adipiscing fringilla sapien, at ultrices nunc fringilla a. Nam tempus, lorem in porta eleifend, risus nisl volutpat felis, vitae placerat ante metus sit amet quam. Etiam elementum nunc eget justo dignissim eleifend. Morbi sagittis risus ac nisl pharetra rhoncus. Morbi tempus dui molestie mi scelerisque posuere. Morbi vitae lobortis turpis, sit amet tempor libero. Nulla facilisi. Sed at imperdiet nisl. In fringilla est neque, sed egestas orci dignissim at. Sed consectetur, ipsum nec condimentum elementum, risus erat hendrerit orci, ac viverra tellus massa et ligula. Curabitur a risus quam. Donec nec condimentum odio, eget hendrerit eros. Maecenas rutrum congue mi, non elementum libero lacinia vel. Fusce convallis interdum elementum. Fusce tincidunt auctor tortor eu commodo. Cras sagittis eros justo.\r\n\r\nNam vitae dolor ac sapien eleifend auctor ut quis nunc. Pellentesque tempus mollis purus eget vulputate. Donec orci augue, suscipit vitae viverra eu, lacinia eget massa. Pellentesque non nulla nisl. In sit amet enim dui. Aliquam a purus vel lectus blandit malesuada. Suspendisse pellentesque commodo quam, nec ullamcorper elit lacinia et. Etiam suscipit dui at odio feugiat condimentum ac quis ligula. In hac habitasse platea dictumst. Sed mollis, justo eu facilisis tristique, turpis dui ultricies augue, vel volutpat lorem nisl ac enim. Aenean eros dolor, sagittis non vehicula id, tempor posuere eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec a velit consectetur, cursus justo vitae, placerat erat. Morbi nec ligula accumsan, gravida est malesuada, bibendum ipsum. Curabitur sit amet dolor quis metus semper vestibulum. Nulla blandit orci nec sem fringilla, sed rhoncus diam tincidunt.\r\n\r\nAenean eu turpis viverra velit malesuada mattis. Phasellus sem quam, vehicula bibendum mi quis, bibendum aliquet sapien. Vestibulum pulvinar condimentum odio sit amet hendrerit. Sed vehicula, turpis ut bibendum bibendum, dui tortor ultricies elit, tempus dignissim elit neque ornare felis. Donec non consectetur nisi. Donec mattis sapien ac purus pretium, sit amet sollicitudin arcu luctus. Duis ut turpis purus. Nullam luctus elit sit amet aliquet semper. Fusce porttitor turpis quis pellentesque bibendum. Pellentesque pellentesque ligula ut accumsan pulvinar. Praesent cursus pulvinar est, pretium fringilla ligula vestibulum a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi in quam sed est pellentesque venenatis. In hac habitasse platea dictumst. Nullam bibendum dapibus elit eget eleifend.\r\n\r\nSed metus ligula, ullamcorper sed cursus in, ullamcorper in justo. Integer dictum viverra ultricies. Donec tempor neque quis velit vulputate rhoncus. Nam rhoncus eros vitae erat hendrerit dapibus. Aenean malesuada justo ac libero aliquet, non elementum augue viverra. Mauris id commodo urna. Maecenas eleifend, elit a vulputate lobortis, magna erat venenatis lorem, a varius ante felis vel orci. Ut et lacus nec neque tempor vehicula. Fusce a diam malesuada, ullamcorper enim sed, molestie urna. Suspendisse placerat dolor vulputate augue mattis, vitae blandit enim pulvinar. Nullam tempus ipsum tristique, pulvinar lacus id, blandit tortor.\r\n\r\nProin sit amet porta est, vitae vestibulum eros. Praesent nec diam libero. Maecenas ut mattis quam. Vivamus quis odio in velit egestas placerat id id orci. Nullam tellus sapien, ultricies nec lacus eget, aliquet placerat lacus. Vivamus et ullamcorper est. Proin ante augue, auctor eget lectus sit amet, pulvinar placerat ipsum. Maecenas eu laoreet eros, vitae aliquam justo. Pellentesque vel vulputate ipsum, eget lacinia elit. Vivamus luctus egestas tortor, non faucibus odio posuere id. Praesent ultrices gravida mollis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque tincidunt quis tortor sit amet suscipit. Morbi lacinia vel nunc eu mattis.\r\n\r\nSed tempor justo quis auctor dignissim. Nulla tempus tortor lectus, id porttitor sem volutpat a. Ut consequat, turpis sed molestie suscipit, lorem nisl vestibulum velit, et ultricies nunc eros ut elit. Vivamus. "}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at magna interdum, ultrices magna ac, venenatis mauris. Suspendisse eu venenatis ante, at dapibus eros. Aliquam vestibulum convallis metus, vel iaculis felis feugiat quis. In commodo quam non augue accumsan, non eleifend purus euismod. Sed in arcu porta, mollis leo a, volutpat tellus. Sed commodo sed ante ut commodo. Nullam gravida quam leo, pretium venenatis odio cursus at.\r\n\r\nPraesent placerat libero enim, a mattis magna euismod in. Sed sollicitudin, sem et sagittis ultrices, ipsum enim pellentesque massa, sit amet eleifend nisl dui a dolor. Quisque et viverra dui. In sit amet felis eu turpis ullamcorper auctor. Aliquam erat volutpat. Integer rhoncus velit bibendum, aliquam diam a, pellentesque quam. Quisque ut nibh rutrum elit ultricies faucibus sed ac lacus. Suspendisse tristique nibh odio, eu consectetur urna scelerisque vitae. Donec semper orci eu ultrices ornare. Praesent eget purus odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu urna lectus. In hac habitasse platea dictumst.\r\n\r\nProin a auctor sem. Proin id neque quis magna molestie dignissim. Maecenas tincidunt lectus id nisl vehicula pharetra. Duis a elit vehicula, vulputate mauris ut, cursus felis. Pellentesque ut placerat mi. Nunc quis erat massa. Suspendisse potenti. Integer congue consectetur est, a egestas sapien dictum pellentesque. Maecenas id viverra dui, nec commodo leo. Ut placerat commodo nulla et cursus. Donec scelerisque, turpis faucibus bibendum hendrerit, justo orci congue odio, ac imperdiet metus purus ut erat. Nunc blandit, nisl nec auctor volutpat, tortor neque pretium lacus, eu ultricies lacus dui ac elit. Vivamus est velit, tempor vitae sapien eu, pretium rutrum turpis. Quisque nec vestibulum neque. In in mollis tortor, vitae semper massa.\r\n\r\nPraesent sit amet lorem congue, pellentesque risus in, commodo ipsum. Phasellus massa augue, ornare ac lacus non, vulputate porttitor erat. Proin sodales quam sit amet pretium dignissim. Morbi tincidunt nisi in sem cursus aliquam. Suspendisse vulputate mattis nunc, sit amet facilisis elit malesuada non. Curabitur vestibulum vel orci eget rhoncus. Ut dignissim libero non nunc iaculis, ut tempus dolor tincidunt.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec egestas leo, quis posuere enim. Etiam commodo semper mauris. Vestibulum condimentum tortor odio, et congue ipsum ullamcorper lobortis. Pellentesque non semper risus. Nullam vel tortor quis tellus rutrum tempus. Etiam pulvinar tincidunt erat, eget dignissim lorem sodales nec.\r\n\r\nUt adipiscing fringilla sapien, at ultrices nunc fringilla a. Nam tempus, lorem in porta eleifend, risus nisl volutpat felis, vitae placerat ante metus sit amet quam. Etiam elementum nunc eget justo dignissim eleifend. Morbi sagittis risus ac nisl pharetra rhoncus. Morbi tempus dui molestie mi scelerisque posuere. Morbi vitae lobortis turpis, sit amet tempor libero. Nulla facilisi. Sed at imperdiet nisl. In fringilla est neque, sed egestas orci dignissim at. Sed consectetur, ipsum nec condimentum elementum, risus erat hendrerit orci, ac viverra tellus massa et ligula. Curabitur a risus quam. Donec nec condimentum odio, eget hendrerit eros. Maecenas rutrum congue mi, non elementum libero lacinia vel. Fusce convallis interdum elementum. Fusce tincidunt auctor tortor eu commodo. Cras sagittis eros justo.\r\n\r\nNam vitae dolor ac sapien eleifend auctor ut quis nunc. Pellentesque tempus mollis purus eget vulputate. Donec orci augue, suscipit vitae viverra eu, lacinia eget massa. Pellentesque non nulla nisl. In sit amet enim dui. Aliquam a purus vel lectus blandit malesuada. Suspendisse pellentesque commodo quam, nec ullamcorper elit lacinia et. Etiam suscipit dui at odio feugiat condimentum ac quis ligula. In hac habitasse platea dictumst. Sed mollis, justo eu facilisis tristique, turpis dui ultricies augue, vel volutpat lorem nisl ac enim. Aenean eros dolor, sagittis non vehicula id, tempor posuere eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec a velit consectetur, cursus justo vitae, placerat erat. Morbi nec ligula accumsan, gravida est malesuada, bibendum ipsum. Curabitur sit amet dolor quis metus semper vestibulum. Nulla blandit orci nec sem fringilla, sed rhoncus diam tincidunt.\r\n\r\nAenean eu turpis viverra velit malesuada mattis. Phasellus sem quam, vehicula bibendum mi quis, bibendum aliquet sapien. Vestibulum pulvinar condimentum odio sit amet hendrerit. Sed vehicula, turpis ut bibendum bibendum, dui tortor ultricies elit, tempus dignissim elit neque ornare felis. Donec non consectetur nisi. Donec mattis sapien ac purus pretium, sit amet sollicitudin arcu luctus. Duis ut turpis purus. Nullam luctus elit sit amet aliquet semper. Fusce porttitor turpis quis pellentesque bibendum. Pellentesque pellentesque ligula ut accumsan pulvinar. Praesent cursus pulvinar est, pretium fringilla ligula vestibulum a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi in quam sed est pellentesque venenatis. In hac habitasse platea dictumst. Nullam bibendum dapibus elit eget eleifend.\r\n\r\nSed metus ligula, ullamcorper sed cursus in, ullamcorper in justo. Integer dictum viverra ultricies. Donec tempor neque quis velit vulputate rhoncus. Nam rhoncus eros vitae erat hendrerit dapibus. Aenean malesuada justo ac libero aliquet, non elementum augue viverra. Mauris id commodo urna. Maecenas eleifend, elit a vulputate lobortis, magna erat venenatis lorem, a varius ante felis vel orci. Ut et lacus nec neque tempor vehicula. Fusce a diam malesuada, ullamcorper enim sed, molestie urna. Suspendisse placerat dolor vulputate augue mattis, vitae blandit enim pulvinar. Nullam tempus ipsum tristique, pulvinar lacus id, blandit tortor.\r\n\r\nProin sit amet porta est, vitae vestibulum eros. Praesent nec diam libero. Maecenas ut mattis quam. Vivamus quis odio in velit egestas placerat id id orci. Nullam tellus sapien, ultricies nec lacus eget, aliquet placerat lacus. Vivamus et ullamcorper est. Proin ante augue, auctor eget lectus sit amet, pulvinar placerat ipsum. Maecenas eu laoreet eros, vitae aliquam justo. Pellentesque vel vulputate ipsum, eget lacinia elit. Vivamus luctus egestas tortor, non faucibus odio posuere id. Praesent ultrices gravida mollis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque tincidunt quis tortor sit amet suscipit. Morbi lacinia vel nunc eu mattis.\r\n\r\nSed tempor justo quis auctor dignissim. Nulla tempus tortor lectus, id porttitor sem volutpat a. Ut consequat, turpis sed molestie suscipit, lorem nisl vestibulum velit, et ultricies nunc eros ut elit. Vivamus. "], ["created_at", Wed, 08 Jan 2014 10:13:55 UTC +00:00], ["editionNo", 0], ["title", "Coucou"], ["updated_at", Wed, 08 Jan 2014 10:13:55 UTC +00:00]]
+  [1m[36m (521.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 525ms (ActiveRecord: 522.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:13:56 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:13:56 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:13:56 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-01-08 11:14:34 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:34 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:34 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:14:43 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:43 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:14:44 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:44 +0100
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:44 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:14:45 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:45 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:46 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-01-08 11:14:55 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tZrWjZ4xFDRl0ERpXDJsB4Yi6MipHu5QZ3PV68mWowk=", "id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (451.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 455ms (ActiveRecord: 452.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:14:56 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:56 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:56 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:14:57 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:14:57 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:14:57 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-01-08 11:17:02 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:17:04 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:17:04 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:17:09 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:17:09 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:17:09 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-08 11:17:19 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:17:19 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:17:20 +0100
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-08 11:17:20 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-08 11:17:20 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-08 11:17:20 +0100
+Served asset /application.js - 304 Not Modified (1ms)

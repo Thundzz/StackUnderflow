@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+		@post= Post.find(params[:id])
 	end
 
 	def method_name
@@ -32,8 +32,11 @@ class PostsController < ApplicationController
 		@oldpost.content = @newpost[:content]
 		@oldpost.title = @newpost[:title]
 		@oldpost.editionNo = @oldpost.editionNo + 1
-		@oldpost.save()
-		redirect_to posts_path 
+		if @oldpost.save()
+			redirect_to posts_path, :notice => "Votre post a été édité avec succès"
+		else
+			redirect_to posts_path, :notice => "Votre post n'a pas pu être édité"
+		end  
 		
 	end
 
@@ -49,8 +52,11 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post = Post.find( params[:id])
-		@post.destroy
-		redirect_to posts_path 
+		if @post.destroy
+			redirect_to posts_path, :notice => "Votre post a bien été supprimé"
+		else
+			redirect_to posts_path, :notice => "Votre post n'a pas pu être supprimé"
+		end 
 	end
 
 end
