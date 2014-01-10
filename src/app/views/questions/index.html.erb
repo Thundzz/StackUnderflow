@@ -1,0 +1,12 @@
+	<h1>Page d'accueil des questions</h1>
+
+<p><%= link_to "Ajouter une nouvelle question", new_question_path %></p>
+
+<p>Cette page liste les questions créées jusqu'à maintenant</p>
+
+<% @questions.each do |question|%>
+<div class="question">
+<h2> <%=  link_to question.title, question_path(question) %> </h2>
+<hr />
+</div>
+<%end %>
