@@ -1,13 +1,9 @@
-<h1>Ajouter un nouveau post</h1>
+<h1> Edition de la réponse :  </h1>
 
 
 <div class="form-group">
 
-	<%= form_for @post do |f| %>
-	<p>
-		Titre : 
-		<%= f.text_field :title, class:"form-control" %>
-	</p>
+	<%= form_for @answer do |f| %>
 	<p>
 		Contenu : 
 		<%= f.text_area :content, class:"form-control", rows:"3" %>

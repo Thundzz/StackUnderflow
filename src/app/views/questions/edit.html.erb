@@ -1,9 +1,9 @@
-<h1>Ajouter un nouveau post</h1>
+<h1>Ajouter une nouvelle question</h1>
 
 
 <div class="form-group">
 
-	<%= form_for @post do |f| %>
+<%= form_for @question do |f| %>
 	<p>
 		Titre : 
 		<%= f.text_field :title, class:"form-control" %>
@@ -15,6 +15,6 @@
 	<p>
 		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
 	</p>
-	<% end %>
+<% end %>
 
 </div>

@@ -1,0 +1,9 @@
+<div class="post">
+<h2> <%=  link_to @post.title, post_path(@post) %> </h2>
+<p> <%= simple_format(@post.content()) %>  </p>
+<p> Ce post a été édité <%= @post.editionNo%>  fois </br>
+ <%= link_to "Editer ce post", edit_post_path(@post) %>  | 
+ <%= link_to "Supprimer ce post", post_path(@post), :confirm => "Êtes vous sûr de vouloir supprimer ce post?", :method => :delete %>  
+</p>
+<hr />
+</div>

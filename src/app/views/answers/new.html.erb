@@ -1,16 +1,15 @@
-<h1>Ajouter un nouveau post</h1>
+<h1>Ajouter une nouvelle réponse</h1>
 
 
 <div class="form-group">
 
-	<%= form_for @post do |f| %>
+	<%= form_for @answer do |f| %>
 	<p>
-		Titre : 
-		<%= f.text_field :title, class:"form-control" %>
-	</p>
-	<p>
+
 		Contenu : 
 		<%= f.text_area :content, class:"form-control", rows:"3" %>
+		<%= f.hidden_field :question_id %>
+
 	</p>
 	<p>
 		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>

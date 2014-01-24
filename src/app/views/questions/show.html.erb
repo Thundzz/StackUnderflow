@@ -1,0 +1,16 @@
+<div class="question">
+	<h2> <%=  link_to @question.title, question_path(@question) %> </h2>
+	<p> <%= simple_format(@question.content()) %>  </p>
+	<%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
+	<hr />
+	<% @answers.each do |answer| %>
+	<div class="answer">
+		<p><%= simple_format(answer.content) %></p>
+		<p> 
+			<%= link_to "Editer cette reponse", edit_answer_path(answer) %> |
+			<%= link_to "Ajouter supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?", :method => :delete %>
+		</p>
+	</div>
+	<% end %>
+
+</div>

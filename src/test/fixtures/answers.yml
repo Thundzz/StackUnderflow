@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyText
+  score: 1
+  questionId: 1
+  validated: false
+
+two:
+  content: MyText
+  score: 1
+  questionId: 1
+  validated: false
