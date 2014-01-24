@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class PostsController < ApplicationController
 
 
@@ -33,9 +34,9 @@ class PostsController < ApplicationController
 		@oldpost.title = @newpost[:title]
 		@oldpost.editionNo = @oldpost.editionNo + 1
 		if @oldpost.save()
-			redirect_to posts_path, :notice => "Votre post a été édité avec succès"
+			redirect_to posts_path, :notice => "Votre post a ete edite avec succes"
 		else
-			redirect_to posts_path, :notice => "Votre post n'a pas pu être édité"
+			redirect_to posts_path, :notice => "Votre post n'a pas pu etre edite"
 		end  
 		
 	end
@@ -44,7 +45,7 @@ class PostsController < ApplicationController
 		@post = Post.new(params[:post])
 		@post.editionNo = 0
 		if @post.save
-			redirect_to posts_path, :notice => "Votre post a bien été ajouté"
+			redirect_to posts_path, :notice => "Votre post a bien été ajoute"
 		else
 			render "new"
 		end
@@ -53,9 +54,9 @@ class PostsController < ApplicationController
 	def destroy
 		@post = Post.find( params[:id])
 		if @post.destroy
-			redirect_to posts_path, :notice => "Votre post a bien été supprimé"
+			redirect_to posts_path, :notice => "Votre post a bien ete supprime"
 		else
-			redirect_to posts_path, :notice => "Votre post n'a pas pu être supprimé"
+			redirect_to posts_path, :notice => "Votre post n'a pas pu etre supprime"
 		end 
 	end
 
