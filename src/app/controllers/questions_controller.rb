@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class QuestionsController < ApplicationController
 	def index
 		@questions = Question.all()
@@ -24,9 +25,9 @@ class QuestionsController < ApplicationController
 	def update
 		oldquestion = Question.find(params[:id])
 		if oldquestion.update_attributes(params[:question])
-			redirect_to questions_path, :notice => "Votre question a été éditée avec succès"
+			redirect_to questions_path, :notice => "Votre question a ete editee avec succes"
 		else
-			redirect_to questions_path, :notice => "Votre question n'a pas pu être éditée"
+			redirect_to questions_path, :notice => "Votre question n'a pas pu etre editee"
 		end  
 		
 	end
@@ -34,7 +35,7 @@ class QuestionsController < ApplicationController
 	def create
 		question = Question.new(params[:question])
 		if question.save
-			redirect_to questions_path, :notice => "Votre question a bien été ajoutée"
+			redirect_to questions_path, :notice => "Votre question a bien ete ajoutee"
 		else
 			render "new"
 		end
@@ -43,9 +44,9 @@ class QuestionsController < ApplicationController
 	def destroy
 		question = Question.find( params[:id])
 		if question.destroy
-			redirect_to questions_path, :notice => "Votre question a bien été supprimée"
+			redirect_to questions_path, :notice => "Votre question a bien eté supprimee"
 		else
-			redirect_to questions_path, :notice => "Votre question n'a pas pu être supprimée"
+			redirect_to questions_path, :notice => "Votre question n'a pas pu etre supprimee"
 		end 
 	end
 end
