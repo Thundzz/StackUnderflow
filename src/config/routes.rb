@@ -1,6 +1,8 @@
 StackUnderflow::Application.routes.draw do
 
 
+  get "users/new"
+
   resources :posts, :questions, :answers
   root :to => 'posts#index'
   # The priority is based upon order of creation:

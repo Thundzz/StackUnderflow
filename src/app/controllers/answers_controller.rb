@@ -24,9 +24,9 @@ class AnswersController < ApplicationController
 	def update
 		oldanswer = Answer.find(params[:id])
 		if oldanswer.update_attributes(params[:answer])
-			redirect_to question_path(oldanswer.question), :notice => "Votre réponse a été éditée avec succès"
+			redirect_to question_path(oldanswer.question), :notice => "Votre reponse a ete editee avec succes"
 		else
-			redirect_to question_path(oldanswer.question), :notice => "Votre réponse n'a pas pu être éditée"
+			redirect_to question_path(oldanswer.question), :notice => "Votre reponse n'a pas pu etre editee"
 		end  
 		
 	end
@@ -36,7 +36,7 @@ class AnswersController < ApplicationController
 		puts(params[:answer])
 		answer = Answer.new(params[:answer])
 		if answer.save
-			redirect_to question_path(answer.question), :notice => "Votre réponse a bien été ajoutée"
+			redirect_to question_path(answer.question), :notice => "Votre reponse a bien ete ajoutee"
 		else
 			render "new"
 		end
@@ -45,9 +45,9 @@ class AnswersController < ApplicationController
 	def destroy
 		answer = Answer.find( params[:id])
 		if answer.destroy
-			redirect_to question_path(answer.question), :notice => "Votre réponse a bien été supprimée"
+			redirect_to question_path(answer.question), :notice => "Votre reponse a bien ete supprimee"
 		else
-			redirect_to question_path(answer.question), :notice => "Votre réponse n'a pas pu être supprimée"
+			redirect_to question_path(answer.question), :notice => "Votre reponse n'a pas pu etre supprimee"
 		end 
 	end
 end
