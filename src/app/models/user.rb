@@ -20,8 +20,8 @@ class User < ActiveRecord::Base
   validates :lastname, :presence => true, :length => { :maximum => 50 }
   validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => true
   validates :name, :presence => true, :length => { :maximum => 50 }
-  validates :right, :presence => true, :numericality => { :greater_than => 0, :less_than => USER }
-  validates :study, :presence => true, :numericality => { :greater_than => 0, :less_than => TELECOM }
+  validates :right,  :numericality => { :greater_than => 0, :less_than => 3 }
+  validates :study, :presence => true, :numericality => { :greater_than => 0, :less_than => 1 }
   validates :password, :presence => true, :confirmation => true, :length => { :within => 6..40 }
 
   before_save :encrypt_password

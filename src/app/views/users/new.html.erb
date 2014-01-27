@@ -1,2 +1,44 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Inscription</h1>
+
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :prénom %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :nom %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+  <%= hidden_field_tag(:right, "3") %>
+  </div>
+  <div class="field">
+    <%= f.label :filière %><br />
+    <%= radio_button_tag(:study, "1") %>
+    <%= label_tag(:study_info, "Info") %>
+    <%= radio_button_tag(:study, "2") %>
+    <%= label_tag(:study_matmeca, "Matmeca") %>
+    <%= radio_button_tag(:study, "3") %>
+    <%= label_tag(:study_elec, "Elec") %>
+   <%= radio_button_tag(:study, "4") %>
+    <%= label_tag(:study_telecom, "Télécom") %>
+   
+
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Inscription"  %>
+  </div>
+<% end %>
