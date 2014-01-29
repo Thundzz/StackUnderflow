@@ -1,8 +1,15 @@
 StackUnderflow::Application.routes.draw do
 
-  resources :posts, :questions, :answers, :users
+  resources :posts, :questions, :answers, :users, :sessions
   root :to => 'posts#index'
+
   match '/signup', :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
