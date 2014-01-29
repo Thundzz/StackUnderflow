@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   validates :lastname, :presence => true, :length => { :maximum => 50 }
   validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => true
   validates :name, :presence => true, :length => { :maximum => 50 }
+  # validates_inclusion_of :study, :in => [1,4]
   validates :study, :presence => true
   validates :password, :presence => true, :confirmation => true, :length => { :within => 6..40 }
 

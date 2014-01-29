@@ -11,20 +11,15 @@
     <%= f.text_field :lastname %>
   </div>
   <div class="field">
-    <%= f.label :filière %><br />
-    <%= radio_button :study, 'int', '1', :checked => true %>Info 
-    <%= radio_button :study, 'int', '2' %>Matmeca 
-    <%= radio_button :study, 'int', '3' %>Elec
-    <%= radio_button :study, 'int', '4' %>Telecom
-    
-    <!-- <%= label_tag(:study_info, "Info") %> -->
-    <!-- <%= radio_button_tag(:study, "2") %> -->
-    <!-- <%= label_tag(:study_matmeca, "Matmeca") %> -->
-    <!-- <%= radio_button_tag(:study, 3) %> -->
-    <!-- <%= label_tag(:study_elec, "Elec") %> -->
-    <!-- <%= radio_button_tag(:study, 4) %> -->
-    <!-- <%= label_tag(:study_telecom, "Télécom") %> -->
-    </div>
+    <%= f.radio_button("study","1") %>
+    <%= f.label :info %>
+    <%= f.radio_button("study","2") %>
+    <%= f.label :matmeca %>
+    <%= f.radio_button("study","3") %>
+    <%= f.label :elec %>
+    <%= f.radio_button("study","4") %>
+    <%= f.label :telecom %>
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
