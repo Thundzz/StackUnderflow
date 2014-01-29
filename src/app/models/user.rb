@@ -27,7 +27,8 @@ class User < ActiveRecord::Base
   before_save :encrypt_password, :default_values
   
   def default_values
-    self.right ||= 2; # a modifier avec systeme de points
+    self.right ||= 3; # a modifier avec systeme de points
+    self.points ||=0;
   end
 
 
