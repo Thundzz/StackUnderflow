@@ -3,9 +3,25 @@ class PostsController < ApplicationController
 
 
 	def index
-		@posts = Post.all()
+          @posts = Post.search(params[:search])             
 
-	end
+         if params[:term]
+         @posta = Post.find(:all,:conditions => ['title LIKE ?', "#{params[:term]}%"]) 
+        logger.info 'debug'
+        logger.info @posta
+        else
+        @posta = Post.all 
+        logger.info 'no term'
+        end
+ 
+       respond_to do |format|  
+       format.html 
+       logger.info 'json'
+       logger.info @posta.to_json
+       format.json { render :json => @posta.to_json }
+       end		
+       end
+
 
 	def show
 		@post= Post.find(params[:id])

@@ -2,9 +2,15 @@
 <html>
 <head>
   <title>StackUnderflow</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag 'jquery-1.10.2', 'jquery-ui-1.10.4.custom.min.js','jquery-ui-1.10.4.custom.js' %>
+<%= stylesheet_link_tag 'ui-lightness/jquery-ui-1.10.4.custom', 'ui-lightness/jquery-ui-1.10.4.custom.min'%>
+<%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<!--  javascript et CSS pour l'autocomplete
+<%= javascript_include_tag 'jquery-1.10.2', 'jquery-ui-1.10.4.custom.min.js','jquery-ui-1.10.4.custom.js' %>
+<%= stylesheet_link_tag 'ui-lightness/jquery-ui-1.10.4.custom', 'ui-lightness/jquery-ui-1.10.4.custom.min'%>
+<!-- -->
 </head>
 <body>
   <!-- tests -->

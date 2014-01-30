@@ -57959,3 +57959,1402 @@ Served asset /application.css - 304 Not Modified (4ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-29 17:23:54 +0100
 Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 00:58:00 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (12.1ms)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 00:58:00 +0100
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 00:58:00 +0100
+Compiled jquery.js  (4ms)  (pid 27230)
+Compiled jquery_ujs.js  (0ms)  (pid 27230)
+Compiled application.js  (50ms)  (pid 27230)
+Served asset /application.js - 200 OK (58ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-01-30 01:00:25 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (2.1ms)
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:00:25 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:10:04 +0100
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `search' for #<Class:0x00000003d057e8>):
+  app/controllers/posts_controller.rb:6:in `index'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (13.0ms)
+Completed 200 OK in 44ms (Views: 31.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled jquery-ui-1.10.4.custom.js  (9ms)  (pid 27548)
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled ui-lightness/jquery-ui-1.10.4.custom.css  (0ms)  (pid 27548)
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled jquery-ui-1.10.4.custom.min.js  (2ms)  (pid 27548)
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled ui-lightness/jquery-ui-1.10.4.custom.min.css  (0ms)  (pid 27548)
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled jquery-1.10.2.js  (26ms)  (pid 27548)
+Served asset /jquery-1.10.2.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:12:26 +0100
+Compiled cupertino/jquery-ui-1.10.4.custom.css  (0ms)  (pid 27548)
+Compiled cupertino/jquery-ui-1.10.4.custom.min.css  (0ms)  (pid 27548)
+Compiled application.css  (62ms)  (pid 27548)
+Served asset /application.css - 200 OK (82ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:12:33 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN3+VBmOjp2XinMRe1F1h32aKCISnpg5UgFayoSPFLU=", "post"=>{"title"=>"Ruby on rails Routing", "content"=>"root : => \"controller#action\""}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "root : => \"controller#action\""], ["created_at", Thu, 30 Jan 2014 00:13:16 UTC +00:00], ["editionNo", 0], ["title", "Ruby on rails Routing"], ["updated_at", Thu, 30 Jan 2014 00:13:16 UTC +00:00]]
+  [1m[36m (175.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 182ms (ActiveRecord: 178.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"}]
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:13:16 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:13:19 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN3+VBmOjp2XinMRe1F1h32aKCISnpg5UgFayoSPFLU=", "post"=>{"title"=>"Post test", "content"=>"this is a test!"}, "commit"=>"Envoyer !"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "this is a test!"], ["created_at", Thu, 30 Jan 2014 00:13:54 UTC +00:00], ["editionNo", 0], ["title", "Post test"], ["updated_at", Thu, 30 Jan 2014 00:13:54 UTC +00:00]]
+  [1m[35m (181.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 185ms (ActiveRecord: 182.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"}]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.4ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:13:54 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:13:58 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN3+VBmOjp2XinMRe1F1h32aKCISnpg5UgFayoSPFLU=", "post"=>{"title"=>"Post autocompletion", "content"=>"autocompletion works!"}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("content", "created_at", "editionNo", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "autocompletion works!"], ["created_at", Thu, 30 Jan 2014 00:14:18 UTC +00:00], ["editionNo", 0], ["title", "Post autocompletion"], ["updated_at", Thu, 30 Jan 2014 00:14:18 UTC +00:00]]
+  [1m[36m (184.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 189ms (ActiveRecord: 185.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.5ms)
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:14:18 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=Post&post%5Bid%5D=" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Post", "post"=>{"id"=>""}}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%Post%')[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.5ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /application.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:15:34 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (33.7ms)
+Completed 200 OK in 77ms (Views: 57.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /application.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:20:30 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:20:34 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:22:59 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (34.3ms)
+Completed 200 OK in 77ms (Views: 58.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:23:00 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (25.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (12.5ms)
+Completed 200 OK in 73ms (Views: 54.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 01:26:56 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (26.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (12.6ms)
+Completed 200 OK in 78ms (Views: 56.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 02:18:48 +0100
+Compiled application.js  (14ms)  (pid 28824)
+Served asset /application.js - 200 OK (105ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2014-01-30 02:18:49 +0100
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts?term=He" for 127.0.0.1 at 2014-01-30 02:18:53 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"term"=>"He"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE 'He%')[0m
+debug
+[]
+json
+[]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts?term=Ru" for 127.0.0.1 at 2014-01-30 02:19:10 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"term"=>"Ru"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE 'Ru%')[0m
+debug
+[#<Post id: 1, title: "Ruby on rails Routing", content: "root : => \"controller#action\"", created_at: "2014-01-30 00:13:16", updated_at: "2014-01-30 00:13:16", editionNo: 0>]
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"}]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2014-01-30 02:19:11 +0100
+Served asset /images/ui-bg_glass_100_fdf5ce_1x400.png - 404 Not Found (23ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=Ruby+on+rails+Routing&post%5Bid%5D=1" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Ruby on rails Routing", "post"=>{"id"=>"1"}}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%Ruby on rails Routing%')
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (2.6ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:19:37 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[]
+  Rendered questions/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:19:40 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.9ms)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:19:42 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-01-30 02:20:03 +0100
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN3+VBmOjp2XinMRe1F1h32aKCISnpg5UgFayoSPFLU=", "question"=>{"title"=>"Question 1", "content"=>"x+y = ?"}, "commit"=>"Envoyer !"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "questions" ("content", "created_at", "score", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "x+y = ?"], ["created_at", Thu, 30 Jan 2014 01:20:03 UTC +00:00], ["score", nil], ["title", "Question 1"], ["updated_at", Thu, 30 Jan 2014 01:20:03 UTC +00:00]]
+  [1m[36m (181.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 191ms (ActiveRecord: 184.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"}]
+  Rendered questions/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:04 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-01-30 02:20:07 +0100
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.4ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:08 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN3+VBmOjp2XinMRe1F1h32aKCISnpg5UgFayoSPFLU=", "question"=>{"title"=>"Question 2", "content"=>"?????????????"}, "commit"=>"Envoyer !"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("content", "created_at", "score", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "?????????????"], ["created_at", Thu, 30 Jan 2014 01:20:15 UTC +00:00], ["score", nil], ["title", "Question 2"], ["updated_at", Thu, 30 Jan 2014 01:20:15 UTC +00:00]]
+  [1m[35m (218.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 221ms (ActiveRecord: 218.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+  Rendered questions/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.6ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:15 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (11.9ms)
+Completed 200 OK in 68ms (Views: 49.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:35 +0100
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/questions?term=Qu" for 127.0.0.1 at 2014-01-30 02:20:42 +0100
+Processing by QuestionsController#index as JSON
+  Parameters: {"term"=>"Qu"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE (title LIKE 'Qu%')[0m
+debug Qustion controller
+[#<Question id: 1, title: "Question 1", content: "x+y = ?", score: nil, created_at: "2014-01-30 01:20:03", updated_at: "2014-01-30 01:20:03">, #<Question id: 2, title: "Question 2", content: "?????????????", score: nil, created_at: "2014-01-30 01:20:15", updated_at: "2014-01-30 01:20:15">]
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&search=Question+1&post%5Bid%5D=1" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Question 1", "post"=>{"id"=>"1"}}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE (title LIKE '%Question 1%')
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+  Rendered questions/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (2.7ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:44 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.9ms)
+Completed 200 OK in 30ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:47 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts?term=Po" for 127.0.0.1 at 2014-01-30 02:20:52 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"term"=>"Po"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE 'Po%')[0m
+debug
+[#<Post id: 2, title: "Post test", content: "this is a test!", created_at: "2014-01-30 00:13:54", updated_at: "2014-01-30 00:13:54", editionNo: 0>, #<Post id: 3, title: "Post autocompletion", content: "autocompletion works!", created_at: "2014-01-30 00:14:18", updated_at: "2014-01-30 00:14:18", editionNo: 0>]
+json
+[{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=Post+autocompletion&post%5Bid%5D=3" for 127.0.0.1 at 2014-01-30 02:20:55 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Post autocompletion", "post"=>{"id"=>"3"}}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%Post autocompletion%')
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (20.2ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:20:55 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:20:56 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:20:56 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:20:56 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:20:56 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:20:56 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 02:21:01 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (33ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.5ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /application.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2014-01-30 06:04:20 +0100
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts?term=Ru" for 127.0.0.1 at 2014-01-30 06:04:28 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"term"=>"Ru"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE 'Ru%')
+debug
+[#<Post id: 1, title: "Ruby on rails Routing", content: "root : => \"controller#action\"", created_at: "2014-01-30 00:13:16", updated_at: "2014-01-30 00:13:16", editionNo: 0>]
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"}]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (25.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (12.7ms)
+Completed 200 OK in 74ms (Views: 56.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /application.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 07:12:39 +0100
+Served asset /application.js - 304 Not Modified (57ms)
+
+
+Started GET "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2014-01-30 07:12:40 +0100
+Served asset /images/ui-bg_highlight-soft_100_eeeeee_1x100.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts?term=Po" for 127.0.0.1 at 2014-01-30 07:12:44 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"term"=>"Po"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE 'Po%')[0m
+debug
+[#<Post id: 2, title: "Post test", content: "this is a test!", created_at: "2014-01-30 00:13:54", updated_at: "2014-01-30 00:13:54", editionNo: 0>, #<Post id: 3, title: "Post autocompletion", content: "autocompletion works!", created_at: "2014-01-30 00:14:18", updated_at: "2014-01-30 00:14:18", editionNo: 0>]
+json
+[{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2014-01-30 07:12:45 +0100
+Served asset /images/ui-bg_glass_100_fdf5ce_1x400.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+no term
+json
+[{"content":"root : => \"controller#action\"","created_at":"2014-01-30T00:13:16Z","editionNo":0,"id":1,"title":"Ruby on rails Routing","updated_at":"2014-01-30T00:13:16Z"},{"content":"this is a test!","created_at":"2014-01-30T00:13:54Z","editionNo":0,"id":2,"title":"Post test","updated_at":"2014-01-30T00:13:54Z"},{"content":"autocompletion works!","created_at":"2014-01-30T00:14:18Z","editionNo":0,"id":3,"title":"Post autocompletion","updated_at":"2014-01-30T00:14:18Z"}]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 07:12:48 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 07:12:50 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/questions?term=Qu" for 127.0.0.1 at 2014-01-30 07:12:55 +0100
+Processing by QuestionsController#index as JSON
+  Parameters: {"term"=>"Qu"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE (title LIKE 'Qu%')[0m
+debug Qustion controller
+[#<Question id: 1, title: "Question 1", content: "x+y = ?", score: nil, created_at: "2014-01-30 01:20:03", updated_at: "2014-01-30 01:20:03">, #<Question id: 2, title: "Question 2", content: "?????????????", score: nil, created_at: "2014-01-30 01:20:15", updated_at: "2014-01-30 01:20:15">]
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&search=Question+2&post%5Bid%5D=" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Question 2", "post"=>{"id"=>""}}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE (title LIKE '%Question 2%')
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"x+y = ?","created_at":"2014-01-30T01:20:03Z","id":1,"score":null,"title":"Question 1","updated_at":"2014-01-30T01:20:03Z"},{"content":"?????????????","created_at":"2014-01-30T01:20:15Z","id":2,"score":null,"title":"Question 2","updated_at":"2014-01-30T01:20:15Z"}]
+  Rendered questions/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.min.css" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /jquery-ui-1.10.4.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /jquery-ui-1.10.4.custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery-1.10.2.js" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /jquery-1.10.2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.10.4.custom.css" for 127.0.0.1 at 2014-01-30 07:12:59 +0100
+Served asset /ui-lightness/jquery-ui-1.10.4.custom.css - 304 Not Modified (0ms)
