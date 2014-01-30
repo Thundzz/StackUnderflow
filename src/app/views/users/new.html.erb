@@ -2,37 +2,44 @@
 
 <%= form_for(@user) do |f| %>
 <%= render 'shared/error_messages' %>
-  <div class="field">
-    <%= f.label :prénom %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :nom %><br />
-    <%= f.text_field :lastname %>
-  </div>
-  <div class="field">
-    <%= f.radio_button("study","1") %>
-    <%= f.label :info %>
+<div class="field">
+  <%= f.label :prénom %><br />
+  <%= f.text_field :name , class:"form-control"%>
+</div>
+<div class="field">
+  <%= f.label :nom %><br />
+  <%= f.text_field :lastname, class:"form-control"%>
+</div>
+<div class="field">
+      <%= f.radio_button("study","1") %>
+      <%= f.label :info %>
+
+
     <%= f.radio_button("study","2") %>
     <%= f.label :matmeca %>
+
+
     <%= f.radio_button("study","3") %>
     <%= f.label :elec %>
+
     <%= f.radio_button("study","4") %>
     <%= f.label :telecom %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Inscription"  %>
-  </div>
+
+</div>
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.text_field :email , class:"form-control"%>
+</div>
+<div class="field">
+  <%= f.label :password %><br />
+  <%= f.password_field :password , class:"form-control"%>
+</div>
+<div class="field">
+  <%= f.label :password_confirmation, "Confirmation" %><br />
+  <%= f.password_field :password_confirmation , class:"form-control"%>
+</div>
+</br>
+<div class="actions">
+  <%= f.submit "Inscription", class:"btn btn-default"  %>
+</div>
 <% end %>

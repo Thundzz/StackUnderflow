@@ -2,15 +2,17 @@
 
 <%= form_for(:session, :url => sessions_path) do |f| %>
   <div class="field">
-    <%= f.label :email, "eMail" %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email, "Adresse mail" %><br />
+    <%= f.text_field :email, class:"form-control"%>
   </div>
+  </br>
   <div class="field">
     <%= f.label :password, "Mot de passe" %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, class:"form-control" %>
   </div>
+  </br>
   <div class="actions">
-    <%= f.submit "S'identifier" %>
+    <%= f.submit "S'identifier", class:"btn btn-default" %>
   </div>
 <% end %>
 
