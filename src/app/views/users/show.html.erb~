@@ -1,1 +1,0 @@
-<%= @user.nom %>, <%= @user.email %>

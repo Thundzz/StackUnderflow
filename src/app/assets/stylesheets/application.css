@@ -49,6 +49,21 @@
 
 .form-control
 {
- width:300px; 
+ width:500px; 
 }
 
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:15px;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
