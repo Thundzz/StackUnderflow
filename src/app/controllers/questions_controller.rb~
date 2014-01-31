@@ -1,9 +1,25 @@
 # -*- coding: utf-8 -*-
 class QuestionsController < ApplicationController
-	def index
-		@questions = Question.all()
+	
+         def index
+          @questions = Question.search(params[:search])             
 
-	end
+         if params[:term]
+         @questiona = Question.find(:all,:conditions => ['title LIKE ?', "#{params[:term]}%"]) 
+        logger.info 'debug Qustion controller'
+        logger.info @questiona
+        else
+        @questiona = Question.all 
+        logger.info 'no term Question'
+        end
+ 
+       respond_to do |format|  
+       format.html 
+       logger.info 'json'
+       logger.info @questiona.to_json
+       format.json { render :json => @questiona.to_json }
+       end		
+       end
 
 	def show
 		@question= Question.find(params[:id])

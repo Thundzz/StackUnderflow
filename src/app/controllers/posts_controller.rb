@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 		@posts = Post.search(params[:search])             
 
 		if params[:term]
-			@posta = Post.find(:all,:conditions => ['title LIKE ?', "#{params[:term]}%"]) 
+			@posta = Post.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
 			logger.info 'debug'
 			logger.info @posta
 		else
