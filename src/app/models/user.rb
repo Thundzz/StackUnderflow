@@ -50,7 +50,29 @@ class User < ActiveRecord::Base
     return user if user.salt == cookie_salt
   end
 
-
+def self.search(search)
+   arr = []
+   if search
+      logger.info "search input :  "+search
+     us = User.all
+     us.each do |u|
+     search_name = u.name + ' ' + u.lastname
+    search_name_inverse =u.lastname + ' ' + u.name 
+ logger.info "search name:  "+search_name
+     logger.info "search name_inverse:  "+search_name_inverse
+     
+     if (search_name.downcase.include? search.downcase) or (search_name_inverse.downcase.include? search.downcase) 
+      arr.push(u.id) 
+      logger.info "u.id : "
+      logger.info u.id
+     end
+    
+  end
+   User.find_all_by_id(arr)
+  else
+    find(:all)
+  end
+end
 
 
   private

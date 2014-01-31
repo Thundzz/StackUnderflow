@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
           @questions = Question.search(params[:search])             
 
          if params[:term]
-         @questiona = Question.find(:all,:conditions => ['title LIKE ?', "#{params[:term]}%"]) 
+         @questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
         logger.info 'debug Qustion controller'
         logger.info @questiona
         else
