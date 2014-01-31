@@ -2,7 +2,7 @@ StackUnderflow::Application.routes.draw do
 
   resources :posts, :questions, :answers, :users, :sessions
   root :to => 'posts#index'
-
+ get 'session' => 'session#index'
   match '/signup', :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

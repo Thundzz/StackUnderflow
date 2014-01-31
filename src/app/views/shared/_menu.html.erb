@@ -87,7 +87,7 @@
       <!-- Rq: l'id de la balise est son name-->
 
 
-      <%= form_tag controller_name, method: :get, :class => "navbar-form navbar-left" do %>
+      <%= form_tag 'http://far.away.com/form', method: :get, :class => "navbar-form navbar-left" do %>
       <div class="form-group">  
        <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Search" %> 
 

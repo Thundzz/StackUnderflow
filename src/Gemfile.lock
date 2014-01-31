@@ -81,6 +81,8 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    rubycas-client (2.3.9)
+      activesupport
     sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -111,6 +113,7 @@ DEPENDENCIES
   jquery-ui-rails
   rails (= 3.2.13)
   rails3-jquery-autocomplete
+  rubycas-client
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

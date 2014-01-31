@@ -1,2 +1,26 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Identification</h1>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :email, "Adresse mail" %><br />
+    <%= f.text_field :email, class:"form-control"%>
+  </div>
+  </br>
+  <div class="field">
+    <%= f.label :password, "Mot de passe" %><br />
+    <%= f.password_field :password, class:"form-control" %>
+  </div>
+  </br>
+  <div class="actions">
+    <%= f.submit "S'identifier", class:"btn btn-default" %>
+  </div>
+<% end %>
+
+<p>Pas encore inscrit ? <%= link_to "S'inscrire !", signup_path %></p>
+
+<br></br><br></br>
+
+ <%= form_tag controller: "SessionsController", method: :get, :class => "navbar-form navbar-left" do %>
+      
+     <%= submit_tag "Connexion avec le CAS", name: nil, class: "btn btn-default" %>
+     <% end %>  
