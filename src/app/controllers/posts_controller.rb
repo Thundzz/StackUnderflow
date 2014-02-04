@@ -1,9 +1,20 @@
 # -*- coding: utf-8 -*-
 class PostsController < ApplicationController
+	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+	before_filter :correct_user, only: [:edit, :update, :destroy]
+
+
+	# Before filter
+	def correct_user
+		@post = Post.find( params[:id] )
+		if @post.user != current_user
+			redirect_to @post, :notice => "Vous ne pouvez modifier que vos propres posts"
+		end
+	end
 
 
 	def index
-		@posts = Post.search(params[:search])             
+		@posts = Post.search(params[:search])
 
 		if params[:term]
 			@posta = Post.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
@@ -27,25 +38,19 @@ class PostsController < ApplicationController
 		@post= Post.find(params[:id])
 	end
 
-	def method_name
-		
-	end
-
 	def edit
-
 		@post = Post.find( params[:id] )
-
 	end
 
 
 	def new
 		@post = Post.new()
-
 	end
 
 	def update
-		@newpost = params[:post]
 		@oldpost = Post.find( params[:id] )
+		@newpost = params[:post]
+		
 		@oldpost.content = @newpost[:content]
 		@oldpost.title = @newpost[:title]
 		@oldpost.editionNo = @oldpost.editionNo + 1
@@ -53,15 +58,16 @@ class PostsController < ApplicationController
 			redirect_to posts_path, :notice => "Votre post a ete edite avec succes"
 		else
 			redirect_to posts_path, :notice => "Votre post n'a pas pu etre edite"
-		end  
-		
+		end
 	end
 
 	def create
-		@post = Post.new(params[:post])
+		@post = current_user.posts.build(params[:post])
+
 		@post.editionNo = 0
+		#@post.user = current_user
 		if @post.save
-			redirect_to posts_path, :notice => "Votre post a bien été ajoute"
+			redirect_to posts_path, :notice => "Votre post a bien ete ajoute"
 		else
 			render "new"
 		end
@@ -73,7 +79,7 @@ class PostsController < ApplicationController
 			redirect_to posts_path, :notice => "Votre post a bien ete supprime"
 		else
 			redirect_to posts_path, :notice => "Votre post n'a pas pu etre supprime"
-		end 
+		end
 	end
 
 end

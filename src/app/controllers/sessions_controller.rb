@@ -3,8 +3,8 @@
 class SessionsController < ApplicationController
 before_filter CASClient::Frameworks::Rails::Filter,:except => [ :new, :create,:destroy ]
   def index
- 
-end
+     
+  end
    def new
     @titre = "S'identifier"
   end
@@ -18,7 +18,7 @@ end
       render 'new'
     else
       sign_in user
-      redirect_to user
+      redirect_back_or user
     end
   end
 
