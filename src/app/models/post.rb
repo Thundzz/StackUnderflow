@@ -1,5 +1,8 @@
 class Post < ActiveRecord::Base
   attr_accessible :content, :title, :editionNo
+  belongs_to :user
+
+  validates :user_id, :presence => true
 
   def print_content
 

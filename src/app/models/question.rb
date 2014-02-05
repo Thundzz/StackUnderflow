@@ -1,6 +1,7 @@
 class Question < ActiveRecord::Base
   attr_accessible :content, :score, :title
   has_many :answers
+  belongs_to :user
 
 def self.search(search)
   if search

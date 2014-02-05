@@ -15,8 +15,13 @@ class User < ActiveRecord::Base
 
 
   attr_accessor :password
-  attr_accessible :email, :lastname, :name, :points, :right, :study, :password, :password_confirmation
+  attr_accessible :login, :email, :lastname, :name, :points, :right, :study, :password, :password_confirmation
+
+  has_many :answers
+  has_many :posts
+  has_many :questions
   
+  validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true
   validates :lastname, :presence => true, :length => { :maximum => 50 }
   validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => true
   validates :name, :presence => true, :length => { :maximum => 50 }

@@ -1,25 +1,37 @@
 # -*- coding: utf-8 -*-
 class QuestionsController < ApplicationController
-	
-         def index
-          @questions = Question.search(params[:search])             
+	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+	before_filter :correct_user, only: [:edit, :update, :destroy]
 
-         if params[:term]
-         @questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
-        logger.info 'debug Qustion controller'
-        logger.info @questiona
+
+	# Before filter
+	def correct_user
+		@question = Question.find( params[:id] )
+		if @question.user != current_user
+			redirect_to @question, :notice => "Vous ne pouvez modifier que vos propres questions"
+		end
+	end
+
+	
+	def index
+		@questions = Question.search(params[:search])             
+
+		if params[:term]
+        	@questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
+        	logger.info 'debug Qustion controller'
+        	logger.info @questiona
         else
-        @questiona = Question.all 
-        logger.info 'no term Question'
+        	@questiona = Question.all 
+        	logger.info 'no term Question'
         end
  
-       respond_to do |format|  
-       format.html 
-       logger.info 'json'
-       logger.info @questiona.to_json
-       format.json { render :json => @questiona.to_json }
-       end		
-       end
+       	respond_to do |format|  
+       		format.html 
+       		logger.info 'json'
+       		logger.info @questiona.to_json
+       		format.json { render :json => @questiona.to_json }
+       	end		
+    end
 
 	def show
 		@question= Question.find(params[:id])
@@ -49,7 +61,7 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		question = Question.new(params[:question])
+		question = current_user.questions.build(params[:question])
 		if question.save
 			redirect_to questions_path, :notice => "Votre question a bien ete ajoutee"
 		else

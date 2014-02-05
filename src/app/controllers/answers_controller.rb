@@ -1,9 +1,20 @@
 class AnswersController < ApplicationController
-	def index
-		@answers = Answer.all()
+	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+	before_filter :correct_user, only: [:edit, :update, :destroy]
+
+
+	# Before filter
+	def correct_user
+		@answer = Answer.find( params[:id] )
+		if @answer.user != current_user
+			redirect_to @answer.question, :notice => "Vous ne pouvez modifier que vos propres reponses"
+		end
 	end
 
 
+	def index
+		@answers = Answer.all()
+	end
 
 	def show
 		@answer= Answer.find(params[:id])
@@ -35,6 +46,7 @@ class AnswersController < ApplicationController
 		puts("create params hash : " )
 		puts(params[:answer])
 		answer = Answer.new(params[:answer])
+		answer.user = current_user
 		if answer.save
 			redirect_to question_path(answer.question), :notice => "Votre reponse a bien ete ajoutee"
 		else
