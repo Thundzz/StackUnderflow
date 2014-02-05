@@ -1,6 +1,7 @@
 <div class="question">
 	<h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
 	<p> <%= simple_format(@question.content()) %>  </p>
+	<%= link_to "Associer tag", add_tag_path(:question_id => @question.id) %>
 	<%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
 	<hr />
 	<% @answers.each do |answer| %>
