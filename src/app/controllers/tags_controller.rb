@@ -5,6 +5,10 @@ class TagsController < ApplicationController
 def index
 @tagas = Tag.all
 q= params[:q]  
+logger.info "test c++"
+logger.info q
+logger.info "string :"
+logger.info q.to_s
 @tags = Tag.where("name like ?", "%"+q.to_s+"%")
   respond_to do |format|
     format.html
