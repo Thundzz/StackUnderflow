@@ -17,7 +17,7 @@ end
   # GET /tags/1.json
   def show
     @tag = Tag.find(params[:id])
-
+    @questions = @tag.questions
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @tag }
@@ -72,15 +72,16 @@ end
     end
   end
 
-  # DELETE /tags/1
-  # DELETE /tags/1.json
+  
+ 
   def destroy
-    @tag = Tag.find(params[:id])
-    @tag.destroy
-
-    respond_to do |format|
-      format.html { redirect_to tags_url }
-      format.json { head :no_content }
-    end
+    tag = Tag.find( params[:id])
+    if tag.destroy
+      redirect_to tags_path, :notice => "Votre tag a bien eté supprimee"
+    else
+      redirect_to tags_path, :notice => "Votre tag n'a pas pu etre supprimee"
+    end 
   end
+  
+    
 end

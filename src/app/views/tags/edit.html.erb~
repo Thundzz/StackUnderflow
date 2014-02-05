@@ -13,7 +13,7 @@
 		<%= f.text_area :description, class:"form-control", rows:"3" %>
 	</p>
 	<p>
-		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+		<%= f.submit "Enregistrer !", class:"btn btn-default" %> <br/>
 	</p>
 <% end %>
 

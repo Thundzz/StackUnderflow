@@ -1,20 +1,17 @@
-<div class="question">
+<div class="tag">
 	<h2> <%=  link_to @tag.name, tag_path(@tag) %> </h2>
 	<p> <%= simple_format(@tag.description()) %>  </p>
-	<%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
 	<hr />
-	<% @answers.each do |answer| %>
-	<div class="answer">
-		<p><%= simple_format(answer.content) %></p>
-		<p> 
-			Par <%= link_to answer.user.login, answer.user %>
-			<% if (current_user == answer.user) %>
-				 | <%= link_to "Editer cette reponse", edit_answer_path(answer) 
-				%> |
-				<%= link_to "Ajouter supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?", :method => :delete %>
-			<% end %>
-		</p>
-	</div>
-	<% end %>
+</div>
 
+<div class="tag">
+  <h2>  <%= "Questions correspondantes au tag :" %> <%= simple_format(@tag.mot_clef) %>  </h2>
+	
+	</br></br>
+	<% @questions.each do |question| %>
+	<p><%= link_to question.title, question_path(question) %> </p>
+	<% end %>
+	
+	<hr />
+	<%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr de vouloir supprimer ce tag?", :method => :delete %>
 </div>
