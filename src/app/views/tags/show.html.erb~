@@ -1,11 +1,9 @@
-<div class="tag">
-	<h2> <%=  link_to @tag.name, tag_path(@tag) %> </h2>
-	<p> <%= simple_format(@tag.description()) %>  </p>
-	<hr />
-</div>
 
 <div class="tag">
-  <h2>  <%= "Questions correspondantes au tag :" %> <%= simple_format(@tag.mot_clef) %>  </h2>
+ 
+<h1> <%=  link_to @tag.name, tag_path(@tag) %> </h1>
+	<p> <%= simple_format(@tag.description()) %>  </p>
+  <b>Questions correspondantes au tag : </b> <%= simple_format(@tag.name) %>  
 	
 	</br></br>
 	<% @questions.each do |question| %>
@@ -14,4 +12,5 @@
 	
 	<hr />
 	<%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr de vouloir supprimer ce tag?", :method => :delete %>
+
 </div>
