@@ -1,6 +1,7 @@
 StackUnderflow::Application.routes.draw do
 
-  resources :posts, :questions, :answers, :users, :sessions
+
+  resources :posts, :questions, :answers, :users, :sessions, :tags
   root :to => 'posts#index'
  get 'session' => 'session#index'
   match '/signup', :to => 'users#new'

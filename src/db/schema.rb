@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20140205151348) do
     t.integer  "user_id"
   end
 
+  create_table "questions_tags", :id => false, :force => true do |t|
+    t.integer "question_id"
+    t.integer "tag_id"
+  end
+
+  add_index "questions_tags", ["question_id", "tag_id"], :name => "index_questions_tags_on_question_id_and_tag_id"
+
   create_table "tags", :force => true do |t|
     t.string   "mot_clef"
     t.datetime "created_at", :null => false

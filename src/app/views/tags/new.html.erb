@@ -1,0 +1,17 @@
+<h1>Ajouter un nouveau tag</h1>
+
+
+<div class="form-group">
+
+<%= form_for @tag do |f| %>
+	<p>
+		Mot clé : 
+		<%= f.text_field :mot_clef, class:"form-control" %>
+	</p>
+	
+	<p>
+		<%= f.submit "Enregistrer", class:"btn btn-default" %> <br/>
+	</p>
+<% end %>
+
+</div>
