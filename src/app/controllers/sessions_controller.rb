@@ -2,7 +2,11 @@
 class SessionsController < ApplicationController
 before_filter CASClient::Frameworks::Rails::Filter,:except => [ :new, :create,:destroy ]
   def index
-    # redirect_to root_path # a modifier, juste pour avoir affichage
+    HEAD
+    redirect_to root_path # a modifier, juste pour avoir affichage
+  end
+  def new
+     
   end
    def new
 # 2c56c193b9569dd881d6b9109b24aaaf931b7490

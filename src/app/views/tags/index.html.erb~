@@ -1,12 +1,12 @@
-	<h1>Page d'accueil des tags</h1>
+	<h1>Page d'accueil des Tags</h1>
 
-<p><%= link_to "Ajouter un nouveau tag", new_question_path %></p>
+<p><%= link_to "Ajouter un nouveau Tag", new_tag_path %></p>
 
-<p>Cette page liste les tags créés jusqu'à maintenant</p>
+<p>Cette page liste les questions créées jusqu'à maintenant</p>
 
-<% @tags.each do |tag|%>
-<div class="tag">
-<h2> <%=  link_to tag.mot_clef, tag_path(tag) %>  </h2>
+<% @tagas.each do |tag|%>
+<div class="question">
+<h2> <%=  link_to tag.name, tag_path(tag) %></h2>
 <hr />
 </div>
 <%end %>

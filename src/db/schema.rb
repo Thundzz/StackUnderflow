@@ -46,12 +46,11 @@ ActiveRecord::Schema.define(:version => 20140205151348) do
     t.integer "tag_id"
   end
 
-  add_index "questions_tags", ["question_id", "tag_id"], :name => "index_questions_tags_on_question_id_and_tag_id"
-
   create_table "tags", :force => true do |t|
-    t.string   "mot_clef"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -61,11 +60,11 @@ ActiveRecord::Schema.define(:version => 20140205151348) do
     t.integer  "study"
     t.integer  "points"
     t.string   "email"
+    t.string   "login"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
     t.string   "salt"
-    t.string   "login"
   end
 
 end

@@ -8,7 +8,7 @@
 <div class="question">
 <h2> <%=  link_to question.title, question_path(question) %> par <%= link_to question.user.login, question.user %> </h2>
 <% unless question.tags.blank? %>
-<b><u>Tag</u> :</b>
+<b>Tag :</b>
  <% question.tags.each do |tag|%>
 <%= tag.name%> -
 <%end%>
