@@ -4,7 +4,7 @@
 
 <p>Cette page liste les tags créés jusqu'à maintenant</p>
 
-<% @tagas.each do |tag|%>
+<% @tagsearch.each do |tag|%>
 <div class="tag">
 <h2> <%=  link_to tag.name, tag_path(tag) %></h2>
 <hr />

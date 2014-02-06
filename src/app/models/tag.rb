@@ -16,4 +16,14 @@ class Tag < ActiveRecord::Base
     tokens.gsub!(/<<<(.+?)>>>/) { create!(name: $1).id }
     tokens.split(',')
   end
+
+
+def self.search(search) #pour la recherche
+  if search
+    find(:all, :conditions => ['LOWER(name) LIKE LOWER(?)', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
+
 end

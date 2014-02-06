@@ -2,9 +2,9 @@
 
 <p><%= link_to "Ajouter un nouveau Tag", new_tag_path %></p>
 
-<p>Cette page liste les tags créées jusqu'à maintenant</p>
+<p>Cette page liste les tags créés jusqu'à maintenant</p>
 
-<% @tagas.each do |tag|%>
+<% @tags.each do |tag|%>
 <div class="tag">
 <h2> <%=  link_to tag.name, tag_path(tag) %></h2>
 <hr />

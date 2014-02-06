@@ -3,17 +3,31 @@ class TagsController < ApplicationController
   # GET /tags.json
  
 def index
+
+@tagsearch = Tag.search(params[:search]) #pour la recherche
 @tagas = Tag.all
 q= params[:q]  
 logger.info "test c++"
 logger.info q
 logger.info "string :"
 logger.info q.to_s
+# autocompletion à partir de l'interface de recherche de bootstrap
+if params[:term]
+ @tags = Tag.find(:all,:conditions => ['LOWER(name) LIKE LOWER(?)', "%#{params[:term]}%"])
+ respond_to do |format|  
+			format.html 
+			logger.info 'json'
+			logger.info @posts.to_json
+			format.json { render :json => @tags.to_json }
+		end	
+end
+else if params[:q] #autocompletion pour le champs du choix des tags dans le forumlaire questions
 @tags = Tag.where("name like ?", "%"+q.to_s+"%")
   respond_to do |format|
     format.html
     format.json { render :json => @tags.map(&:attributes) }
   end
+end
 end
 
  
