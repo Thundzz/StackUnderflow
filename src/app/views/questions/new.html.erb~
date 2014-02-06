@@ -20,7 +20,7 @@
 		<%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %>
 
 	</p>
-	Tag non trouvé?<%= link_to "ajouter tag", new_tag_path %>
+	Tag non trouvé?<%= link_to " ajouter tag", new_tag_path %>
        
         <p>
 		</br> <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>

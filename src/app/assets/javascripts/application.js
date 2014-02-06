@@ -21,6 +21,8 @@ $(function() {
   $("#question_tag_tokens").tokenInput("/tags.json", {
     crossDomain: false,
     prePopulate: $("#question_tag_tokens").data("pre"),
-    theme: "facebook"
+    theme: "facebook",
+    preventDuplicates : true,
+    tokenLimit :5
   });
 });

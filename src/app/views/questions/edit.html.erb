@@ -17,7 +17,7 @@
 
         <p>
 		<%= f.label :tag_tokens, "Tags :" %><br/>
-		<%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %>
+		<%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %> (5 tags au max)
 	</p>
 	
         <p>
