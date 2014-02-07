@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8 
 class PostsController < ApplicationController
 	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
 	before_filter :correct_user, only: [:edit, :update, :destroy]

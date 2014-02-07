@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8 
 class SessionsController < ApplicationController
 before_filter CASClient::Frameworks::Rails::Filter,:except => [ :new, :create,:destroy ]
   def index
