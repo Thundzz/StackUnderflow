@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class TagsController < ApplicationController
   # GET /tags
   # GET /tags.json
@@ -89,7 +90,7 @@ end
   def destroy
     tag = Tag.find( params[:id])
     if tag.destroy
-      redirect_to tags_path, :notice => "Votre tag a bien eté supprimee"
+      redirect_to tags_path, :notice => "Votre tag a bien ete supprimee"
     else
       redirect_to tags_path, :notice => "Votre tag n'a pas pu etre supprimee"
     end 
