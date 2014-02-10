@@ -9876,3 +9876,843 @@ Served asset /application.js - 304 Not Modified (9ms)
 
 Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-07 14:30:09 +0100
 Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 18:40:36 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (18.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (66.7ms)
+Completed 200 OK in 247ms (Views: 183.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:40:37 +0100
+Compiled bootstrap.min.css  (0ms)  (pid 27804)
+Compiled bootstrap.css  (2ms)  (pid 27804)
+Compiled jquery.ui.core.css  (4ms)  (pid 27804)
+Compiled jquery.ui.theme.css  (95ms)  (pid 27804)
+Compiled jquery.ui.accordion.css  (102ms)  (pid 27804)
+Compiled jquery.ui.menu.css  (7ms)  (pid 27804)
+Compiled jquery.ui.autocomplete.css  (16ms)  (pid 27804)
+Compiled jquery.ui.button.css  (4ms)  (pid 27804)
+Compiled jquery.ui.datepicker.css  (4ms)  (pid 27804)
+Compiled jquery.ui.resizable.css  (3ms)  (pid 27804)
+Compiled jquery.ui.dialog.css  (11ms)  (pid 27804)
+Compiled jquery.ui.progressbar.css  (6ms)  (pid 27804)
+Compiled jquery.ui.selectable.css  (3ms)  (pid 27804)
+Compiled jquery.ui.slider.css  (3ms)  (pid 27804)
+Compiled jquery.ui.spinner.css  (5ms)  (pid 27804)
+Compiled jquery.ui.tabs.css  (3ms)  (pid 27804)
+Compiled jquery.ui.tooltip.css  (3ms)  (pid 27804)
+Compiled jquery.ui.base.css  (228ms)  (pid 27804)
+Compiled jquery.ui.all.css  (243ms)  (pid 27804)
+Compiled answers.css  (27ms)  (pid 27804)
+Compiled posts.css  (1ms)  (pid 27804)
+Compiled questions.css  (39ms)  (pid 27804)
+Compiled sessions.css  (1ms)  (pid 27804)
+Compiled token-input-facebook.css  (0ms)  (pid 27804)
+Compiled token-input-mac.css  (0ms)  (pid 27804)
+Compiled token-input.css  (0ms)  (pid 27804)
+Compiled users.css  (2ms)  (pid 27804)
+Compiled application.css  (546ms)  (pid 27804)
+Served asset /application.css - 200 OK (593ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:40:38 +0100
+Compiled jquery.tokeninput.js  (0ms)  (pid 27804)
+Served asset /jquery.tokeninput.js - 200 OK (32ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:40:38 +0100
+Compiled jquery.js  (6ms)  (pid 27804)
+Compiled jquery.ui.core.js  (0ms)  (pid 27804)
+Compiled jquery.ui.widget.js  (0ms)  (pid 27804)
+Compiled jquery.ui.accordion.js  (28ms)  (pid 27804)
+Compiled jquery.ui.position.js  (0ms)  (pid 27804)
+Compiled jquery.ui.menu.js  (6ms)  (pid 27804)
+Compiled jquery.ui.autocomplete.js  (19ms)  (pid 27804)
+Compiled jquery.ui.button.js  (2ms)  (pid 27804)
+Compiled jquery.ui.datepicker.js  (2ms)  (pid 27804)
+Compiled jquery.ui.mouse.js  (2ms)  (pid 27804)
+Compiled jquery.ui.draggable.js  (8ms)  (pid 27804)
+Compiled jquery.ui.resizable.js  (29ms)  (pid 27804)
+Compiled jquery.ui.dialog.js  (49ms)  (pid 27804)
+Compiled jquery.ui.droppable.js  (4ms)  (pid 27804)
+Compiled jquery.ui.effect.js  (0ms)  (pid 27804)
+Compiled jquery.ui.effect-blind.js  (3ms)  (pid 27804)
+Compiled jquery.ui.effect-bounce.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-clip.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-drop.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-explode.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-fade.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-fold.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-highlight.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-pulsate.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-scale.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-shake.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-slide.js  (1ms)  (pid 27804)
+Compiled jquery.ui.effect-transfer.js  (1ms)  (pid 27804)
+Compiled jquery.ui.progressbar.js  (2ms)  (pid 27804)
+Compiled jquery.ui.selectable.js  (3ms)  (pid 27804)
+Compiled jquery.ui.slider.js  (3ms)  (pid 27804)
+Compiled jquery.ui.sortable.js  (4ms)  (pid 27804)
+Compiled jquery.ui.spinner.js  (4ms)  (pid 27804)
+Compiled jquery.ui.tabs.js  (2ms)  (pid 27804)
+Compiled jquery.ui.tooltip.js  (3ms)  (pid 27804)
+Compiled jquery.ui.all.js  (310ms)  (pid 27804)
+Compiled jquery_ujs.js  (0ms)  (pid 27804)
+Compiled bootstrap.min.js  (0ms)  (pid 27804)
+Compiled bootstrap.js  (1ms)  (pid 27804)
+Compiled answers.js  (507ms)  (pid 27804)
+Compiled bootstrap.js.bak  (1ms)  (pid 27804)
+Compiled jquery-1.10.2.js  (5ms)  (pid 27804)
+Compiled jquery-ui-1.10.4.custom.js  (5ms)  (pid 27804)
+Compiled jquery-ui-1.10.4.custom.min.js  (2ms)  (pid 27804)
+Compiled posts.js  (131ms)  (pid 27804)
+Compiled questions.js  (104ms)  (pid 27804)
+Compiled sessions.js  (112ms)  (pid 27804)
+Compiled users.js  (102ms)  (pid 27804)
+Compiled application.js  (1576ms)  (pid 27804)
+Served asset /application.js - 200 OK (1637ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:40:39 +0100
+Served asset /token-input.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100.png" for 127.0.0.1 at 2014-02-10 18:40:40 +0100
+Served asset /jquery-ui/ui-bg_flat_75_ffffff_40x100.png - 200 OK (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-02-10 18:40:42 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+no term
+[#<User id: 1, right: 3, login: "esagardia", name: "Elorri", lastname: "Sagardia", study: 1, points: 0, email: "esagardia@enseirb.fr", created_at: "2014-02-07 13:22:36", updated_at: "2014-02-07 13:22:36", encrypted_password: "0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4a...", salt: "e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f33...">]
+json
+[{"created_at":"2014-02-07T13:22:36Z","email":"esagardia@enseirb.fr","encrypted_password":"0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4adf69a97b94791","id":1,"lastname":"Sagardia","login":"esagardia","name":"Elorri","points":0,"right":3,"salt":"e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f338d6c2b66921f6","study":1,"updated_at":"2014-02-07T13:22:36Z"}]
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered shared/_menu.html.erb (2.9ms)
+Completed 200 OK in 68ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-02-10 18:40:44 +0100
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.9ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+
+string :
+
+  Rendered tags/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.6ms)
+Completed 200 OK in 45ms (Views: 35.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-02-10 18:40:49 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+no term
+[#<User id: 1, right: 3, login: "esagardia", name: "Elorri", lastname: "Sagardia", study: 1, points: 0, email: "esagardia@enseirb.fr", created_at: "2014-02-07 13:22:36", updated_at: "2014-02-07 13:22:36", encrypted_password: "0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4a...", salt: "e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f33...">]
+json
+[{"created_at":"2014-02-07T13:22:36Z","email":"esagardia@enseirb.fr","encrypted_password":"0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4adf69a97b94791","id":1,"lastname":"Sagardia","login":"esagardia","name":"Elorri","points":0,"right":3,"salt":"e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f338d6c2b66921f6","study":1,"updated_at":"2014-02-07T13:22:36Z"}]
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:40:50 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  Rendered questions/index.html.erb within layouts/application (58.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.9ms)
+Completed 200 OK in 122ms (Views: 88.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2014-02-10 18:40:53 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 1
+  Rendered questions/show.html.erb within layouts/application (57.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.1ms)
+Completed 200 OK in 83ms (Views: 71.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/2" for 127.0.0.1 at 2014-02-10 18:40:57 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 2
+  Rendered questions/show.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.6ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-02-10 18:41:01 +0100
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+
+string :
+
+  Rendered tags/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered shared/_menu.html.erb (2.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-02-10 18:41:04 +0100
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (60.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.2ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-02-10 18:41:26 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kAfkJJJUmKupYhgB1LHLXht+WjRza93BZZDxrXmU5q0=", "user"=>{"login"=>"sjemli", "name"=>"seif", "lastname"=>"jemli", "study"=>"1", "email"=>"seifeddinejemli@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Inscription"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'sjemli' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'seifeddinejemli@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "lastname", "login", "name", "points", "right", "salt", "study", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 10 Feb 2014 17:41:26 UTC +00:00], ["email", "seifeddinejemli@gmail.com"], ["encrypted_password", "97ca9956e4c83b46fe3b40dda813775f0960aac2094ac46c6bbdc22b84d46247"], ["lastname", "jemli"], ["login", "sjemli"], ["name", "seif"], ["points", 0], ["right", 3], ["salt", "756e9aa8ed6d03932218cb3c5ce35e166a82ae41798ded69aa4b90aea63c2610"], ["study", 1], ["updated_at", Mon, 10 Feb 2014 17:41:26 UTC +00:00]]
+  [1m[35m (128.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 310ms (ActiveRecord: 129.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-02-10 18:41:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (4.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:41:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:41:27 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:41:27 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:41:27 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-02-10 18:41:29 +0100
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+
+string :
+
+  Rendered tags/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (3.8ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:41:29 +0100
+Served asset /token-input.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:41:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:41:29 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:41:29 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tags?term=C%2B" for 127.0.0.1 at 2014-02-10 18:41:36 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"term"=>"C+"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+
+string :
+
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (LOWER(name) LIKE LOWER('%C+%'))
+json
+null
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_75_dadada_1x400.png" for 127.0.0.1 at 2014-02-10 18:41:37 +0100
+Served asset /jquery-ui/ui-bg_glass_75_dadada_1x400.png - 200 OK (7ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:41:40 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  Rendered questions/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:41:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:41:40 +0100
+Served asset /token-input.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:41:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:41:40 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-10 18:41:41 +0100
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered questions/new.html.erb within layouts/application (5.6ms)
+  Rendered shared/_menu.html.erb (1.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:41:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:41:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:41:41 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:41:41 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-10 18:41:46 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+c
+string :
+c
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%c%')[0m
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tags.json?q=c%2B" for 127.0.0.1 at 2014-02-10 18:41:46 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c+"}
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c+
+string :
+c+
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c+%')
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-02-10 18:41:54 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (3.2ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:41:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:41:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:41:54 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:41:54 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-02-10 18:44:02 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (28.5ms)
+Completed 200 OK in 52ms (Views: 39.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:02 +0100
+Served asset /application.css - 304 Not Modified (59ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:02 +0100
+Served asset /token-input.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:02 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:02 +0100
+Served asset /application.js - 304 Not Modified (96ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:44:05 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  Rendered questions/index.html.erb within layouts/application (45.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 62ms (Views: 51.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:05 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:05 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:05 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:05 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-10 18:44:07 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (3.4ms)
+  Rendered shared/_menu.html.erb (1.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:07 +0100
+Served asset /application.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:07 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:07 +0100
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:07 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-10 18:44:19 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tags.json?q=c%2B%2B" for 127.0.0.1 at 2014-02-10 18:44:20 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c++"}
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+c++
+string :
+c++
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%c++%')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tags.json?q=c%2B" for 127.0.0.1 at 2014-02-10 18:44:21 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c+"}
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c+
+string :
+c+
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c+%')
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-02-10 18:44:22 +0100
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+
+string :
+
+  Rendered tags/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.8ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:22 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:22 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:22 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:22 +0100
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:44:25 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  Rendered questions/index.html.erb within layouts/application (7.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.1ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:25 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:25 +0100
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:25 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:25 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:44:29 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  Rendered questions/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.9ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:29 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:29 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:29 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:29 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:44:30 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  Rendered questions/index.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:30 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:30 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:30 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:30 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-10 18:44:31 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (1.7ms)
+  Rendered shared/_menu.html.erb (1.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:44:31 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:44:31 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:44:31 +0100
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:44:31 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-10 18:44:41 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tags.json?q=c%2B" for 127.0.0.1 at 2014-02-10 18:44:42 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c+"}
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+c+
+string :
+c+
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%c+%')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tags.json?q=c%2B%2B" for 127.0.0.1 at 2014-02-10 18:44:43 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c++"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c++
+string :
+c++
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c++%')
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-10 18:45:00 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_menu.html.erb (1.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:45:00 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:45:00 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-02-10 18:45:00 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-02-10 18:45:00 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-10 18:45:09 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-10 18:48:31 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (31.3ms)
+  Rendered shared/_menu.html.erb (2.5ms)
+Completed 200 OK in 91ms (Views: 44.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:48:31 +0100
+Compiled token-input.css  (0ms)  (pid 28012)
+Served asset /token-input.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-10 18:48:31 +0100
+Compiled jquery.tokeninput.js  (1ms)  (pid 28012)
+Served asset /jquery.tokeninput.js - 200 OK (28ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-10 18:52:19 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-02-10 18:52:23 +0100
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kAfkJJJUmKupYhgB1LHLXht+WjRza93BZZDxrXmU5q0=", "question"=>{"title"=>"Question c++", "content"=>"jfjf", "tag_tokens"=>"2"}, "commit"=>"Envoyer !"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (2.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("content", "created_at", "score", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "jfjf"], ["created_at", Mon, 10 Feb 2014 17:52:23 UTC +00:00], ["score", nil], ["title", "Question c++"], ["updated_at", Mon, 10 Feb 2014 17:52:23 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "questions_tags" ("question_id", "tag_id") VALUES (3, 2)[0m
+  [1m[35m (193.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 212ms (ActiveRecord: 196.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-10 18:52:23 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  Rendered questions/index.html.erb within layouts/application (38.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:52:23 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)

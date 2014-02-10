@@ -652,13 +652,25 @@ $.TokenList = function (input, url_or_data, settings) {
         }
     }
 
-    // Highlight the query part of the search term
+  
+  function regexSanitize( str ) {
+  return str.replace(/([.+*?:\[\](){}|\\])/g, "\\$1");
+}
+  // Highlight the query part of the search term
     function highlight_term(value, term) {
-        return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<b>$1</b>");
+        return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + regexSanitize(term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<b>$1</b>");
     }
     
     function find_value_and_highlight_term(template, value, term) {
-        return template.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + value + ")(?![^<>]*>)(?![^&;]+;)", "g"), highlight_term(value, term));
+         try { 
+b = regexSanitize(value);
+a =template.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" +  regexSanitize(value) + ")(?![^<>]*>)(?![^&;]+;)", "g"),highlight_term(value, term));}
+catch (e)
+{alert(e);
+        return false;
+}
+return a;
+
     }
 
     // Populate the results dropdown with some results
