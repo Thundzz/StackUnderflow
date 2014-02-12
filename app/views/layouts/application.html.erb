@@ -3,22 +3,13 @@
 <head>
   <title>StackUnderflow</title>
 <%= javascript_include_tag 'ckeditor/ckeditor.js'%>
+  <%= javascript_include_tag "application","jquery.tokeninput" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "token-input" %>
-  <%= javascript_include_tag "application","jquery.tokeninput" %>
+
   <%= csrf_meta_tags %>
 
 </head>
-<!-- code editeur -->
-<script type="text/javascript">$(document).ready(function() {
-    if ($('textarea').length > 0) {
-        var data = $('textarea');
-        $.each(data, function(i) {
-            CKEDITOR.replace(data[i].id);
-        });
-    }
-});</script>
-<!-- ******fin editeur ***-->
 
 
 <body>
@@ -39,6 +30,16 @@
   <div class="content">
     <%= yield %>
   </div>
+<!-- code editeur -->
+<script type="text/javascript">$(document).ready(function() {
+    if ($('textarea').length > 0) {
+        var data = $('textarea');
+        $.each(data, function(i) {
+            CKEDITOR.replace(data[i].id);
+        });
+    }
+});</script>
+<!-- ******fin editeur ***-->
 
 </body>
 </html>
