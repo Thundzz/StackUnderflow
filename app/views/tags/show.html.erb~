@@ -2,7 +2,7 @@
 <div class="tag">
  
 <h1> <%=  link_to @tag.name, tag_path(@tag) %> </h1>
-<hr/></br>
+<hr/>
 <b>Description :</b>
 	<p> <%= simple_format(@tag.description()) %>  </p>
 </br><hr/>  

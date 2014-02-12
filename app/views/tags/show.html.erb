@@ -4,7 +4,7 @@
 <h1> <%=  link_to @tag.name, tag_path(@tag) %> </h1>
 <hr/>
 <b>Description :</b>
-	<p> <%= simple_format(@tag.description()) %>  </p>
+	<p> <%= @tag.description().html_safe %>  </p>
 </br><hr/>  
 <b>Questions correspondantes à ce tag :</b>
 	

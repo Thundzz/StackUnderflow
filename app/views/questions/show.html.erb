@@ -1,11 +1,11 @@
 <div class="question">
 	<h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
-	<p> <%= simple_format(@question.content()) %>  </p>
+	<p> <%= @question.content().html_safe %>  </p>
 	<%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
 	<hr />
 	<% @answers.each do |answer| %>
 	<div class="answer">
-		<p><%= simple_format(answer.content) %></p>
+		<p><%= answer.content.html_safe %></p>
 		<p> 
 			Par <%= link_to answer.user.login, answer.user %>
 			<% if (current_user == answer.user) %>
