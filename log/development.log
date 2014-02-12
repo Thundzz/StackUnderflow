@@ -10716,3 +10716,1251 @@ Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.9ms)
 
 Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-10 18:52:23 +0100
 Served asset /token-input.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 04:25:57 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (29.4ms)
+Completed 200 OK in 53ms (Views: 40.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:25:57 +0100
+Compiled ckeditor/ckeditor.js  (7ms)  (pid 14618)
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (55ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:25:57 +0100
+Served asset /token-input.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:25:58 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (28ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 04:26:05 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3[0m
+  Rendered questions/index.html.erb within layouts/application (37.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (3.2ms)
+Completed 200 OK in 58ms (Views: 46.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:26:05 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:26:05 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:26:05 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:26:06 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-12 04:26:10 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_menu.html.erb (1.2ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:26:10 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:26:10 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:26:10 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Compiled ckeditor/config.js  (0ms)  (pid 14618)
+Served asset /ckeditor/config.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 14618)
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/ckeditor/lang/fr.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 14618)
+Served asset /ckeditor/lang/fr.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Compiled ckeditor/styles.js  (0ms)  (pid 14618)
+Served asset /ckeditor/styles.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Compiled ckeditor/contents.css  (0ms)  (pid 14618)
+Served asset /ckeditor/contents.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /ckeditor/plugins/codemirror/icons/SearchCode.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoFormat.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoComplete.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:26:11 +0100
+Served asset /ckeditor/plugins/codemirror/icons/CommentSelectedRange.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/tags.json?q=j" for 127.0.0.1 at 2014-02-12 04:27:24 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"j"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+j
+string :
+j
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%j%')
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tags.json?q=ja" for 127.0.0.1 at 2014-02-12 04:27:26 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"ja"}
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+ja
+string :
+ja
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%ja%')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-12 04:27:28 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:27:38 +0100
+Compiled ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js  (1ms)  (pid 14618)
+Served asset /ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:27:38 +0100
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 14618)
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (6ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-02-12 04:28:51 +0100
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GrztK8SrbJVBLcm+8mJzsDmaIYgBwca8A4Ndx5K5Vew=", "question"=>{"title"=>"Essai éditeur", "content"=>"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>", "tag_tokens"=>"2"}, "commit"=>"Envoyer !"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (2.6ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("content", "created_at", "score", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>"], ["created_at", Wed, 12 Feb 2014 03:28:51 UTC +00:00], ["score", nil], ["title", "Essai éditeur"], ["updated_at", Wed, 12 Feb 2014 03:28:51 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "questions_tags" ("question_id", "tag_id") VALUES (4, 2)[0m
+  [1m[35m (196.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 209ms (ActiveRecord: 199.9ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 04:28:51 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  Rendered questions/index.html.erb within layouts/application (7.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:28:51 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:28:51 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:28:51 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2014-02-12 04:28:54 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 4
+  Rendered questions/show.html.erb within layouts/application (14.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.9ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:28:54 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:28:55 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:28:55 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 04:47:29 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (29.1ms)
+Completed 200 OK in 52ms (Views: 40.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:47:29 +0100
+Compiled ckeditor/ckeditor.js  (6ms)  (pid 15187)
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (91ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:47:29 +0100
+Compiled token-input.css  (0ms)  (pid 15187)
+Served asset /token-input.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:29 +0100
+Compiled jquery.tokeninput.js  (0ms)  (pid 15187)
+Served asset /jquery.tokeninput.js - 304 Not Modified (7ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 04:47:31 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4[0m
+  Rendered questions/index.html.erb within layouts/application (40.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 58ms (Views: 46.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:47:31 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:31 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:47:31 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2014-02-12 04:47:33 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 4[0m
+  Rendered questions/show.html.erb within layouts/application (14.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:47:34 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:47:34 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:34 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:34 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 04:47:42 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.9ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  Rendered questions/index.html.erb within layouts/application (33.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:47:42 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:42 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:47:42 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered questions/new.html.erb within layouts/application (3.1ms)
+  Rendered shared/_menu.html.erb (1.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Compiled ckeditor/config.js  (0ms)  (pid 15187)
+Served asset /ckeditor/config.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Compiled ckeditor/skins/moono/editor.css  (1ms)  (pid 15187)
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Compiled ckeditor/styles.js  (0ms)  (pid 15187)
+Served asset /ckeditor/styles.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Compiled ckeditor/contents.css  (0ms)  (pid 15187)
+Served asset /ckeditor/contents.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/plugins/codemirror/icons/SearchCode.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/plugins/codemirror/icons/CommentSelectedRange.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoComplete.png - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:47:44 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoFormat.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 04:48:16 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.1ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:48:16 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:48:17 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:48:17 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 04:51:17 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2}]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  Rendered questions/index.html.erb within layouts/application (79.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (4.0ms)
+Completed 200 OK in 116ms (Views: 92.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:51:17 +0100
+Compiled ckeditor/ckeditor.js  (33ms)  (pid 15311)
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:51:17 +0100
+Compiled token-input.css  (0ms)  (pid 15311)
+Served asset /token-input.css - 304 Not Modified (62ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:51:17 +0100
+Compiled jquery.tokeninput.js  (0ms)  (pid 15311)
+Served asset /jquery.tokeninput.js - 304 Not Modified (496ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-12 04:51:21 +0100
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered questions/new.html.erb within layouts/application (3.4ms)
+  Rendered shared/_menu.html.erb (1.3ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 04:51:21 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:51:21 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 04:51:21 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Compiled ckeditor/config.js  (0ms)  (pid 15311)
+Served asset /ckeditor/config.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 15311)
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Compiled ckeditor/styles.js  (0ms)  (pid 15311)
+Served asset /ckeditor/styles.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Compiled ckeditor/contents.css  (0ms)  (pid 15311)
+Served asset /ckeditor/contents.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /ckeditor/plugins/codemirror/icons/SearchCode.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoFormat.png - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoComplete.png - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /ckeditor/plugins/codemirror/icons/CommentSelectedRange.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 04:51:22 +0100
+Served asset /ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-12 05:00:34 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (29.2ms)
+  Rendered shared/_menu.html.erb (2.3ms)
+Completed 200 OK in 82ms (Views: 41.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:00:34 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:00:34 +0100
+Served asset /token-input.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:00:34 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/config.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/lang/fr.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 15553)
+Served asset /ckeditor/lang/fr.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/styles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/contents.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/CommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/plugins/codemirror/icons/CommentSelectedRange.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/SearchCode.png?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/plugins/codemirror/icons/SearchCode.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/plugins/codemirror/icons/UncommentSelectedRange.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoComplete.png?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoComplete.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/icons/AutoFormat.png?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:35 +0100
+Served asset /ckeditor/plugins/codemirror/icons/AutoFormat.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/css/codemirror.min.css" for 127.0.0.1 at 2014-02-12 05:00:47 +0100
+Compiled ckeditor/plugins/codemirror/css/codemirror.min.css  (0ms)  (pid 15553)
+Served asset /ckeditor/plugins/codemirror/css/codemirror.min.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/js/codemirror.min.js" for 127.0.0.1 at 2014-02-12 05:00:47 +0100
+Compiled ckeditor/plugins/codemirror/js/codemirror.min.js  (1ms)  (pid 15553)
+Served asset /ckeditor/plugins/codemirror/js/codemirror.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/js/codemirror.addons.min.js" for 127.0.0.1 at 2014-02-12 05:00:47 +0100
+Compiled ckeditor/plugins/codemirror/js/codemirror.addons.min.js  (0ms)  (pid 15553)
+Served asset /ckeditor/plugins/codemirror/js/codemirror.addons.min.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/js/codemirror.mode.htmlmixed.min.js" for 127.0.0.1 at 2014-02-12 05:00:47 +0100
+Compiled ckeditor/plugins/codemirror/js/codemirror.mode.htmlmixed.min.js  (0ms)  (pid 15553)
+Served asset /ckeditor/plugins/codemirror/js/codemirror.mode.htmlmixed.min.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/ckeditor/plugins/codemirror/js/codemirror.addons.search.min.js" for 127.0.0.1 at 2014-02-12 05:00:47 +0100
+Compiled ckeditor/plugins/codemirror/js/codemirror.addons.search.min.js  (0ms)  (pid 15553)
+Served asset /ckeditor/plugins/codemirror/js/codemirror.addons.search.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:00:49 +0100
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-12 05:05:55 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (31.1ms)
+  Rendered shared/_menu.html.erb (2.3ms)
+Completed 200 OK in 85ms (Views: 43.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:05:55 +0100
+Compiled ckeditor/ckeditor.js  (5ms)  (pid 15742)
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (65ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:05:55 +0100
+Compiled token-input.css  (0ms)  (pid 15742)
+Served asset /token-input.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:05:55 +0100
+Compiled jquery.tokeninput.js  (1ms)  (pid 15742)
+Served asset /jquery.tokeninput.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:05:56 +0100
+Compiled ckeditor/config.js  (0ms)  (pid 15742)
+Served asset /ckeditor/config.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/ckeditor/lang/fr.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:05:56 +0100
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 15742)
+Served asset /ckeditor/lang/fr.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:05:56 +0100
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 15742)
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:05:56 +0100
+Compiled ckeditor/styles.js  (0ms)  (pid 15742)
+Served asset /ckeditor/styles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:05:56 +0100
+Compiled ckeditor/contents.css  (2ms)  (pid 15742)
+Served asset /ckeditor/contents.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js?t=E0LB" for 127.0.0.1 at 2014-02-12 05:06:22 +0100
+Compiled ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js  (0ms)  (pid 15742)
+Served asset /ckeditor/plugins/syntaxhighlight/dialogs/syntaxhighlight.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=E0LB" for 127.0.0.1 at 2014-02-12 05:06:22 +0100
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 15742)
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (6ms)
+
+
+Started GET "/tags.json?q=c" for 127.0.0.1 at 2014-02-12 05:06:51 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"c"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+c
+string :
+c
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%c%')
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-02-12 05:06:55 +0100
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GrztK8SrbJVBLcm+8mJzsDmaIYgBwca8A4Ndx5K5Vew=", "question"=>{"title"=>"Essai éditeur 2", "content"=>"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>", "tag_tokens"=>"2"}, "commit"=>"Envoyer !"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (2.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("content", "created_at", "score", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>"], ["created_at", Wed, 12 Feb 2014 04:06:55 UTC +00:00], ["score", nil], ["title", "Essai éditeur 2"], ["updated_at", Wed, 12 Feb 2014 04:06:55 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "questions_tags" ("question_id", "tag_id") VALUES (5, 2)[0m
+  [1m[35m (203.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 219ms (ActiveRecord: 206.9ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 05:06:55 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5
+  Rendered questions/index.html.erb within layouts/application (16.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:06:55 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:06:55 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:06:55 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/5" for 127.0.0.1 at 2014-02-12 05:06:58 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 5
+  Rendered questions/show.html.erb within layouts/application (40.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.5ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:06:58 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:06:58 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:06:58 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/questions?term=Ess" for 127.0.0.1 at 2014-02-12 05:07:09 +0100
+Processing by QuestionsController#show as JSON
+  Parameters: {"term"=>"Ess", "id"=>"questions"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "questions"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Question with id=questions):
+  app/controllers/questions_controller.rb:37:in `show'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-12 05:07:15 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5
+  Rendered questions/index.html.erb within layouts/application (10.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.6ms)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:07:15 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:07:15 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:07:15 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/4" for 127.0.0.1 at 2014-02-12 05:07:18 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 4
+  Rendered questions/show.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (2.9ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-12 05:07:18 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-12 05:07:18 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-12 05:07:18 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
