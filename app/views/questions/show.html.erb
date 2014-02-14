@@ -1,19 +1,19 @@
 <div class="question">
-	<h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
-	
+  <h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
+  
 
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
+  <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+	 cellspacing="2">
+    <tbody>
 
-<tr>
-<td style="vertical-align: center;" width="50"><p> <br><div style="font-size:32px;">
-<font face="Verdana" color="#800080">
-<b ><center class="compteur"><%=@vote_count_show%></center> </b>
-</font></div>
-    
-</td>
-<td style="vertical-align: top;"><br><span><%= @question.content().html_safe %>  </span></p>
+      <tr>
+	<td style="vertical-align: center;" width="50"><p> <br><div style="font-size:32px;">
+	      <font face="Verdana" color="#800080">
+		<b ><center class="compteur"><%=@vote_count_show%></center> </b>
+	    </font></div>
+	    
+	</td>
+	<td style="vertical-align: top;"><br><span><%= @question.content().html_safe %>  </span></p>
 </td>
 </tr>
 
@@ -26,38 +26,35 @@ cellspacing="2">
 
 <br/>
 
-    <p>
-   
+<p>
   
- <%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
-       
- <%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
-           
+  
+  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>      
+  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
+</p>
+<%= link_to "répondre", new_answer_path(:question_id => @question.id) %>
 
-        </p>
-        <%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
-         
-	<hr />
-	<% @answers.each do |answer| %>
-	<div class="answer">
-		<p><%= answer.content.html_safe %></p>
-		<p> 
-			Par <%= link_to answer.user.login, answer.user %>
-			<% if (current_user == answer.user) %>
-				 | <%= link_to "Editer cette reponse", edit_answer_path(answer) 
-				%> |
-              
-				<%= link_to "Supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?", :method => :delete %>
- <p><button type="button" class="btn btn-default btn-lg">
-             <span class="glyphicon glyphicon-thumbs-up"></span>
-          </button>
-       <button type="button" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-thumbs-down"></span> 
-</button>
-        </p>
-			<% end %>
-		</p>
-	</div>
-	<% end %>
+<hr />
+<% @answers.each do |answer| %>
+<div class="answer">
+  <p><%= answer.content.html_safe %></p>
+  <p> 
+    Par <%= link_to answer.user.login, answer.user %>
+    <% if (current_user == answer.user) %>
+    | <%= link_to "Éditer", edit_answer_path(answer) 
+	  %> |
+    
+    <%= link_to "Supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr(e) de vouloir supprimer cette réponse?", :method => :delete %>
+  <p><button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-thumbs-up"></span>
+    </button>
+    <button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-thumbs-down"></span> 
+    </button>
+  </p>
+  <% end %>
+  </p>
+</div>
+<% end %>
 
 </div>

@@ -1,16 +1,16 @@
-<h1> Profil utilisateur </h1>
+*<h1> Profil utilisateur </h1>
 
 <div class="profil">
-  <h2> <%= @user.login %> (<%= @user.lastname %> <%= @user.name %>) </h2>
+  <h2> <%= @user.login %> (<%= @user.name %> <%= @user.lastname %>) </h2>
   Filière : 
   <% if @user.study == 1 %>
   <%= "Informatique" %>
   <% else if @user.study == 2 %>
-  <%= "Matmeca" %>
+  <%= "Matméca" %>
   <% else if @user.study == 3 %>
   <%= "Electronique" %>
   <% else if @user.study == 4 %>
-  <%= "Télécom" %>
+  <%= "Télécommunication" %>
   <% end %>
   <% end %>
   <% end %>
