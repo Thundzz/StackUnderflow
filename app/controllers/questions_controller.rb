@@ -145,7 +145,7 @@ class QuestionsController < ApplicationController
             format.js
             format.html
             end
-        end
+       
   else
    positive_vote_count = @quest_vote_against.votes_for
                negative_vote_count = @quest_vote_against.votes_against
@@ -157,6 +157,7 @@ class QuestionsController < ApplicationController
             format.js
             format.html
             end
+end
 end
 
 end
