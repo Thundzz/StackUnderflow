@@ -16,6 +16,6 @@
   <% end %>
   <% end %> <br/>
 <!--  Nombre de points : <%= @user.points %>-->
-  Reputation: <%= @user.karma %>
+  Reputation: <%= @user.karma >
 
 </div>

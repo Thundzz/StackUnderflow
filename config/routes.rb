@@ -7,7 +7,13 @@ StackUnderflow::Application.routes.draw do
   match '/signup', :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  
+
+resources :questions do
+  member do
+    get 'vote_for'
+    get 'vote_against'
+  end
+end
 
 
 
