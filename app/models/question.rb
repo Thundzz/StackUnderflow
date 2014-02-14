@@ -1,5 +1,7 @@
 class Question < ActiveRecord::Base
-  attr_accessible :content, :score, :title,:tag_tokens
+  
+acts_as_voteable
+attr_accessible :content, :score, :title,:tag_tokens
   has_many :answers
   belongs_to :user
  has_and_belongs_to_many :tags
