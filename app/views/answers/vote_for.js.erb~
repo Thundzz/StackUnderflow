@@ -1,0 +1,1 @@
+$(this).html("<%= @total_vote %>")

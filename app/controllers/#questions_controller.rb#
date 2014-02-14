@@ -1,0 +1,163 @@
+# coding: utf-8 
+class QuestionsController < ApplicationController
+	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+	before_filter :correct_user, only: [:edit, :update, :destroy]
+
+
+	# Before filter
+	def correct_user
+		@question = Question.find( params[:id] )
+		if @question.user != current_user
+			redirect_to @question, :notice => "Vous ne pouvez modifier que vos propres questions"
+		end
+	end
+
+	
+	def index
+		@questions = Question.search(params[:search])             
+
+		if params[:term]
+        	@questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
+        	logger.info 'debug Qustion controller'
+        	logger.info @questiona
+        else
+        	@questiona = Question.all 
+        	logger.info 'no term Question'
+        end
+ 
+       	respond_to do |format|  
+       		format.html 
+       		logger.info 'json'
+       		logger.info @questiona.to_json
+       		format.json { render :json => @questiona.to_json }
+       	end		
+    end
+
+	def show
+          @question= Question.find(params[:id])
+          positive_vote_count = @question.votes_for
+          negative_vote_count = @question.votes_against
+          
+          @vote_count_show =positive_vote_count-negative_vote_count
+          @answers = @question.answers
+	end
+	
+	
+	def edit
+
+		@question = Question.find( params[:id] )
+	end
+
+
+	def new
+		@question = Question.new()
+
+	end
+
+	def update
+		oldquestion = Question.find(params[:id])
+		if oldquestion.update_attributes(params[:question])
+			redirect_to questions_path, :notice => "Votre question a ete editee avec succes"
+		else
+			redirect_to questions_path, :notice => "Votre question n'a pas pu etre editee"
+		end  
+		
+	end
+
+	def create
+		question = current_user.questions.build(params[:question])
+		if question.save
+			redirect_to questions_path, :notice => "Votre question a bien ete ajoutee"
+		else
+			render "new"
+		end
+	end
+
+	def destroy
+		question = Question.find( params[:id])
+		if question.destroy
+			redirect_to questions_path, :notice => "Votre question a bien eté supprimee"
+		else
+			redirect_to questions_path, :notice => "Votre question n'a pas pu etre supprimee"
+		end 
+	end
+
+
+         def vote_for
+           logger.info "***vote for***!!!"
+           logger.info params[:id]
+           @quest_vote_for = Question.find(params[:id])
+           logger.info "***current user id***!!!"
+           logger.info current_user.login
+           
+           if(current_user.id != @quest_vote_for.user.id)
+             if current_user.voted_against?(@quest_vote_for)
+               current_user.unvote_for(@quest_vote_for)
+             else 
+               current_user.vote_exclusively_for(@quest_vote_for)
+             end
+             
+             positive_vote_count = @quest_vote_for.votes_for
+             negative_vote_count = @quest_vote_for.votes_against
+             logger.info current_user.voted_for?(@quest_vote_for)       
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+            end
+             
+           else
+             positive_vote_count = @quest_vote_for.votes_for
+             negative_vote_count = @quest_vote_for.votes_against
+             logger.info current_user.voted_for?(@quest_vote_for)       
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+            end
+             
+           end
+        end
+         
+         def vote_against
+           logger.info "***vote against*!!!"
+           logger.info params[:id]
+           @quest_vote_against = Question.find(params[:id])
+             logger.info @quest_vote_against
+           if(current_user.id != @quest_vote_against.user.id)
+             if current_user.voted_for?(@quest_vote_against)
+               current_user.unvote_for(@quest_vote_against)
+             else 
+               current_user.vote_exclusively_against(@quest_vote_against)
+             end
+
+             positive_vote_count = @quest_vote_against.votes_for
+             negative_vote_count = @quest_vote_against.votes_against
+             logger.info current_user.voted_for?(@quest_vote_against)               
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote against"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+             
+           else
+             positive_vote_count = @quest_vote_against.votes_for
+             negative_vote_count = @quest_vote_against.votes_against
+             logger.info current_user.voted_for?(@quest_vote_against)               
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote against"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+           end
+         end
+         
+end
