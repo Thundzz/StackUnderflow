@@ -1,8 +1,7 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "erreur") %> 
-        ont empêché d'enregistrer votre inscription</h2>
-    <p>Merci de corriger ces champs :</p>
+    <h2>Inscription impossible (<%= pluralize(@user.errors.count, "erreur") %>)</h2>
+    <p> Veuillez corriger les problème suivants :</p>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
