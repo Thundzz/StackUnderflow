@@ -1,7 +1,0 @@
- <p><button type="button" class="btn btn-default btn-lg">
-             <span class="glyphicon glyphicon-thumbs-up"></span>
-          </button>
-       <button type="button" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-thumbs-down"></span> 
-</button>
-        </p>
