@@ -37,7 +37,8 @@
                 dataType: "json",
                 data: {term: request.term},
                 success: function(data) {
-                  response($.map(data, function(item) { var nom_controller = "<%=controller_name%>"
+                  response($.map(data, function(item) { 
+               var nom_controller = "<%=controller_name%>"
                if (nom_controller == "users")
                   { return {
                       label: item.lastname+' '+item.name,

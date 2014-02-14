@@ -13580,3 +13580,341 @@ string :
 ja
   [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%ja%')[0m
 Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-14 07:32:22 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (23.9ms)
+Completed 200 OK in 110ms (Views: 96.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:32:22 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (115ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:32:22 +0100
+Served asset /token-input.css - 304 Not Modified (65ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:32:23 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (42ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-14 07:32:24 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2},{"content":"<p><strong>zjdzldjlkz&nbsp;</strong><em>sjdksjdlsk</em>&nbsp;&nbsp;</p><pre class=\"brush:java;\">class CLIST_S{\r\n \r\n\tvoid afficher(){\r\n\t\tint size = liste.size();\r\n\t\tSystem.out.println(&quot;Taille de la liste = &quot; + size);\r\n\t\tIterator&lt;String&gt; it = liste.iterator();\r\n\t\twhile(it.hasNext()){\r\n\t\t\tSystem.out.print(&quot;&#39;&quot; + it.next() + &quot;&#39; &quot;);\r\n\t\t}\r\n\t\tSystem.out.print(&quot;\\n&quot;);\r\n\t}\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T19:45:34Z","id":6,"score":null,"title":"test 5","updated_at":"2014-02-12T19:45:34Z","user_id":2}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 6[0m
+  Rendered questions/index.html.erb within layouts/application (91.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered shared/_menu.html.erb (2.4ms)
+Completed 200 OK in 114ms (Views: 99.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:32:24 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:32:24 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:32:24 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-14 07:32:26 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-14 07:32:26 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered shared/_menu.html.erb (3.6ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:32:26 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:32:26 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:32:26 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-02-14 07:32:33 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:32:33 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:32:33 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:32:33 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-02-14 07:32:39 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZJpvcLgOYzpNZqHsLCucQo2eUQ96oRrG+xaF4k74d4=", "session"=>{"email"=>"seifeddinejemli@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"S'identifier"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'seifeddinejemli@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 19ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-14 07:32:39 +0100
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered questions/new.html.erb within layouts/application (7.4ms)
+  Rendered shared/_menu.html.erb (1.3ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /ckeditor/config.js - 200 OK (35ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=E0LB" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /ckeditor/skins/moono/editor.css - 200 OK (38ms)
+
+
+Started GET "/assets/ckeditor/contents.css?t=E0LB" for 127.0.0.1 at 2014-02-14 07:32:40 +0100
+Served asset /ckeditor/contents.css - 200 OK (20ms)
+
+
+Started GET "/tags.json?q=ja" for 127.0.0.1 at 2014-02-14 07:32:52 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"ja"}
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+ja
+string :
+ja
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE (name like '%ja%')
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tags.json?q=j" for 127.0.0.1 at 2014-02-14 07:32:53 +0100
+Processing by TagsController#index as JSON
+  Parameters: {"q"=>"j"}
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" 
+test c++
+j
+string :
+j
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name like '%j%')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered questions/new.html.erb within layouts/application (1.7ms)
+  Rendered shared/_menu.html.erb (1.2ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Served asset /tags.css - 404 Not Found (281ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/tags.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=E0LB" for 127.0.0.1 at 2014-02-14 07:34:10 +0100
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-14 07:34:11 +0100
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" 
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2},{"content":"<p><strong>zjdzldjlkz&nbsp;</strong><em>sjdksjdlsk</em>&nbsp;&nbsp;</p><pre class=\"brush:java;\">class CLIST_S{\r\n \r\n\tvoid afficher(){\r\n\t\tint size = liste.size();\r\n\t\tSystem.out.println(&quot;Taille de la liste = &quot; + size);\r\n\t\tIterator&lt;String&gt; it = liste.iterator();\r\n\t\twhile(it.hasNext()){\r\n\t\t\tSystem.out.print(&quot;&#39;&quot; + it.next() + &quot;&#39; &quot;);\r\n\t\t}\r\n\t\tSystem.out.print(&quot;\\n&quot;);\r\n\t}\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T19:45:34Z","id":6,"score":null,"title":"test 5","updated_at":"2014-02-12T19:45:34Z","user_id":2}]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 6
+  Rendered questions/index.html.erb within layouts/application (11.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.9ms)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:34:12 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:34:12 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:34:12 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 07:34:12 +0100
+Served asset /tags.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/tags.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-14 07:35:05 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2},{"content":"<p><strong>zjdzldjlkz&nbsp;</strong><em>sjdksjdlsk</em>&nbsp;&nbsp;</p><pre class=\"brush:java;\">class CLIST_S{\r\n \r\n\tvoid afficher(){\r\n\t\tint size = liste.size();\r\n\t\tSystem.out.println(&quot;Taille de la liste = &quot; + size);\r\n\t\tIterator&lt;String&gt; it = liste.iterator();\r\n\t\twhile(it.hasNext()){\r\n\t\t\tSystem.out.print(&quot;&#39;&quot; + it.next() + &quot;&#39; &quot;);\r\n\t\t}\r\n\t\tSystem.out.print(&quot;\\n&quot;);\r\n\t}\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T19:45:34Z","id":6,"score":null,"title":"test 5","updated_at":"2014-02-12T19:45:34Z","user_id":2}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 6[0m
+  Rendered questions/index.html.erb within layouts/application (15.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 07:35:05 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 07:35:05 +0100
+Served asset /token-input.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 07:35:05 +0100
+Compiled tags.css  (0ms)  (pid 20840)
+Served asset /tags.css - 200 OK (1363ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:35:06 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
