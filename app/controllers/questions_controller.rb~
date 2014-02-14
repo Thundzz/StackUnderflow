@@ -124,7 +124,7 @@ class QuestionsController < ApplicationController
         end
 
         def vote_against
-             logger.info "***vote against***!!!"
+             logger.info "***vote against*!!!"
              logger.info params[:id]
             @quest_vote_against = Question.find(params[:id])
              logger.info @quest_vote_against

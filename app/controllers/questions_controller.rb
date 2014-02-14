@@ -128,7 +128,7 @@ class QuestionsController < ApplicationController
              logger.info params[:id]
             @quest_vote_against = Question.find(params[:id])
              logger.info @quest_vote_against
-                 if(current_user.id != @quest_vote_for.user.id)
+                 if(current_user.id != @quest_vote_against.user.id)
             if current_user.voted_for?(@quest_vote_against)
                 current_user.unvote_for(@quest_vote_against)
             else 

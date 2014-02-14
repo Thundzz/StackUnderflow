@@ -18626,3 +18626,382 @@ calcul vote for
 0
   Rendered questions/vote_for.js.erb (0.0ms)
 Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/7" for 127.0.0.1 at 2014-02-14 12:55:24 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 7[0m
+  Rendered questions/show.html.erb within layouts/application (33.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (3.4ms)
+Completed 200 OK in 106ms (Views: 45.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 12:55:24 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 12:55:24 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 12:55:24 +0100
+Served asset /tags.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 12:55:24 +0100
+Served asset /token-input.css - 304 Not Modified (3ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-14 12:55:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-02-14 12:55:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-02-14 12:55:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/seif/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/questions/7/vote_for" for 127.0.0.1 at 2014-02-14 12:55:28 +0100
+Processing by QuestionsController#vote_for as JS
+  Parameters: {"id"=>"7"}
+***vote for***!!!
+7
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+***current user id***!!!
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+sjemli
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote for
+0
+  Rendered questions/vote_for.js.erb (0.4ms)
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:55:30 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x00000003f9daf0>
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `user' for nil:NilClass):
+  app/controllers/questions_controller.rb:131:in `vote_against'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:55:30 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x007fe0685a65b8>
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `user' for nil:NilClass):
+  app/controllers/questions_controller.rb:131:in `vote_against'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (19.7ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.8ms)
+
+
+Started GET "/questions/7/vote_for" for 127.0.0.1 at 2014-02-14 12:55:31 +0100
+Processing by QuestionsController#vote_for as JS
+  Parameters: {"id"=>"7"}
+***vote for***!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+***current user id***!!!
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+sjemli
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote for
+0
+  Rendered questions/vote_for.js.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/7/vote_for" for 127.0.0.1 at 2014-02-14 12:55:32 +0100
+Processing by QuestionsController#vote_for as JS
+  Parameters: {"id"=>"7"}
+***vote for***!!!
+7
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+***current user id***!!!
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+sjemli
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote for
+0
+  Rendered questions/vote_for.js.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:55:33 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x00000003febc28>
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `user' for nil:NilClass):
+  app/controllers/questions_controller.rb:131:in `vote_against'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:55:34 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x000000039cee30>
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `user' for nil:NilClass):
+  app/controllers/questions_controller.rb:131:in `vote_against'
+
+
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (24.0ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/seif/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/7" for 127.0.0.1 at 2014-02-14 12:57:18 +0100
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = 7[0m
+  Rendered questions/show.html.erb within layouts/application (32.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_menu.html.erb (3.3ms)
+Completed 200 OK in 102ms (Views: 45.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 12:57:18 +0100
+Served asset /ckeditor/ckeditor.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 12:57:18 +0100
+Served asset /jquery.tokeninput.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 12:57:18 +0100
+Served asset /tags.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 12:57:18 +0100
+Served asset /token-input.css - 304 Not Modified (3ms)
+
+
+Started GET "/questions/7/vote_for" for 127.0.0.1 at 2014-02-14 12:57:20 +0100
+Processing by QuestionsController#vote_for as JS
+  Parameters: {"id"=>"7"}
+***vote for***!!!
+7
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+***current user id***!!!
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+sjemli
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote for
+0
+  Rendered questions/vote_for.js.erb (0.4ms)
+Completed 200 OK in 14ms (Views: 1.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/7/vote_for" for 127.0.0.1 at 2014-02-14 12:57:21 +0100
+Processing by QuestionsController#vote_for as JS
+  Parameters: {"id"=>"7"}
+***vote for***!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+***current user id***!!!
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+sjemli
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote for
+0
+  Rendered questions/vote_for.js.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:57:22 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x00000003d20958>
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote against
+0
+  Rendered questions/vote_against.js.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:57:22 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x0000000428d288>
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote against
+0
+  Rendered questions/vote_against.js.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/7/vote_against" for 127.0.0.1 at 2014-02-14 12:57:22 +0100
+Processing by QuestionsController#vote_against as JS
+  Parameters: {"id"=>"7"}
+***vote against*!!!
+7
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+#<Question:0x0000000433e088>
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 't'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question' AND "votes"."vote" = 'f'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = 2 AND "votes"."voter_type" = 'User' AND "votes"."vote" = 't' AND "votes"."voteable_id" = 7 AND "votes"."voteable_type" = 'Question'
+false
+calcul vote against
+0
+  Rendered questions/vote_against.js.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms)
