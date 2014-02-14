@@ -19,8 +19,9 @@ class AnswersController < ApplicationController
 	end
 
 	def show
-		@answer= Answer.find(params[:id])
-	end
+          @answer = Answer.find(params[:id])
+          @point = @answer.votes_for
+        end
 
 	def edit
 		@answer = Answer.find( params[:id] )
@@ -64,4 +65,85 @@ class AnswersController < ApplicationController
 			redirect_to question_path(answer.question), :notice => "Votre reponse n'a pas pu etre supprimee"
 		end 
 	end
+
+        def vote_for
+           logger.info "***vote for***!!!"
+           logger.info params[:id]
+           @answ_vote_for = Answer.find(params[:id])
+           logger.info "***current user id***!!!"
+           logger.info current_user.login
+           
+           if(current_user.id != @answ_vote_for.user.id)
+             if current_user.voted_against?(@answ_vote_for)
+               current_user.unvote_for(@answ_vote_for)
+             else 
+               current_user.vote_exclusively_for(@answ_vote_for)
+             end
+             
+             positive_vote_count = @answ_vote_for.votes_for
+             negative_vote_count = @answ_vote_for.votes_against
+             logger.info current_user.voted_for?(@answ_vote_for)       
+             @total_vote =positive_vote_count-negative_vote_count
+             @answer_id = @answ_vote_for.id
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+            end
+             
+           else
+             positive_vote_count = @answ_vote_for.votes_for
+             negative_vote_count = @answ_vote_for.votes_against
+             logger.info current_user.voted_for?(@answ_vote_for)       
+             @total_vote =positive_vote_count-negative_vote_count
+             @answer_id = @answ_vote_for.id
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+            end
+             
+           end
+        end
+         
+         def vote_against
+           logger.info "***vote against*!!!"
+           logger.info params[:id]
+           @answ_vote_against = Answer.find(params[:id])
+             logger.info @answ_vote_against
+           if(current_user.id != @answ_vote_against.user.id)
+             if current_user.voted_for?(@answ_vote_against)
+               current_user.unvote_for(@answ_vote_against)
+             else 
+               current_user.vote_exclusively_against(@answ_vote_against)
+             end
+
+             positive_vote_count = @answ_vote_against.votes_for
+             negative_vote_count = @answ_vote_against.votes_against
+             logger.info current_user.voted_for?(@answ_vote_against)               
+             @total_vote =positive_vote_count-negative_vote_count
+             @answer_id = @answ_vote_against.id
+             logger.info "calcul vote against"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+             
+           else
+             positive_vote_count = @answ_vote_against.votes_for
+             negative_vote_count = @answ_vote_against.votes_against
+             logger.info current_user.voted_for?(@answ_vote_against)               
+             @total_vote =positive_vote_count-negative_vote_count
+             @answer_id = @answ_vote_against.id
+             logger.info "calcul vote against"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+           end
+         end
 end

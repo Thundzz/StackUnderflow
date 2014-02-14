@@ -84,80 +84,80 @@ class QuestionsController < ApplicationController
 
 
          def vote_for
-             logger.info "***vote for***!!!"
-             logger.info params[:id]
-            @quest_vote_for = Question.find(params[:id])
-            logger.info "***current user id***!!!"
-            logger.info current_user.login
-         
-            if(current_user.id != @quest_vote_for.user.id)
+           logger.info "***vote for***!!!"
+           logger.info params[:id]
+           @quest_vote_for = Question.find(params[:id])
+           logger.info "***current user id***!!!"
+           logger.info current_user.login
+           
+           if(current_user.id != @quest_vote_for.user.id)
              if current_user.voted_against?(@quest_vote_for)
-                current_user.unvote_for(@quest_vote_for)
-            else 
-            current_user.vote_exclusively_for(@quest_vote_for)
-            end
-
+               current_user.unvote_for(@quest_vote_for)
+             else 
+               current_user.vote_exclusively_for(@quest_vote_for)
+             end
+             
              positive_vote_count = @quest_vote_for.votes_for
              negative_vote_count = @quest_vote_for.votes_against
              logger.info current_user.voted_for?(@quest_vote_for)       
-           @total_vote =positive_vote_count-negative_vote_count
-           logger.info "calcul vote for"
-            logger.info positive_vote_count-negative_vote_count
-            respond_to do |format|
-            format.js
-            format.html
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
             end
-       
-      else
-   positive_vote_count = @quest_vote_for.votes_for
+             
+           else
+             positive_vote_count = @quest_vote_for.votes_for
              negative_vote_count = @quest_vote_for.votes_against
              logger.info current_user.voted_for?(@quest_vote_for)       
-           @total_vote =positive_vote_count-negative_vote_count
-           logger.info "calcul vote for"
-            logger.info positive_vote_count-negative_vote_count
-            respond_to do |format|
-            format.js
-            format.html
+             @total_vote =positive_vote_count-negative_vote_count
+             logger.info "calcul vote for"
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
             end
-
+             
+           end
         end
-        end
-
-        def vote_against
-             logger.info "***vote against*!!!"
-             logger.info params[:id]
-            @quest_vote_against = Question.find(params[:id])
+         
+         def vote_against
+           logger.info "***vote against*!!!"
+           logger.info params[:id]
+           @quest_vote_against = Question.find(params[:id])
              logger.info @quest_vote_against
-                 if(current_user.id != @quest_vote_against.user.id)
-            if current_user.voted_for?(@quest_vote_against)
-                current_user.unvote_for(@quest_vote_against)
-            else 
-            current_user.vote_exclusively_against(@quest_vote_against)
-            end
+           if(current_user.id != @quest_vote_against.user.id)
+             if current_user.voted_for?(@quest_vote_against)
+               current_user.unvote_for(@quest_vote_against)
+             else 
+               current_user.vote_exclusively_against(@quest_vote_against)
+             end
 
-                positive_vote_count = @quest_vote_against.votes_for
-               negative_vote_count = @quest_vote_against.votes_against
+             positive_vote_count = @quest_vote_against.votes_for
+             negative_vote_count = @quest_vote_against.votes_against
              logger.info current_user.voted_for?(@quest_vote_against)               
-@total_vote =positive_vote_count-negative_vote_count
+             @total_vote =positive_vote_count-negative_vote_count
              logger.info "calcul vote against"
-            logger.info positive_vote_count-negative_vote_count
-           respond_to do |format|
-            format.js
-            format.html
-            end
-       
-  else
-   positive_vote_count = @quest_vote_against.votes_for
-               negative_vote_count = @quest_vote_against.votes_against
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+             
+           else
+             positive_vote_count = @quest_vote_against.votes_for
+             negative_vote_count = @quest_vote_against.votes_against
              logger.info current_user.voted_for?(@quest_vote_against)               
-@total_vote =positive_vote_count-negative_vote_count
+             @total_vote =positive_vote_count-negative_vote_count
              logger.info "calcul vote against"
-            logger.info positive_vote_count-negative_vote_count
-           respond_to do |format|
-            format.js
-            format.html
-            end
-end
-end
-
+             logger.info positive_vote_count-negative_vote_count
+             respond_to do |format|
+               format.js
+               format.html
+             end
+           end
+         end
+         
 end

@@ -15,6 +15,13 @@ resources :questions do
   end
 end
 
+  resources :answers do
+  member do
+    get 'vote_for'
+    get 'vote_against'
+  end
+end
+
 
 
   # The priority is based upon order of creation:

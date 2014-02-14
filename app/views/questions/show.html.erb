@@ -40,23 +40,42 @@ cellspacing="2">
 	<hr />
 	<% @answers.each do |answer| %>
 	<div class="answer">
-		<p><%= answer.content.html_safe %></p>
+	  
+	  <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+cellspacing="2">
+	    <tbody>
+	      
+	      <tr>
+		<td style="vertical-align: center;" width="50"><p> <br><div style="font-size:32px;">
+		      <font face="Verdana" color="#800080">
+			<b ><center id=<%=answer.id%>> <%= answer.votes_for-answer.votes_against  %></center> </b>
+		    </font></div>
+		    
+		</td>
+		<td style="vertical-align: top;"><br><span> <%= answer.content.html_safe %>  </span></p>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+	  
+		
 		<p> 
+		  
+
 			Par <%= link_to answer.user.login, answer.user %>
+			
 			<% if (current_user == answer.user) %>
 				 | <%= link_to "Editer cette reponse", edit_answer_path(answer) 
 				%> |
               
 				<%= link_to "Supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?", :method => :delete %>
- <p><button type="button" class="btn btn-default btn-lg">
-             <span class="glyphicon glyphicon-thumbs-up"></span>
-          </button>
-       <button type="button" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-thumbs-down"></span> 
-</button>
-        </p>
 			<% end %>
 		</p>
+		<%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_answer_path(answer), :remote => true,:class =>"btn btn-default btn-lg" %>
+			
+			<%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_answer_path(answer), :remote => true,:class =>"btn btn-default btn-lg" %>
 	</div>
 	<% end %>
 
