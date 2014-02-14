@@ -1,4 +1,3 @@
-
 <div class="tag">
  
 <h1> <%=  link_to @tag.name, tag_path(@tag) %> </h1>
@@ -6,7 +5,7 @@
 <b>Description :</b>
 	<p> <%= @tag.description().html_safe %>  </p>
 </br><hr/>  
-<b>Questions correspondantes à ce tag :</b>
+<b>Questions correspondant à ce tag :</b>
 	
 	</br></br>
 	<% @questions.each do |question| %>
@@ -14,6 +13,6 @@
 	<% end %>
 	
 	<hr />
-	<%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr de vouloir supprimer ce tag?", :method => :delete, class: "btn btn-default"%>
+	<%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr(e) de vouloir supprimer ce tag?", :method => :delete, class: "btn btn-default"%>
 
 </div>

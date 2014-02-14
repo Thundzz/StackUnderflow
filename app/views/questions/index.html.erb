@@ -1,21 +1,21 @@
-	<h1>Page d'accueil des questions</h1>
+<h1>Page d'accueil des questions</h1>
 
 <p><%= link_to "Ajouter une nouvelle question", new_question_path %></p>
 
-<p>Cette page liste les questions créées jusqu'à maintenant</p>
+<p>Cette page liste les questions posées</p>
 <hr/>
 <% @questions.each do |question|%>
 <div class="question">
-<h2> <%=  link_to question.title, question_path(question) %> par <%= link_to question.user.login, question.user %> </h2>
-<% unless question.tags.blank? %>
-<b><u>Tags</u> :</b>
- <ul class="tags"> 
-   <% question.tags.each do |tag|%>
-   <li><a href="#"><%= tag.name%></a></li>
-   <%end%>
-</ul>
-<br/>
-<%end%>
-<hr />
+  <h2> <%=  link_to question.title, question_path(question) %> par <%= link_to question.user.login, question.user %> </h2>
+  <% unless question.tags.blank? %>
+  <b><u>Tags</u> :</b>
+  <ul class="tags"> 
+    <% question.tags.each do |tag|%>
+    <li><a href="#"><%= tag.name%></a></li>
+    <%end%>
+  </ul>
+  <br/>
+  <%end%>
+  <hr />
 </div>
 <%end %>

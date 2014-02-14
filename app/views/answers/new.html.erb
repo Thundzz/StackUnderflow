@@ -1,4 +1,4 @@
-<h1>Ajouter une nouvelle réponse</h1>
+<h1>Nouvelle réponse</h1>
 
 
 <div class="form-group">
@@ -6,7 +6,7 @@
 	<%= form_for @answer do |f| %>
 	<p>
 
-		Contenu : 
+		Réponse : 
 		<%= f.text_area :content, class:"form-control", rows:"3" %>
 		<%= f.hidden_field :question_id %>
 

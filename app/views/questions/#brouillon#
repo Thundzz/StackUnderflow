@@ -24,9 +24,6 @@ cellspacing="2">
 
 
 
-
-
-
 <br/>
 
     <p>
@@ -83,3 +80,4 @@ cellspacing="2">
 	<% end %>
 
 </div>
+

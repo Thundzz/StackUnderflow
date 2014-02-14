@@ -3,7 +3,7 @@
 <p>Cette page liste les utilisateurs créés jusqu'à maintenant</p>
 <% @users.each do |user|%>
 <div class="name">
-<h2> <%= user.lastname %> <%= user.name %></h2> <%= link_to "Accéder au profil",  user_path(user) %> 
+<h2> <%= user.name %> <%= user.lastname %></h2> <%= link_to "Accéder au profil",  user_path(user) %> 
 <hr />
 </div>
 <%end %>
