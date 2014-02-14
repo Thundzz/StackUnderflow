@@ -13918,3 +13918,132 @@ Served asset /tags.css - 200 OK (1363ms)
 
 Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 07:35:06 +0100
 Served asset /jquery.tokeninput.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-14 11:19:34 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" 
+no term
+json
+[]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (19.2ms)
+Completed 200 OK in 45ms (Views: 32.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/ckeditor/ckeditor.js" for 127.0.0.1 at 2014-02-14 11:19:34 +0100
+Served asset /ckeditor/ckeditor.js - 200 OK (53ms)
+
+
+Started GET "/assets/jquery.tokeninput.js" for 127.0.0.1 at 2014-02-14 11:19:34 +0100
+Served asset /jquery.tokeninput.js - 200 OK (1ms)
+
+
+Started GET "/assets/token-input.css" for 127.0.0.1 at 2014-02-14 11:19:34 +0100
+Served asset /token-input.css - 200 OK (1ms)
+
+
+Started GET "/assets/tags.css" for 127.0.0.1 at 2014-02-14 11:19:34 +0100
+Served asset /tags.css - 200 OK (2ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-02-14 11:20:14 +0100
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" [0m
+test c++
+
+string :
+
+  Rendered tags/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (2.0ms)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-02-14 11:20:15 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" 
+no term
+[#<User id: 1, right: 3, login: "esagardia", name: "Elorri", lastname: "Sagardia", study: 1, points: 0, email: "esagardia@enseirb.fr", created_at: "2014-02-07 13:22:36", updated_at: "2014-02-07 13:22:36", encrypted_password: "0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4a...", salt: "e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f33...">, #<User id: 2, right: 3, login: "sjemli", name: "seif", lastname: "jemli", study: 1, points: 0, email: "seifeddinejemli@gmail.com", created_at: "2014-02-10 17:41:26", updated_at: "2014-02-10 17:41:26", encrypted_password: "97ca9956e4c83b46fe3b40dda813775f0960aac2094ac46c6bb...", salt: "756e9aa8ed6d03932218cb3c5ce35e166a82ae41798ded69aa4...">]
+json
+[{"created_at":"2014-02-07T13:22:36Z","email":"esagardia@enseirb.fr","encrypted_password":"0f081dac7adbc9f39ceb98930ed14ae34f1d5ee9ba052c57d4adf69a97b94791","id":1,"lastname":"Sagardia","login":"esagardia","name":"Elorri","points":0,"right":3,"salt":"e42f287ae27caf7b169aebd2d9cdd84714074f1e023868a3f338d6c2b66921f6","study":1,"updated_at":"2014-02-07T13:22:36Z"},{"created_at":"2014-02-10T17:41:26Z","email":"seifeddinejemli@gmail.com","encrypted_password":"97ca9956e4c83b46fe3b40dda813775f0960aac2094ac46c6bbdc22b84d46247","id":2,"lastname":"jemli","login":"sjemli","name":"seif","points":0,"right":3,"salt":"756e9aa8ed6d03932218cb3c5ce35e166a82ae41798ded69aa4b90aea63c2610","study":1,"updated_at":"2014-02-10T17:41:26Z"}]
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.7ms)
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-02-14 11:20:17 +0100
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+no term Question
+json
+[{"content":"je comprends pas comment le polymorphisme fonctionne en java","created_at":"2014-02-07T13:24:44Z","id":1,"score":null,"title":"ma super question","updated_at":"2014-02-07T13:24:44Z","user_id":1},{"content":"c++ c'est quoi?","created_at":"2014-02-07T13:27:25Z","id":2,"score":null,"title":"ma deuxieme super question","updated_at":"2014-02-07T13:27:25Z","user_id":1},{"content":"jfjf","created_at":"2014-02-10T17:52:23Z","id":3,"score":null,"title":"Question c++","updated_at":"2014-02-10T17:52:23Z","user_id":2},{"content":"<p>this is a<strong> test&nbsp;</strong>on the <em>editor&nbsp;</em>!!! su<em>ceesssss!</em></p><p>&nbsp;</p><pre class=\"brush:java;\"> PrintWriter sortie = null;\r\n    try {\r\n      // &#39;sortie&#39; permet d&#39;&eacute;crire du texte dans un flux de caract&egrave;res dirig&eacute;\r\n      // vers notre fichier.\r\n      sortie = new PrintWriter(new FileWriter(fichier));\r\n    } catch (IOException e) {\r\n      // Si sa cr&eacute;ation &eacute;choue, on s&#39;arr&ecirc;te.\r\n      System.err.println(&quot;# Erreur : impossible de cr&eacute;er \\&quot;&quot;+ fichier +&quot;\\&quot;.&quot;);\r\n      System.exit(1);\r\n    }</pre><p>Hope it works!!</p>","created_at":"2014-02-12T03:28:51Z","id":4,"score":null,"title":"Essai éditeur","updated_at":"2014-02-12T03:28:51Z","user_id":2},{"content":"<p><strong>emflmefv</strong><em>rklekrlekrlv &nbsp;</em></p><pre class=\"brush:css;\">h1 {\r\n  text-align: center;\r\n  color: blue;\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T04:06:55Z","id":5,"score":null,"title":"Essai éditeur 2","updated_at":"2014-02-12T04:06:55Z","user_id":2},{"content":"<p><strong>zjdzldjlkz&nbsp;</strong><em>sjdksjdlsk</em>&nbsp;&nbsp;</p><pre class=\"brush:java;\">class CLIST_S{\r\n \r\n\tvoid afficher(){\r\n\t\tint size = liste.size();\r\n\t\tSystem.out.println(&quot;Taille de la liste = &quot; + size);\r\n\t\tIterator&lt;String&gt; it = liste.iterator();\r\n\t\twhile(it.hasNext()){\r\n\t\t\tSystem.out.print(&quot;&#39;&quot; + it.next() + &quot;&#39; &quot;);\r\n\t\t}\r\n\t\tSystem.out.print(&quot;\\n&quot;);\r\n\t}\r\n}</pre><p>&nbsp;</p>","created_at":"2014-02-12T19:45:34Z","id":6,"score":null,"title":"test 5","updated_at":"2014-02-12T19:45:34Z","user_id":2}]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "questions_tags" ON "tags"."id" = "questions_tags"."tag_id" WHERE "questions_tags"."question_id" = 6[0m
+  Rendered questions/index.html.erb within layouts/application (52.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered shared/_menu.html.erb (1.5ms)
+Completed 200 OK in 67ms (Views: 57.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-02-14 11:21:38 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered shared/_menu.html.erb (1.8ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions?utf8=%E2%9C%93" for 127.0.0.1 at 2014-02-14 11:21:40 +0100
+Processing by SessionsController#index as HTML
+  Parameters: {"utf8"=>"✓"}
+Guessed service url: "http://localhost:3000/sessions?utf8=%E2%9C%93"
+Generated login url: https://cas.ipb.fr/login?service=http%3A%2F%2Flocalhost%3A3000%2Fsessions%3Futf8%3D%25E2%259C%2593
+Redirecting to "https://cas.ipb.fr/login?service=http%3A%2F%2Flocalhost%3A3000%2Fsessions%3Futf8%3D%25E2%259C%2593"
+Redirected to https://cas.ipb.fr/login?service=http%3A%2F%2Flocalhost%3A3000%2Fsessions%3Futf8%3D%25E2%259C%2593
+Filter chain halted as CASClient::Frameworks::Rails::Filter rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions?utf8=%E2%9C%93&ticket=ST-99931-eH3t4A7fdNfN1bJgybVi-cas" for 127.0.0.1 at 2014-02-14 11:21:41 +0100
+Processing by SessionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "ticket"=>"ST-99931-eH3t4A7fdNfN1bJgybVi-cas"}
+Request contains ticket "ST-99931-eH3t4A7fdNfN1bJgybVi-cas".
+Guessed service url: "http://localhost:3000/sessions?utf8=%E2%9C%93"
+Requesting CAS response for URI https://cas.ipb.fr/proxyValidate?service=http%3A%2F%2Flocalhost%3A3000%2Fsessions%3Futf8%3D%25E2%259C%2593&ticket=ST-99931-eH3t4A7fdNfN1bJgybVi-cas
+CAS server responded with #<Net::HTTPOK 200 OK readbody=true>:
+<cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+	<cas:authenticationSuccess>
+		<cas:user>fbouquet</cas:user>
+
+
+	</cas:authenticationSuccess>
+</cas:serviceResponse>
+Ticket "ST-99931-eH3t4A7fdNfN1bJgybVi-cas" for service "http://localhost:3000/sessions?utf8=%E2%9C%93" belonging to user "fbouquet" is VALID.
+Extra user attributes provided along with ticket "ST-99931-eH3t4A7fdNfN1bJgybVi-cas": {}.
+Completed 500 Internal Server Error in 768ms
+
+NameError (uninitialized constant SessionsController::HEAD):
+  app/controllers/sessions_controller.rb:5:in `index'
+
+
+  Rendered /home/florent/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/florent/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/florent/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
