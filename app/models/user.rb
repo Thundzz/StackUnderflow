@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 acts_as_voter
 
  has_karma :questions, :as => :user, :weight => [ 1, 1]
+ has_karma :answers, :as => :user, :weight => [ 1, 1]
   #expression reguliere email
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i 
   #constantes enum right
