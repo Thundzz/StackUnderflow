@@ -1,12 +1,31 @@
+<style>
+.h3{font-family: Gill Sans, Verdana;
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;}
+h1{
+ font: bold 30px "Century Schoolbook", Georgia, Times, serif;
+	color: #333;
+	line-height: 90%;
+	margin: .2em 0 .4em 0;
+	letter-spacing: -2px;}
+
+</style>
+
+
 <h1>Page d'accueil des Tags</h1>
+<p class="h3">Cette page liste les tags</p>
+<p ><%= link_to "Nouveau tag", new_tag_path , :class=>"btn btn-info"%></p>
 
-<p><%= link_to "Nouveau tag", new_tag_path , :class=>"btn btn-info"%></p>
 
-<p>Cette page liste les tags</p>
 
 <% @tagsearch.each do |tag|%>
-<div class="tag">
-<h2> <%=  link_to tag.name, tag_path(tag) %></h2>
-<hr />
-</div>
+
+<% if (tag.questions.size==1) then ch="Question" else ch="Questions" end%>
+    <div class="panel-body ">
+     <u class="post-tag"><%=link_to tag.name, tag_path(tag) %></u> : Utilisé dans <%= tag.questions.size%> <%=ch%>
+     </div>
+
 <%end %>

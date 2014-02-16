@@ -1,18 +1,63 @@
-<div class="tag">
- 
-<h1> <%=  link_to @tag.name, tag_path(@tag) %> </h1>
+<style>
+h3{font-family: Gill Sans, Verdana;
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;}
+h1{
+ font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+	color: #333;
+	line-height: 90%;
+	margin: .2em 0 .4em 0;
+	letter-spacing: -2px;
+}
+</style>
+ <% if (@questions.size==1) then ch="Question correspondante" else ch="Question correspondantes" end%> 
+<h1><%= @tag.name%> :</h1><h3> <%= @questions.size%> <%=ch%></h3>
 <hr/>
-<b>Description :</b>
-	<p> <%= @tag.description().html_safe %>  </p>
-</br><hr/>  
-<b>Questions correspondant à ce tag :</b>
+
+	</br>
 	
-	</br></br>
-	<% @questions.each do |question| %>
+	
+	
+
+<!--************************************nouveau code **************************-->
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Description
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+       <%= @tag.description().html_safe %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <%=ch%>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+       <% @questions.each do |question| %>
 	<p><%= link_to question.title, question_path(question) %> </p>
 	<% end %>
-	
-	<hr />
-	<%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr(e) de vouloir supprimer ce tag?", :method => :delete, class: "btn btn-default"%>
+      </div>
+    </div>
+  </div>
+<hr/>
+  <%= link_to "Supprimer ce tag", tag_path(@tag), :confirm => "Êtes vous sûr(e) de vouloir supprimer ce tag?", :method => :delete, class: "btn btn-danger"%>
+  </div>
+
 
 </div>
+

@@ -1,6 +1,6 @@
 <style>
 .h3{font-family: Gill Sans, Verdana;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 14px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
