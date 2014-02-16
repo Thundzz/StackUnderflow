@@ -20,13 +20,6 @@ cellspacing="2">
 </tbody>
 </table>
 
-
-
-
-
-
-
-
 <br/>
 
     <p>
@@ -38,7 +31,9 @@ cellspacing="2">
            
 
         </p>
-        <%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id) %>
+      
+<!-- ******************************partie Reponses *************************** -->
+  <%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
          
 	<hr />
 	<% @answers.each do |answer| %>

@@ -1,7 +1,7 @@
 <h1>Page d'accueil des posts</h1>
 
 
-<p><%= link_to "Nouveau post", new_post_path , :class=>"btn btn-info"%></p>
+<p><%= link_to "Nouveau post", new_post_path %></p>
 
 <p>Cette page liste les posts créés jusqu'à maintenant</p>
 
