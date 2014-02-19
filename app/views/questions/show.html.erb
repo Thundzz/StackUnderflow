@@ -1,6 +1,5 @@
 <div class="question">
 	<h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
-	
 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -16,21 +15,34 @@ cellspacing="2">
 <td style="vertical-align: top;"><br><span><%= @question.content().html_safe %>  </span></p>
 </td>
 </tr>
-
 </tbody>
 </table>
 
 <br/>
 
     <p>
-   
-  
+      
+
  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
        
  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
            
 
         </p>
+</br>
+    <p>	
+  <% unless @question.tags.blank? %>
+  <ul class="tags"> 
+    <% @question.tags.each do |tag|%>
+    <li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
+       <%end%>
+       <%end%>
+  </ul>
+  <%= link_to "Ajouter/Supprimer tags", handle_tags_question_path(@question) %>
+</p>
+</br>
+
+
       
 <!-- ******************************partie Reponses *************************** -->
   <%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>

@@ -34,12 +34,12 @@ class QuestionsController < ApplicationController
     end
 
 	def show
-		@question= Question.find(params[:id])
-               positive_vote_count = @question.votes_for
-             negative_vote_count = @question.votes_against
+          @question= Question.find(params[:id])
+          positive_vote_count = @question.votes_for
+          negative_vote_count = @question.votes_against
 
-                @vote_count_show =positive_vote_count-negative_vote_count
-		@answers = @question.answers
+          @vote_count_show =positive_vote_count-negative_vote_count
+          @answers = @question.answers
 	end
 	
 	
@@ -57,9 +57,9 @@ class QuestionsController < ApplicationController
 	def update
 		oldquestion = Question.find(params[:id])
 		if oldquestion.update_attributes(params[:question])
-			redirect_to questions_path, :notice => "Votre question a ete editee avec succes"
+			redirect_to questions_path, :notice => "Votre question a été editée avec succès"
 		else
-			redirect_to questions_path, :notice => "Votre question n'a pas pu etre editee"
+			redirect_to questions_path, :notice => "Votre question n'a pas pu être éditée"
 		end  
 		
 	end
@@ -159,5 +159,11 @@ class QuestionsController < ApplicationController
              end
            end
          end
+
+
+         def handle_tags
+           @question = Question.find(params[:id])
+         end
+         
          
 end

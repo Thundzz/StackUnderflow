@@ -1,0 +1,18 @@
+<div class="question">
+	<h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
+</div>
+<%= form_for @question do |f| %>
+
+        <p>
+		<%= f.label :tag_tokens, "Tags :" %><br/>
+		<%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %> (5 tags au max)
+
+	</p>
+	Tag non trouvé?<%= link_to " ajouter tag", new_tag_path %>
+       
+        <p>
+
+<p>
+		</br> <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+	</p>
+<% end %>

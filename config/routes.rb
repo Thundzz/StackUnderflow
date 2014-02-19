@@ -8,10 +8,11 @@ StackUnderflow::Application.routes.draw do
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
-resources :questions do
-  member do
-    get 'vote_for'
-    get 'vote_against'
+  resources :questions do
+    member do
+      get 'vote_for'
+      get 'vote_against'
+      get 'handle_tags'
   end
 end
 
