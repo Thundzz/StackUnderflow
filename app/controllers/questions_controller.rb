@@ -91,7 +91,8 @@ class QuestionsController < ApplicationController
            logger.info current_user.login
            
            if(current_user.id != @quest_vote_for.user.id)
-             if current_user.voted_against?(@quest_vote_for)
+             @test=0
+              if current_user.voted_against?(@quest_vote_for)
                current_user.unvote_for(@quest_vote_for)
              else 
                current_user.vote_exclusively_for(@quest_vote_for)
@@ -109,6 +110,7 @@ class QuestionsController < ApplicationController
             end
              
            else
+             @test=1
              positive_vote_count = @quest_vote_for.votes_for
              negative_vote_count = @quest_vote_for.votes_against
              logger.info current_user.voted_for?(@quest_vote_for)       
@@ -129,7 +131,8 @@ class QuestionsController < ApplicationController
            @quest_vote_against = Question.find(params[:id])
              logger.info @quest_vote_against
            if(current_user.id != @quest_vote_against.user.id)
-             if current_user.voted_for?(@quest_vote_against)
+               @test=0
+              if current_user.voted_for?(@quest_vote_against)
                current_user.unvote_for(@quest_vote_against)
              else 
                current_user.vote_exclusively_against(@quest_vote_against)
@@ -147,6 +150,7 @@ class QuestionsController < ApplicationController
              end
              
            else
+             @test=1
              positive_vote_count = @quest_vote_against.votes_for
              negative_vote_count = @quest_vote_against.votes_against
              logger.info current_user.voted_for?(@quest_vote_against)               

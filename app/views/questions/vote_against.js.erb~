@@ -1,11 +1,12 @@
 $(".compteur").html("<%= @total_vote %>")
 
+
 if("<%=@test%>"=="1")
 { 
 $(document).trigger("add-alerts", [
     {
 
-      'message': "Vous ne pouvez pas voter pour votre propre Question!",
+      'message': "This is a warning.",
       'priority': 'warning'
     }
   ]);
