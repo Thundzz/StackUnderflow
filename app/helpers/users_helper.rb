@@ -7,7 +7,7 @@ module UsersHelper
 	    else if @user.study == 3
 	    	"<span class=\"label label-warning\">Electronique</span>"
 	    else if @user.study == 4
-	    	"<span class=\"label label-important\">Télécommunication</span>"
+	    	"<span class=\"label label-danger\">Télécommunication</span>"
 	    end
 		end
 		end
