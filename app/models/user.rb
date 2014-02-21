@@ -26,14 +26,14 @@ acts_as_voter
   has_many :questions
   
   validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true
-  # validates :lastname, :presence => true, :length => { :maximum => 50 }
-  # validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => true
-  # validates :name, :presence => true, :length => { :maximum => 50 }
-  # # validates_inclusion_of :study, :in => [1,4]
-  # validates :study, :presence => true
-  # validates :password, :presence => true, :confirmation => true, :length => { :within => 6..40 }
+  validates :lastname, :length => { :maximum => 50 }
+  validates :email, :format => { :with => email_regex }, :uniqueness => true
+  validates :name, :length => { :maximum => 50 }
+  # validates_inclusion_of :study, :in => [1,4]
+  #validates :study
+  validates :password, :confirmation => true, :length => { :within => 6..40 }
 
-  # before_save :encrypt_password, :default_values
+  before_save :encrypt_password, :default_values
   
   def default_values
     self.right ||= 3; # a modifier avec systeme de points

@@ -20,7 +20,7 @@ h1{
 <p class="h3">Cette page liste les utilisateurs</p>
 <% @users.each do |user|%>
 <div class="name">
-<h2> <%= user.name %> <%= user.lastname %></h2> <%= link_to "Accéder au profil",  user_path(user) %> 
+<h2> <%= user.login %></h2> <%= link_to "Accéder au profil",  user %> 
 <hr />
 </div>
 <%end %>

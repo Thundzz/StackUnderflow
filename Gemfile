@@ -4,7 +4,11 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
- gem 'rubycas-client' #gem pour le CAS
+gem 'rubycas-client' #gem pour le CAS
+
+# Gems to make params.require work
+# gem 'rails-api'
+# gem 'strong_parameters'
 
 gem 'thumbs_up'
 group :development, :test do

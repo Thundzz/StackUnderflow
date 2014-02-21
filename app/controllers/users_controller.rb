@@ -31,6 +31,9 @@ def index
 	end
 
   def new
+    if signed_in?
+      redirect_to current_user
+    end
     @title = "S'inscrire"
     @user = User.new
   end
@@ -46,6 +49,28 @@ def index
       render 'new'
     end
   end
+
+  def edit
+    @title = "Editer votre profil"
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profil modifié avec succès."
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+
+  private
+
+    def user_params
+      params.require(:user).permit(:name, :lastname, :study, :email, :password, :password_confirmation)
+    end
 
 
 end
