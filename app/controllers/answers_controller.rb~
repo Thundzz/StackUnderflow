@@ -116,7 +116,6 @@ class AnswersController < ApplicationController
            @answ_vote_against = Answer.find(params[:id])
              logger.info @answ_vote_against
            if(current_user.id != @answ_vote_against.user.id)
-             @test=0
              if current_user.voted_for?(@answ_vote_against)
                current_user.unvote_for(@answ_vote_against)
              else 
@@ -136,7 +135,6 @@ class AnswersController < ApplicationController
              end
              
            else
-             @test=1
              positive_vote_count = @answ_vote_against.votes_for
              negative_vote_count = @answ_vote_against.votes_against
              logger.info current_user.voted_for?(@answ_vote_against)               
