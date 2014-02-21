@@ -1,6 +1,8 @@
 # coding: utf-8 
 
 class UsersController < ApplicationController
+  include UsersHelper #inclut modele session helper
+
   def show
     @user = User.find(params[:id])
     @title = @user.name

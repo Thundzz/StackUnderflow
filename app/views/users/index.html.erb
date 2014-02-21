@@ -18,9 +18,10 @@ h1{
 	<h1>Page d'accueil des Utilisateurs</h1>
 
 <p class="h3">Cette page liste les utilisateurs</p>
+
 <% @users.each do |user|%>
-<div class="name">
-<h2> <%= user.login %></h2> <%= link_to "Accéder au profil",  user %> 
-<hr />
+<div class="name well">
+	<h4>~<%= user.login %></h4>
+	<%= link_to "Accéder au profil",  user %> 
 </div>
 <%end %>

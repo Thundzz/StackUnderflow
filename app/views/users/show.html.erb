@@ -1,21 +1,18 @@
 <h1> Profil utilisateur </h1>
 
-<div class="profil">
-  <h2> <%= @user.login %> (<%= @user.name %> <%= @user.lastname %>) </h2>
-  Filière : 
-  <% if @user.study == 1 %>
-  <%= "Informatique" %>
-  <% else if @user.study == 2 %>
-  <%= "Matméca" %>
-  <% else if @user.study == 3 %>
-  <%= "Electronique" %>
-  <% else if @user.study == 4 %>
-  <%= "Télécommunication" %>
+<div class="profil well">
+  <h2> ~<%= @user.login %> 
+    <% unless @user.name.blank? or @user.lastname.blank? %>
+      (<%= @user.name %> <%= @user.lastname %>) 
+    <% end %>
+  </h2>
+
+  <% unless @user.study.nil? %>
+    <p>Filière : <%= (show_study @user.study).html_safe %></p>
+
   <% end %>
-  <% end %>
-  <% end %>
-  <% end %> <br/>
+
 <!--  Nombre de points : <%= @user.points %>-->
-  Reputation: <%= @user.karma %>
+  <p>Réputation : <span class="label label-info"><%= @user.karma %></span></p>
 
 </div>
