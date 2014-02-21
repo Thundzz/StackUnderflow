@@ -1,6 +1,6 @@
 <div class="question">
 	
-<div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="3000"></div>
+<div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="1200"></div>
 <h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
@@ -52,7 +52,10 @@ cellspacing="2">
 	<hr />
 	<% @answers.each do |answer| %>
 	<div class="answer">
-	  
+	  <div id="<%=answer.id%>x"" class="alert alert-warning alert-dismissable"  style="DISPLAY: none" >
+           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Vous ne pouvez pas voter pour votre propre Réponse!
+          </div>
 	  <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 	    <tbody>

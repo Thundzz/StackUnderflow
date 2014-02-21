@@ -1,1 +1,7 @@
 $("#<%= @answer_id %>").html("<%= @total_vote %>")
+
+if("<%=@test%>"=="1")
+{ 
+$("#<%= @answer_id %>x").fadeIn("fast").delay(1100).fadeOut(100)
+
+}
