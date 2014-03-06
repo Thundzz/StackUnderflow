@@ -10,27 +10,23 @@
   <%= f.text_field :lastname, class:"form-control"%>
 </div>
 <div class="field">
-
-<%= label_tag 'Filière', 'Filière' %>
+  
+  <%= label_tag 'Filière', 'Filière' %>
   <div class="radio-toolbar">
     <%= f.radio_button("study","1") %>
     <%= label_tag 'user_study_1', 'Informatique' %>
-
-
-
+    
     <%= f.radio_button("study","2") %>
     <%= label_tag 'user_study_2', 'Matméca' %>
-
-
+    
     <%= f.radio_button("study","3") %>
     <%= label_tag 'user_study_3', 'Electronique' %>
-
 
     <%= f.radio_button("study","4") %>
     <%= label_tag 'user_study_4', 'Télécommunications' %>
 
   </div>
-
+  
 </div>
 <div class="field">
   <%= f.label :email %><br />

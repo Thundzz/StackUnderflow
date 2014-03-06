@@ -2,16 +2,12 @@
 class SessionsController < ApplicationController
 before_filter CASClient::Frameworks::Rails::Filter,:except => [ :new, :create,:destroy ]
   def index
-    #HEAD
     unless session[:cas_user].blank?
       create_or_login_user session[:cas_user]
     end
-
-    #redirect_to root_path # a modifier, juste pour avoir affichage
   end
 
   def new
-# 2c56c193b9569dd881d6b9109b24aaaf931b7490
     @titre = "S'identifier"
   end
 

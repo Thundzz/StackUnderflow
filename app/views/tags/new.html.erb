@@ -2,20 +2,20 @@
 
 
 <div class="form-group">
-
-<%= form_for @tag do |f| %>
-	<p>
-		Name : 
-		<%= f.text_field :name, class:"form-control" %>
-	</p>
-	
-	<p>
-		Description : 
-		<%= f.text_area :description, class:"form-control", rows:"3" %>
-	</p>
-	<p>
-		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
-	</p>
-<% end %>
-
+  
+  <%= form_for @tag do |f| %>
+  <p>
+    Name : 
+    <%= f.text_field :name, class:"form-control" %>
+  </p>
+  
+  <p>
+    Description : 
+    <%= f.text_area :description, class:"form-control", rows:"3" %>
+  </p>
+  <p>
+    <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+  </p>
+  <% end %>
+  
 </div>

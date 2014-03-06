@@ -5,17 +5,15 @@ class Post < ActiveRecord::Base
   validates :user_id, :presence => true
 
   def print_content
-
   	"#{self.content}"
-  	
   end
 
-def self.search(search)
-  if search
-    find(:all, :conditions => ['LOWER(title) LIKE LOWER(?)', "%#{search}%"])
-  else
-    find(:all)
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['LOWER(title) LIKE LOWER(?)', "%#{search}%"])
+    else
+      find(:all)
+    end
   end
-end
-
+  
 end

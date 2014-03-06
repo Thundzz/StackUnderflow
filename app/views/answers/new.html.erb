@@ -2,18 +2,18 @@
 
 
 <div class="form-group">
-
-	<%= form_for @answer do |f| %>
-	<p>
-
-		Réponse : 
-		<%= f.text_area :content, class:"form-control", rows:"3" %>
-		<%= f.hidden_field :question_id %>
-
-	</p>
-	<p>
-		<%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
-	</p>
-	<% end %>
-
+  
+  <%= form_for @answer do |f| %>
+  <p>
+    
+    Réponse : 
+    <%= f.text_area :content, class:"form-control", rows:"3" %>
+    <%= f.hidden_field :question_id %>
+    
+  </p>
+  <p>
+    <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+  </p>
+  <% end %>
+  
 </div>

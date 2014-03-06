@@ -3,16 +3,16 @@
 <div class="profil well">
   <h2> ~<%= @user.login %> 
     <% unless @user.name.blank? or @user.lastname.blank? %>
-      (<%= @user.name %> <%= @user.lastname %>) 
+    (<%= @user.name %> <%= @user.lastname %>) 
     <% end %>
   </h2>
-
+  
   <% unless @user.study.nil? %>
-    <p>Filière : <%= (show_study @user.study).html_safe %></p>
-
+  <p>Filière : <%= (show_study @user.study).html_safe %></p>
+  
   <% end %>
-
-<!--  Nombre de points : <%= @user.points %>-->
+  
+  <!--  Nombre de points : <%= @user.points %>-->
   <p>Réputation : <span class="label label-info"><%= @user.karma %></span></p>
-
+  
 </div>

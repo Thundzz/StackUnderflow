@@ -1,11 +1,11 @@
 <% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2>Inscription impossible (<%= pluralize(@user.errors.count, "erreur") %>)</h2>
-    <p> Veuillez corriger les problème suivants :</p>
-    <ul>
+<div id="error_explanation">
+  <h2>Inscription impossible (<%= pluralize(@user.errors.count, "erreur") %>)</h2>
+  <p> Veuillez corriger les problème suivants :</p>
+  <ul>
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+    <li><%= msg %></li>
     <% end %>
-    </ul>
-  </div>
+  </ul>
+</div>
 <% end %>
