@@ -1,7 +1,0 @@
-$(".compteur").html("<%= @total_vote %>")
-
-if("<%=@test%>"=="1")
-{ 
- $("#<%=@question_id %>").fadeIn("fast").delay(1100).fadeOut(100)
-
-}
