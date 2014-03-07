@@ -44,6 +44,7 @@ module SessionsHelper
         redirect_back_or user
       else
         flash[:error] = "Connexion avortée : veuillez réessayer."
+        flash[:error] = user.errors.full_messages
         redirect_to new_session_path
       end
     else

@@ -27,11 +27,11 @@ class User < ActiveRecord::Base
   
   validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true
   validates :lastname, :length => { :maximum => 50 }
-  validates :email, :format => { :with => email_regex }, :uniqueness => true
+  validates :email, :format => { :with => email_regex }, :uniqueness => true, :if => :email?
   validates :name, :length => { :maximum => 50 }
   # validates_inclusion_of :study, :in => [1,4]
   #validates :study
-  validates :password, :confirmation => true, :length => { :within => 6..40 }
+  validates :password, :confirmation => true, :length => { :within => 6..40 }, :allow_nil => true
   
   before_save :encrypt_password, :default_values
   

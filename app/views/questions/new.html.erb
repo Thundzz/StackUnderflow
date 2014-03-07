@@ -19,7 +19,7 @@
     <%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %> (5 tags au max)
     
   </p>
-  Tag non trouvé?<%= link_to " ajouter tag", new_tag_path %>
+  Tag non trouvé?<%= link_to " ajouter tag", new_tag_path, target: "_blank" %>
   
   <p>
     </br>
