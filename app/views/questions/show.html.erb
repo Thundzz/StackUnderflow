@@ -1,8 +1,9 @@
 <div class="question">
-	
+
 <div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="1200"></div>
 <h2> <%=  link_to @question.title, question_path(@question) %> par <%= link_to @question.user.login, @question.user %> </h2>
 
+<%= link_to "Editer question", edit_question_path(@question) %>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
@@ -12,7 +13,7 @@ cellspacing="2">
 <font face="Verdana" color="gray">
 <b ><center class="compteur"><%=@vote_count_show%></center> </b>
 </font></div>
-    
+
 </td>
 <td style="vertical-align: top;"><br><span><%= @question.content().html_safe %>  </span></p>
 </td>
@@ -23,74 +24,100 @@ cellspacing="2">
 <br/>
 
     <p>
-      
+
 
  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
-       
+
  <%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_question_path(@question), :remote => true,:class =>"btn btn-default btn-lg" %>
-           
+
 
         </p>
 </br>
-    <p>	
+    <p>
   <% unless @question.tags.blank? %>
-  <ul class="tags"> 
+  <ul class="tags">
     <% @question.tags.each do |tag|%>
     <li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
        <%end%>
        <%end%>
   </ul>
-  <%= link_to "Ajouter/Supprimer tags", handle_tags_question_path(@question) %>
+  </br>
+  
 </p>
 </br>
 
 
-      
+
 <!-- ******************************partie Reponses *************************** -->
-  <%= link_to "Nouvelle reponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
-         
+  <%= link_to "Nouvelle réponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
 	<hr />
 	<% @answers.each do |answer| %>
-	<div class="answer">
-	  <div id="<%=answer.id%>x"" class="alert alert-warning alert-dismissable"  style="DISPLAY: none" >
-           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              Vous ne pouvez pas voter pour votre propre Réponse!
+	<div class="answer"
+	     style="padding:0px;">
+
+	  <div id="<%=answer.id%>x" class="alert alert-warning
+	  alert-dismissable" style="DISPLAY: none" >
+           <button type="button" class="close" data-dismiss="alert"
+              aria-hidden="true">&times;</button> Vous ne pouvez pas
+              voter pour votre propre réponse!
           </div>
-	  <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
+	  <table style="text-align: left; width: 100%;
+			border-radius: 5px;
+			border-collapse: separate;">
 	    <tbody>
-	      
+
 	      <tr>
-		<td style="vertical-align: center;" width="50"><p> <br><div style="font-size:32px;">
-		      <font face="Verdana" color="#800080">
-			<b ><center id=<%=answer.id%>> <%= answer.votes_for-answer.votes_against  %></center> </b>
-		    </font></div>
-		    
+		<td style="vertical-align: top; font-size:32px;
+			   font-weight: bold; color: #ffffff;
+			   font-family: Verdana; background-color: #880088;
+                           border-radius: 15px 0px 15px 0px;"
+                    width="55">
+                  <center id=<%=answer.id%>>
+                    <%= answer.votes_for-answer.votes_against %>
+                  </center>
+                </td>
+                <td style="vertical-align: top; padding-left:8px;">
+                  <%= answer.content.html_safe %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+          <%= link_to(
+              content_tag(:span, "",
+              { :class => "glyphicon glyphicon-thumbs-up" }),
+              vote_for_answer_path(answer), {
+              :remote => true,
+              :class =>"btn btn-default btn-xs",
+              :style => "margin:0px"}) %>
+          <%= link_to(
+              content_tag(:span, "",
+              { :class => "glyphicon glyphicon-thumbs-down" }),
+              vote_against_answer_path(answer), {
+              :remote => true,
+              :class =>"btn btn-default btn-xs",
+              :style => "margin:0px"}) %>
+                </td>
+
+                <td style="text-align: left; padding-left: 8px">
+		  Par <%= link_to answer.user.login, answer.user %>
+		  <% if (current_user == answer.user) %>
+		  | <%= link_to "Editer cette reponse",
+			edit_answer_path(answer)
+			%> |
+		  <%= link_to "Supprimer réponse", answer_path(answer),
+     :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
+     :method => :delete %>
+	    <% end %>
 		</td>
-		<td style="vertical-align: top;"><br><span> <%= answer.content.html_safe %>  </span></p>
-</td>
-</tr>
+	      </tr>
 
-</tbody>
-</table>
+	    </tbody>
+	  </table>
 
-	  
-		
-		<p> 
-		  
 
-			Par <%= link_to answer.user.login, answer.user %>
-			
-			<% if (current_user == answer.user) %>
-				 | <%= link_to "Editer cette reponse", edit_answer_path(answer) 
-				%> |
-              
-				<%= link_to "Supprimer réponse", answer_path(answer), :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?", :method => :delete %>
-			<% end %>
-		</p>
-		<%=link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'), vote_for_answer_path(answer), :remote => true,:class =>"btn btn-default btn-lg" %>
-			
-			<%=link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'), vote_against_answer_path(answer), :remote => true,:class =>"btn btn-default btn-lg" %>
+
+
 	</div>
 	<% end %>
 
