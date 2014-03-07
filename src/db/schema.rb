@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140205151348) do
+ActiveRecord::Schema.define(:version => 20140205142035) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(:version => 20140205151348) do
 
   create_table "users", :force => true do |t|
     t.integer  "right"
+    t.string   "login"
     t.string   "name"
     t.string   "lastname"
     t.integer  "study"
     t.integer  "points"
     t.string   "email"
-    t.string   "login"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
