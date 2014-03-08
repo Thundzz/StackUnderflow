@@ -49,13 +49,16 @@
   <div class="form-group">
   <input id="question_mark" onKeyPress="activate();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
   <input type="button" class="btn btn-default" onClick="activate();" value="Ok"/>
+  <!-- La fonction activate est appele en tapant entree ou souris sur ok -->
   </div>
   </div>
   
   <script type="text/javascript">
     function activate() {
     var query = $("#question_mark").val();
+    <!-- il recupere ce qui a ete entre dans le champ texte -->
     if (query.length > 3) {
+    <!-- il envoie sa requete a lapistackexchange avec ce champ et demande a recuperer le score, le title, le contenu, les tags de chaque question qui correspond a la requete et le stock dans question_list-->
     $.getJSON("https://api.stackexchange.com/2.2/search/advanced?\
     site=stackoverflow&accepted=true&sort=relevance&q=" + query,
     function(questions){
@@ -77,5 +80,6 @@
 	     </script>
   
   <div id="question_list">
+   <!-- sense afficher la question_list de activate? -->
   </div>
 </div>
