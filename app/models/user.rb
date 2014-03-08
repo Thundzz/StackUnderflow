@@ -19,11 +19,12 @@ class User < ActiveRecord::Base
   
   
   attr_accessor :password
-  attr_accessible :login, :email, :lastname, :name, :points, :right, :study, :password, :password_confirmation
+  attr_accessible :login, :email, :lastname, :name, :points, :right, :study, :password, :password_confirmation, :badges
   
   has_many :answers
   has_many :posts
   has_many :questions
+  has_and_belongs_to_many :badges
   
   validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true
   validates :lastname, :length => { :maximum => 50 }
@@ -83,27 +84,33 @@ class User < ActiveRecord::Base
     end
   end
   
-  
-  private
-  
-  def encrypt_password
-    self.salt = make_salt if new_record?
-    self.encrypted_password = encrypt(password)
-  end
-  
-  def encrypt(string)
-    secure_hash("#{salt}--#{string}")
-  end
-  
-  def make_salt
-    secure_hash("#{Time.now.utc}--#{password}")
-  end
-  
-  def secure_hash(string)
-    Digest::SHA2.hexdigest(string)
+  def give_badge (badge)
+    if (badge && !self.badges.exists?(badge))
+      self.badges << badge
+
+    end
   end
   
 
+  private
   
+    def encrypt_password
+      self.salt = make_salt if new_record?
+      self.encrypted_password = encrypt(password)
+    end
+    
+    def encrypt(string)
+      secure_hash("#{salt}--#{string}")
+    end
+    
+    def make_salt
+      secure_hash("#{Time.now.utc}--#{password}")
+    end
+    
+    def secure_hash(string)
+      Digest::SHA2.hexdigest(string)
+    end
+  
+
 
 end
