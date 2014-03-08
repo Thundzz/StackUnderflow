@@ -28,12 +28,12 @@
     </div>
     <div class="panel-body" style="height:30px" >
       <% unless question.tags.blank? %>
-      <ul class="tags"> 
-	<% question.tags.each do |tag|%>
-	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
-	<%end%>
-	<%end%>
-      </ul>
+        <ul class="tags"> 
+        	<% question.tags.each do |tag|%>
+        	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
+        	<%end%>
+        </ul>
+      <%end%>
       
     </div>
   </div>
@@ -44,42 +44,18 @@
   
 </div>
 
+
+
+
 <div id="stackoverflow"  >
-  <div class="navbar-form navbar-left">
-  <div class="form-group">
-  <input id="question_mark" onKeyPress="activate();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
-  <input type="button" class="btn btn-default" onClick="activate();" value="Ok"/>
-  <!-- La fonction activate est appele en tapant entree ou souris sur ok -->
+  <div class="navbar-form">
+    <div class="form-group">
+      <input id="question_mark" onKeyPress="search_on_stackoverflow();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
+      <input type="button" class="btn btn-default" onClick="search_on_stackoverflow();" value="Ok"/>
+    </div>
   </div>
-  </div>
-  
-  <script type="text/javascript">
-    function activate() {
-    var query = $("#question_mark").val();
-    <!-- il recupere ce qui a ete entre dans le champ texte -->
-    if (query.length > 3) {
-    <!-- il envoie sa requete a lapistackexchange avec ce champ et demande a recuperer le score, le title, le contenu, les tags de chaque question qui correspond a la requete et le stock dans question_list-->
-    $.getJSON("https://api.stackexchange.com/2.2/search/advanced?\
-    site=stackoverflow&accepted=true&sort=relevance&q=" + query,
-    function(questions){
-    $("#question_list").empty();
-    $.each(questions.items, function(i,item){
-    if (i <= 10) {
-             content = "<div> (" + item.score + ") " + item.title;
-             content += " <a href=" + item.link + ">(link)</a>";
-             content += " [" + item.tags.join() + "]";
-             content += "</div>";
-             $("#question_list").append(content);
-             }
-             });
-             $("#question_list").append("Number of questions : " +
-             questions.items.length);
-             });
-	     }
-	     }
-	     </script>
   
   <div id="question_list">
-   <!-- sense afficher la question_list de activate? -->
+   <!-- Liste des questions sur StackOverflow -->
   </div>
 </div>
