@@ -97,14 +97,14 @@
 
       <!-- Rq: l'id de la balise est son name-->
 
-
+      <% nom_controller = controller_name %>
       <%= form_tag controller_name, method: :get, :class => "navbar-form navbar-left" do %>
       <div class="form-group">  
-       <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Search" %> 
-
+      <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Rechercher"+' '+nom_controller %> 
+      
      </div>
      <input id="search_id" name="post[id]" type="hidden"/>
-     <%= submit_tag "Submit", name: nil, class: "btn btn-default" %>
+     <%= submit_tag "Ok", name: nil, class: "btn btn-default" %>
      <% end %>  
      <!--  ****************** Fin formulaire recherche***************************** -->
 
