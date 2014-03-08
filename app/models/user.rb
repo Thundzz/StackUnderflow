@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   validates :name, :length => { :maximum => 50 }
   # validates_inclusion_of :study, :in => [1,4]
   #validates :study
-  validates :password, :confirmation => true, :length => { :within => 6..40 }, :allow_nil => true
+  validates :password, :confirmation => true, :length => { :within => 6..40 }
   
   before_save :encrypt_password, :default_values
   

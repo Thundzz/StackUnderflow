@@ -28,12 +28,12 @@
     </div>
     <div class="panel-body" style="height:30px" >
       <% unless question.tags.blank? %>
-      <ul class="tags"> 
-	<% question.tags.each do |tag|%>
-	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
-	<%end%>
-	<%end%>
-      </ul>
+        <ul class="tags"> 
+        	<% question.tags.each do |tag|%>
+        	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
+        	<%end%>
+        </ul>
+      <%end%>
       
     </div>
   </div>
@@ -44,3 +44,18 @@
   
 </div>
 
+
+
+
+<div id="stackoverflow"  >
+  <div class="navbar-form">
+    <div class="form-group">
+      <input id="question_mark" onKeyPress="search_on_stackoverflow();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
+      <input type="button" class="btn btn-default" onClick="search_on_stackoverflow();" value="Ok"/>
+    </div>
+  </div>
+  
+  <div id="question_list">
+   <!-- Liste des questions sur StackOverflow -->
+  </div>
+</div>
