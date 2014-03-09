@@ -1,34 +1,51 @@
-<h1>Page d'accueil des Questions</h1>
-<p class="h3">Cette page liste les questions posées</p>
+<h3>Toutes les questions</h3>
+
 <p><%= link_to "Nouvelle question", new_question_path , :class=>"btn btn-info"%></p>
-<div class="question">
-  
-  <hr/>
-  
-  <% @questions.each do |question|%>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      
-      <h2 class="panel-title"> <u><%=  link_to question.title, question_path(question) %></u> par <u><%= link_to question.user.login, question.user %></u> </h2>
-    </div>
-    <div class="panel-body" style="height:30px" >
-      <% unless question.tags.blank? %>
-        <ul class="tags"> 
-        	<% question.tags.each do |tag|%>
-        	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
-        	<%end%>
-        </ul>
-      <%end%>
-      
-    </div>
-  </div>
-  <br/>
-  <%end %>
+<div class="question-list">
 
-  
-  
+
+
+  <table class="table">
+    <tbody>
+      <% @questions.each do |question|%>
+
+      <tr class='clickableRow'> 
+
+        <td class = "question-info">
+          <div class="views">
+            Views : <%=question.views %>
+          </div>
+          <div class="score">
+            Score : <%=question.score %>
+          </div>
+        </td>
+
+
+        <td> <!-- ***************************************** -->
+
+          <%= render :partial => "shared/user_mini", :locals => {:user => question.user} %>
+          <h4>  <%=  link_to question.title, question_path(question) %></h4>
+
+
+
+
+
+          <% unless question.tags.blank? %>
+
+          <% question.tags.each do |tag|%>
+          <u class="post-tag"><a href="<%= tag_path(tag)%>"><%= tag.name%></a></u>
+          <%end%>
+          <%end%>
+
+        </td><!-- ***************************************** -->
+
+      </tr>
+
+
+      <%end %>
+    </tbody>
+  </table>
 </div>
-
 
 
 
@@ -39,8 +56,8 @@
       <input type="button" class="btn btn-default" onClick="search_on_stackoverflow();" value="Ok"/>
     </div>
   </div>
-  
+
   <div id="question_list">
    <!-- Liste des questions sur StackOverflow -->
-  </div>
+ </div>
 </div>

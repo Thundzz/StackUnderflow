@@ -1,0 +1,14 @@
+<div class= "user-mini-info">
+
+	<%= link_to user.login, user %>
+	<div class ="user-score">
+		Réputation : <%= user.karma %>
+	</div>
+	<div class ="user-badges ">
+		<span class="label label-info gold"><%= user.badges.where(:metal =>"gold").count %></span>
+		<span class="label label-info silver"><%= user.badges.where(:metal =>"silver").count %></span>
+		<span class="label label-info bronze"><%= user.badges.where(:metal =>"bronze").count %></span>
+	</div>
+
+</div>
+</div>
