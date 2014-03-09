@@ -1,0 +1,7 @@
+<% unless question.tags.blank? %>
+    <% question.tags.each do |tag|%>
+    <u class="post-tag"><a href="<%= tag_path(tag)%>"><%= tag.name%></a></u>
+
+    <%end%>
+
+<%end%>
