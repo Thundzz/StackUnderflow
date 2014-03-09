@@ -15,7 +15,10 @@ In order to start using StackUnderflow :
 1/ Install the gems specified in the Gemfile with:
    $ bundle install
 2/ Create or update the database with:
-   $ rake db:migrate
+   $ rake db:drop (destroy it)
+   $ rake db:migrate (recreate it)
+   $ rake db:seed  (initialize values)
+
 3/ Run the server with:
    $ rails s
 
