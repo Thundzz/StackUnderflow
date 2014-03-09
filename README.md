@@ -22,8 +22,8 @@ or
    $ rake db:drop (destroy it)
    $ rake db:migrate (recreate it)
    $ rake db:seed  (initialize values)
-
-3/ Run the server with:
+<br/>
+then Run the server with:
    $ rails s
 
 You can now access to the website following this URL:
