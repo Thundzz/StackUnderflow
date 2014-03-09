@@ -14,7 +14,8 @@ class QuestionsController < ApplicationController
   
   
   def index
-    @questions = Question.search(params[:search])             
+    @questions = Question.search(params[:search]).sort_by{|q| q.created_at}.reverse
+    #je suis incapable de trouver une syntaxe pour directement trier dans l'ordre décroissant.
 
     if params[:term]
       @questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
