@@ -257,3 +257,12 @@
   border-radius: 5px;
   background-color:#EAEAEA;
 }
+
+.answer-content
+{
+  width:80%;
+}
+.question-content
+{
+  width:80%;
+}
