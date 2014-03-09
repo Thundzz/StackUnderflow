@@ -15,7 +15,7 @@ In order to start using StackUnderflow :
 execute the shell script  "initialisation_script" 
 <br/>
 or
-<br/>
+
 1/ Install the gems specified in the Gemfile with:
    $ bundle install
 2/ Create or update the database with:
