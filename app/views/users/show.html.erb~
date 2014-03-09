@@ -1,7 +1,7 @@
 <h1> Profil utilisateur </h1>
 
 <div class="profil well">
- <td><%= image_tag avatar_url(@user,100) %></td>
+ <td><%= image_tag avatar_url(@user,200) %></td>
   <h2> ~<%= @user.login %> 
     <% unless @user.name.blank? or @user.lastname.blank? %>
     (<%= @user.name %> <%= @user.lastname %>) 

@@ -7,7 +7,7 @@ module ApplicationHelper
     "http://gravatar.com/avatar/?s="+taille.to_s+"&d=mm"
     else
     gravatar_id = Digest::MD5::hexdigest(user.email).downcase
-    "http://gravatar.com/avatar/#{gravatar_id}.png?s="+taille.to_s+"&d=wavatar"
+    "http://gravatar.com/avatar/#{gravatar_id}.png?s="+taille.to_s+"&d=monsterid"
     end
  end
 end
