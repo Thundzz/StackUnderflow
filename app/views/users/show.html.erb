@@ -11,8 +11,21 @@
   <p>Filière : <%= (show_study @user.study).html_safe %></p>
   
   <% end %>
-  
+
+  <!--Affichage du badge -->
+
+
+
   <!--  Nombre de points : <%= @user.points %>-->
-  <p>Réputation : <span class="label label-info"><%= @user.karma %></span></p>
-  
+  <h4> Réputation : <span class="label label-info"><%= @user.karma %></span> </h4>
+
+  <h4>Badges obtenus : </h4>
+  <% @user.badges.each do |badge| %>
+  <div class = "badge <%= badge.metal %>">
+    <%= badge.official_name %> 
+    <!-- <p> Description : <%= badge.description %></p> -->
+  </div>
+  <% end %>
+
+
 </div>

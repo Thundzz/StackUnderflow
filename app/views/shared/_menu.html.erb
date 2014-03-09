@@ -16,8 +16,8 @@
         <li> <%= link_to "Posts", posts_path %> </li>
         <li> <%= link_to "Questions", questions_path %> </li>
         <li> <%= link_to "Tags", tags_path %> </li>
-       <li> <%= link_to "Utilisateurs", users_path %> </li>
-        
+        <li> <%= link_to "Utilisateurs", users_path %> </li>
+        <li> <%= link_to "Badges", badges_path %> </li>
       </ul>
       <!--                                    -->        
 
@@ -31,38 +31,38 @@
           $('#search').autocomplete({
             minLength: 2,
             source: 
-         
-          function( request, response ) {
+
+            function( request, response ) {
               $.ajax({
                 url: "<%= controller_name%>",
                 dataType: "json",
                 data: {term: request.term},
                 success: function(data) {
                   response($.map(data, function(item) { 
-               var nom_controller = "<%=controller_name%>"
-               if (nom_controller == "users")
-                  { return {
+                   var nom_controller = "<%=controller_name%>"
+                   if (nom_controller == "users")
+                    { return {
                       label: item.lastname+' '+item.name,
                       id: item.id,
-                           }
+                    }
                   } 
 
-               else if (nom_controller == "tags")
+                  else if (nom_controller == "tags")
                   {
                     return {
                       label: item.name,
                       id: item.id,
                     }
-             
-                   }
-                   else
-                   { 
-                     return {
-                      label: item.title,
-                      id: item.id,
 
-                    }}
-                  }));
+                  }
+                  else
+                  { 
+                   return {
+                    label: item.title,
+                    id: item.id,
+
+                  }}
+                }));
                 }
               });
             } ,
@@ -79,64 +79,64 @@
             }
           })
 
-          _renderItem = function( ul, item ) {
-            return $( "<li></li>" ).data( "ui-autocomplete", item )
-            .append( "<a>"+ ul.item.label +'</a>' ) 
+  _renderItem = function( ul, item ) {
+    return $( "<li></li>" ).data( "ui-autocomplete", item )
+    .append( "<a>"+ ul.item.label +'</a>' ) 
 
-            .appendTo( ul ); 
-
-
-
-          };
-
-        });
-      </script>
-
-
-      <!-- fin javascript pour autocompletion -->
-
-      <!-- Rq: l'id de la balise est son name-->
-
-      <% nom_controller = controller_name %>
-      <%= form_tag controller_name, method: :get, :class => "navbar-form navbar-left" do %>
-      <div class="form-group">  
-      <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Rechercher"+' '+nom_controller %> 
-      
-     </div>
-     <input id="search_id" name="post[id]" type="hidden"/>
-     <%= submit_tag "Ok", name: nil, class: "btn btn-default" %>
-     <% end %>  
-     <!--  ****************** Fin formulaire recherche***************************** -->
+    .appendTo( ul ); 
 
 
 
-     <ul class="nav navbar-nav navbar-right">
+  };
 
-       <% if signed_in? %>
-
-       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Compte <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Profil", user_path(current_user) %></li>
-          <li><%= link_to "Paramètres", edit_user_path(current_user) %></li>
-          <!-- <li><a href="#">Mes posts</a></li> -->
-          <li class="divider"></li>
-          <li><%= link_to "Déconnexion", signout_path, :method => :delete %></li>
-        </ul>
+});
+</script>
 
 
-        <% else %>
+<!-- fin javascript pour autocompletion -->
 
-        <ul class="nav navbar-nav">
-          <li> <%= link_to "S'identifier", new_session_path %> </li>
-          <li> <%= link_to "S'inscrire", new_user_path %> </li>
+<!-- Rq: l'id de la balise est son name-->
 
-        </ul>
+<% nom_controller = controller_name %>
+<%= form_tag controller_name, method: :get, :class => "navbar-form navbar-left" do %>
+<div class="form-group">  
+  <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Rechercher"+' '+nom_controller %> 
+
+</div>
+<input id="search_id" name="post[id]" type="hidden"/>
+<%= submit_tag "Ok", name: nil, class: "btn btn-default" %>
+<% end %>  
+<!--  ****************** Fin formulaire recherche***************************** -->
 
 
-          <% end %>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+
+<ul class="nav navbar-nav navbar-right">
+
+ <% if signed_in? %>
+
+ <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Compte <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Profil", user_path(current_user) %></li>
+    <li><%= link_to "Paramètres", edit_user_path(current_user) %></li>
+    <!-- <li><a href="#">Mes posts</a></li> -->
+    <li class="divider"></li>
+    <li><%= link_to "Déconnexion", signout_path, :method => :delete %></li>
+  </ul>
+
+
+  <% else %>
+
+  <ul class="nav navbar-nav">
+    <li> <%= link_to "S'identifier", new_session_path %> </li>
+    <li> <%= link_to "S'inscrire", new_user_path %> </li>
+
+  </ul>
+
+
+  <% end %>
+</ul>
+</div><!-- /.navbar-collapse -->
+</nav>
 
 
