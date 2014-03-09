@@ -16,7 +16,7 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require bootstrap
-
+//= require_tree .
 
 $(function() {
   $("#question_tag_tokens").tokenInput("/tags.json", {
