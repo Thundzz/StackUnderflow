@@ -1,14 +1,13 @@
-<h1>Page d'accueil des Tags</h1>
-<p class="h3">Cette page liste les tags</p>
+<h3>Tous les tags</h3>
+
 <p ><%= link_to "Nouveau tag", new_tag_path , :class=>"btn btn-info"%></p>
 
 
 
 <% @tagsearch.each do |tag|%>
 
-<% if (tag.questions.size==1) then ch="Question" else ch="Questions" end%>
 <div class="tag-list">
-  <u class="post-tag"><%=link_to tag.name, tag_path(tag) %></u> : Utilisé dans <%= tag.questions.size%> <%=ch%>
+  <u class="post-tag"><%=link_to tag.name, tag_path(tag) %></u> –&nbsp;<%= pluralize tag.questions.size, "question"%>
 </div>
 
 <%end %>

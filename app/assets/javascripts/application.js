@@ -59,8 +59,7 @@ function search_on_stackoverflow() {
         }
       });
 
-     $("#question_list").append("Nombre de questions trouvées : " +
-      questions.items.length);
+     $("#question_list").append(questions.items.length + " questions");
      });
   }
 }

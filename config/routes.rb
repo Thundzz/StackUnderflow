@@ -6,7 +6,7 @@ StackUnderflow::Application.routes.draw do
   resources :comment_questions, :controller => 'comments', :type => CommentQuestion.name
   resources :comment_answers, :controller => 'comments', :type => CommentAnswer.name
 
-  root :to => 'posts#index'
+  root :to => 'questions#index'
   get 'session' => 'session#index'
   match '/signup', :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
