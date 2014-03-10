@@ -8,91 +8,10 @@
 
  <div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="1200"></div>
  <h2> <%=  link_to @question.title, question_path(@question) %>  </h2>
-
- <div class="question"
- style="padding:0px;">
-
-
- <div id="<%=@question.id%>y" class="alert alert-warning
-   alert-dismissable" style="DISPLAY: none" >
-   <button type="button" class="close" data-dismiss="alert"
-   aria-hidden="true">&times;</button> Vous ne pouvez pas
-   voter pour votre propre question!
- </div>
- <table style="text-align: left; width: 100%;
- border-radius: 5px;
- border-collapse: separate;">
- <tbody>
-
-
-  <tr>
-    <td style="vertical-align: top; font-size:32px;
-    font-weight: bold; color: #ffffff;
-    font-family: Verdana; background-color: #525756;
-    border-radius: 15px 0px 15px 0px;"
-    width="55">
-    <center class= "compteur">
-      <%= @vote_count_show %>
-    </center>
-  </td>
-  <td style="vertical-align: top; padding-left:8px;">
-    <%= render :partial => "shared/user_mini", :locals => {:user => @question.user} %>
-    <div class="question-content">
-      <%= @question.content.html_safe %>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td>
-    <%= link_to(
-      content_tag(:span, "",
-        { :class => "glyphicon glyphicon-thumbs-up" }),
-      vote_for_question_path(@question), {
-        :remote => true,
-        :class =>"btn btn-default btn-xs",
-        :style => "margin:0px"}) %>
-    <%= link_to(
-      content_tag(:span, "",
-        { :class => "glyphicon glyphicon-thumbs-down" }),
-      vote_against_question_path(@question), {
-        :remote => true,
-        :class =>"btn btn-default btn-xs",
-        :style => "margin:0px"}) %>
-      </td>
-
-      <td style="text-align: left; padding-left: 8px">
-        <% if (current_user == @question.user) %>
-        | <%= link_to "Editer cette question",
-        edit_question_path(@question)
-        %> |
-        <%= link_to "Supprimer question", question_path(@question),
-        :confirm => "Êtes vous sûr de vouloir supprimer cette question?",
-        :method => :delete %>
-        <% end %>
-
-        | <%= link_to "Commenter", new_comment_question_path(:parent_id => @question.id) %>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<div class="question-tags">
-  <h5>Tags : </h5>  
-  <%= render :partial => "shared/question_tag_list", :locals => {:question => @question} %> 
-</div>
-
-
-<div class ="question-comments">
-  <%= render :partial => "shared/comment", :locals => {:parent => @question} %> 
-</div>
-
-
-</div>
-
-
-
+ <hr />
+  <%= render :partial => "shared/question_print", :locals => {:question => @question} %>
+<%= link_to "Répondre", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
 <!-- ******************************partie Reponses *************************** -->
-<%= link_to "Nouvelle réponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
 
 
 
@@ -175,3 +94,4 @@ border-collapse: separate;">
 
 </div>
 <% end %>
+
