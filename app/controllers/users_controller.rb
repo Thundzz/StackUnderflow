@@ -16,9 +16,10 @@ def edit_avatar
 @user = User.find(params[:id])
  if(current_user.id != @user.id)
   @test=2
-elsif @user.email.nil?
+elsif @user.email.blank?
      @test=1
     end
+ 
 respond_to do |format|
       format.js
       format.html
