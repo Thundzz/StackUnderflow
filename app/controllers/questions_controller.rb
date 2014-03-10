@@ -1,4 +1,7 @@
 # coding: utf-8 
+
+require 'will_paginate/array' 
+
 class QuestionsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   before_filter :correct_user, only: [:edit, :update, :destroy]
@@ -14,7 +17,7 @@ class QuestionsController < ApplicationController
   
   
   def index
-    @questions = Question.search(params[:search]).sort_by{|q| q.created_at}.reverse
+    @questions = Question.search(params[:search]).sort_by{|q| q.created_at}.reverse.paginate(:page => params[:page], :per_page => 8)
     #je suis incapable de trouver une syntaxe pour directement trier dans l'ordre décroissant.
 
     if params[:term]

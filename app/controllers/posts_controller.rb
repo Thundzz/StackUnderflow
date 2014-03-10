@@ -1,4 +1,6 @@
 # coding: utf-8 
+require 'will_paginate/array' 
+
 class PostsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
   before_filter :correct_user, only: [:edit, :update, :destroy]
@@ -14,8 +16,9 @@ class PostsController < ApplicationController
   
   
   def index
-    @posts = Post.search(params[:search])
-    
+
+    @posts = Post.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+
     if params[:term]
       @posta = Post.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
       logger.info 'debug'
