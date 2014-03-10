@@ -4,10 +4,26 @@ class UsersController < ApplicationController
   include UsersHelper #inclut modele session helper
 
   def show
+    
     @user = User.find(params[:id])
     @title = @user.name
+   
+   
   end
   
+def edit_avatar
+@test=0
+@user = User.find(params[:id])
+ if(current_user.id != @user.id)
+  @test=2
+elsif @user.email.nil?
+     @test=1
+    end
+respond_to do |format|
+      format.js
+      format.html
+    end
+end
   def index
     @users = User.search(params[:search])             
     

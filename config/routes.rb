@@ -24,6 +24,14 @@ end
 end
 
 
+  resources :users do
+  member do
+    get 'edit_avatar'
+     end
+end
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
