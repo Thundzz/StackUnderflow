@@ -7,7 +7,7 @@
 <% @tagsearch.each do |tag|%>
 
 <% if (tag.questions.size==1) then ch="Question" else ch="Questions" end%>
-<div class="panel-body ">
+<div class="tag-list">
   <u class="post-tag"><%=link_to tag.name, tag_path(tag) %></u> : Utilisé dans <%= tag.questions.size%> <%=ch%>
 </div>
 

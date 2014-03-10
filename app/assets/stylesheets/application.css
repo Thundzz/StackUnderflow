@@ -249,13 +249,16 @@
 }
 
 
-.user-mini-info
+.user-mini-info 
 {
   padding: 8px;
   display: block;
   float: right;
   border-radius: 5px;
   background-color:#EAEAEA;
+  /*border-style:dotted;*/
+  border-width:1px;
+
 }
 
 .answer-content
@@ -265,4 +268,20 @@
 .question-content
 {
   width:80%;
+}
+
+
+.user-mini-info, .q-info
+{
+ border-width:1px;
+ font-size: 12px;
+ /*font-weight: bold;*/
+ padding: 10px;
+ display: inline-block;
+ float: right;
+ border-radius: 5px;
+ /*border-style:dashed;*/
+ vertical-align: middle;
+ background-color:#EAEAEA;
+
 }
