@@ -3,6 +3,7 @@ class Question < ActiveRecord::Base
   acts_as_voteable
   attr_accessible :content, :score, :title,:tag_tokens, :user, :views
   has_many :answers
+  has_many :comments
   belongs_to :user
   has_and_belongs_to_many :tags
   

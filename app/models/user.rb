@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   has_many :answers
   has_many :posts
   has_many :questions
+  has_many :comments
   has_and_belongs_to_many :badges
   
   validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true

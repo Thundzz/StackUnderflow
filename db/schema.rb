@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140308162035) do
+ActiveRecord::Schema.define(:version => 20140310180942) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20140308162035) do
   create_table "badges_users", :id => false, :force => true do |t|
     t.integer "badge_id"
     t.integer "user_id"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string  "contents",    :limit => 400
+    t.integer "parent_id"
+    t.integer "user_id"
+    t.integer "question_id"
+    t.integer "answer_id"
+    t.string  "type"
   end
 
   create_table "posts", :force => true do |t|

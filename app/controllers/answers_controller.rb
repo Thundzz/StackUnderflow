@@ -45,8 +45,6 @@ class AnswersController < ApplicationController
   end
 
   def create
-    puts("create params hash : " )
-    puts(params[:answer])
     answer = Answer.new(params[:answer])
     answer.user = current_user
     answer.score = 0

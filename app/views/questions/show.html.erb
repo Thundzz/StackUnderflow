@@ -70,6 +70,8 @@
         :confirm => "Êtes vous sûr de vouloir supprimer cette question?",
         :method => :delete %>
         <% end %>
+
+        | <%= link_to "Commenter", new_comment_question_path(:parent_id => @question.id) %>
       </td>
     </tr>
   </tbody>
@@ -78,16 +80,23 @@
   <h5>Tags : </h5>  
   <%= render :partial => "shared/question_tag_list", :locals => {:question => @question} %> 
 </div>
+
+
+<div class ="question-comments">
+  <%= render :partial => "shared/comment", :locals => {:parent => @question} %> 
 </div>
 
 
-
-
+</div>
 
 
 
 <!-- ******************************partie Reponses *************************** -->
 <%= link_to "Nouvelle réponse", new_answer_path(:question_id => @question.id), :class=>"btn btn-info" %>
+
+
+
+<h3> <%= pluralize(@answers.count, "réponse") %></h3>
 <hr />
 <% @answers.each do |answer| %>
 <div class="answer"
@@ -150,11 +159,16 @@ border-collapse: separate;">
         :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
         :method => :delete %>
         <% end %>
+        | <%= link_to "Commenter", new_comment_answer_path(:parent_id => answer.id) %>
       </td>
     </tr>
 
   </tbody>
 </table>
+
+<div class ="question-comments">
+  <%= render :partial => "shared/comment", :locals => {:parent => answer} %> 
+</div>
 
 
 

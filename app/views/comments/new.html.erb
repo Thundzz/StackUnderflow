@@ -1,0 +1,18 @@
+<h1>Nouveau commentaire</h1>
+
+<div class="form-group">
+  
+  <%= form_for @comment do |f| %>
+
+  <p>
+
+    Commentaire :
+    <%= f.text_area :contents, class:"form-control", rows:"3" %>
+    <%= f.hidden_field :parent_id %>
+  </p>
+  <p>
+    <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+  </p>
+  <% end %>
+  
+</div>

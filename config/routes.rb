@@ -2,8 +2,12 @@ StackUnderflow::Application.routes.draw do
 
 
   resources :posts, :questions, :answers, :users, :sessions, :tags, :badges
+  resources :comments, :controller => 'comments', :type => Comment.name
+  resources :comment_questions, :controller => 'comments', :type => CommentQuestion.name
+  resources :comment_answers, :controller => 'comments', :type => CommentAnswer.name
+
   root :to => 'posts#index'
- get 'session' => 'session#index'
+  get 'session' => 'session#index'
   match '/signup', :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
@@ -13,22 +17,22 @@ StackUnderflow::Application.routes.draw do
       get 'vote_for'
       get 'vote_against'
       get 'handle_tags'
+    end
   end
-end
 
   resources :answers do
-  member do
-    get 'vote_for'
-    get 'vote_against'
+    member do
+      get 'vote_for'
+      get 'vote_against'
+    end
   end
-end
 
 
   resources :users do
-  member do
-    get 'edit_avatar'
-     end
-end
+    member do
+      get 'edit_avatar'
+    end
+  end
 
 
 
