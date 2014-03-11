@@ -315,7 +315,7 @@
 
 .pagination
 {
-
+  display:block;
 }
 .pagination a, em.current, .disabled
 {
@@ -324,4 +324,13 @@
 .question-content p, .answer-content p
 {
   padding:8px;
+}
+.stackunderflow-footer
+{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #E5E5E5;
 }

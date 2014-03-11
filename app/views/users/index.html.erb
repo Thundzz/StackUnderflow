@@ -1,11 +1,16 @@
 <h3>Tous les utilisateurs</h3>
 
+<%= will_paginate @users %> 
+
 
 <% @users.each do |user|%>
 <div class="name well">
 
-   <td><%= link_to image_tag(avatar_url(user,90)), user %> &nbsp;&nbsp; <h4 style="display:inline"><%= link_to "~"+user.login, user %></h4></td>
-<br/><br/>
+	<td><%= link_to image_tag(avatar_url(user,90)), user %> &nbsp;&nbsp; <h4 style="display:inline"><%= link_to "~"+user.login, user %></h4></td>
+	<br/><br/>
 
 </div>
 <%end %>
+
+
+<%= will_paginate @users %> 

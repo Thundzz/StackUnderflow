@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.search(params[:search])             
+    @users = User.search(params[:search]).paginate(:page => params[:page], :per_page => 24)     
     
     if params[:term]
       logger.info '**parametre term reçu**'
