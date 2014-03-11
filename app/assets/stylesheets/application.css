@@ -283,8 +283,13 @@
  /*border-style:dashed;*/
  vertical-align: middle;
  background-color:#EAEAEA;
-
 }
+
+.q-info
+{
+  width: 150px;
+}
+
 .comments hr
 {
  height: 0px;
@@ -314,5 +319,9 @@
 }
 .pagination a, em.current, .disabled
 {
-margin-left:10px;
+  margin-left:10px;
+}
+.question-content p, .answer-content p
+{
+  padding:8px;
 }

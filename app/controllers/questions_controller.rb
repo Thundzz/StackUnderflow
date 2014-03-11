@@ -1,6 +1,7 @@
 # coding: utf-8 
 
-require 'will_paginate/array' 
+require 'will_paginate/array'
+require 'nokogiri'
 
 class QuestionsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
@@ -17,12 +18,16 @@ class QuestionsController < ApplicationController
   
   
   def index
-    @questions = Question.search(params[:search]).sort_by{|q| q.created_at}.reverse.paginate(:page => params[:page], :per_page => 8)
+    criteria = (params[:search] !=  nil) ? (lambda{|q| q.score}) : (lambda{|q| q.created_at}) 
+    @questions = Question.search(params[:search]).sort_by{|q| criteria.call(q)}.reverse.paginate(:page => params[:page], :per_page => 8)
     #je suis incapable de trouver une syntaxe pour directement trier dans l'ordre décroissant.
 
-    if params[:term]
+    
+     #@questions = Question.search(params[:search]).sort_by{|q| q.created_at}.reverse.paginate(:page => params[:page], :per_page => 8) 
+
+     if params[:term]
       @questiona = Question.find(:all,:conditions => ['LOWER(title) LIKE LOWER(?)', "%#{params[:term]}%"]) 
-      logger.info 'debug Qustion controller'
+      logger.info 'debug Question controller'
       logger.info @questiona
     else
       @questiona = Question.all 
