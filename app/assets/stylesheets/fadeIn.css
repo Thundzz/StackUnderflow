@@ -1,0 +1,28 @@
+  .style8{
+    
+      background-repeat:repeat;
+      background-color:#FFF;
+       left:30%;
+       top:30%;
+       width:500px;
+       height:400px;
+       display:none;
+     margin-right: auto;
+margin-left: auto;
+position:absolute;
+      z-index:19;
+      }
+
+
+   .black{
+  background-color:black;
+  width: 150%;
+  height: 100%;
+  position: fixed;
+  top:0%;
+  left:-100px;
+  right:-100px; 
+  opacity:0;
+  z-index:12;
+  
+}

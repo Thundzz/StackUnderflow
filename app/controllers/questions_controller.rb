@@ -66,6 +66,7 @@ class QuestionsController < ApplicationController
   
   def new
     @question = Question.new()
+    @tag=Tag.new()
     
   end
   
