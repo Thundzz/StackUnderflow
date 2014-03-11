@@ -3,6 +3,17 @@
 class UsersController < ApplicationController
   include UsersHelper #inclut modele session helper
 
+  before_filter :correct_user, only: [:edit, :update, :destroy]
+  
+  # Before filter
+  def correct_user
+    @user = User.find( params[:id] )
+    if @user != current_user
+      redirect_to @user, :notice => "Vous ne pouvez modifier que votre propre profil"
+    end
+  end
+  
+
   def show
     
     @user = User.find(params[:id])
@@ -11,20 +22,21 @@ class UsersController < ApplicationController
    
   end
   
-def edit_avatar
-@test=0
-@user = User.find(params[:id])
- if(current_user.id != @user.id)
-  @test=2
-elsif @user.email.blank?
-     @test=1
+  def edit_avatar
+    @test=0
+    @user = User.find(params[:id])
+    if(current_user.id != @user.id)
+      @test=2
+    elsif @user.email.blank?
+      @test=1
     end
- 
-respond_to do |format|
+    
+    respond_to do |format|
       format.js
       format.html
     end
-end
+  end
+  
   def index
     @users = User.search(params[:search])             
     
