@@ -24,71 +24,71 @@
 
       <!-- **********************************************************************************-->      
       <!-- jQuery pour AUTOCOMPLETION -->
-
+      
       <script type="text/javascript">
         $(function() {
-
-          $('#search').autocomplete({
-            minLength: 2,
-            source: 
-         
-          function( request, response ) {
-              $.ajax({
-                url: "<%= controller_name%>",
-                dataType: "json",
-                data: {term: request.term},
-                success: function(data) {
-                  response($.map(data, function(item) { 
-               var nom_controller = "<%=controller_name%>"
-               if (nom_controller == "users")
-                  { return {
-                      label: item.lastname+' '+item.name,
-                      id: item.id,
-                           }
-                  } 
-
-               else if (nom_controller == "tags")
-                  {
-                    return {
-                      label: item.name,
-                      id: item.id,
-                    }
-             
-                   }
-                   else
-                   { 
-                     return {
-                      label: item.title,
-                      id: item.id,
-
-                    }}
-                  }));
-                }
-              });
-            } ,
-
-            focus: function(event, ui) {
-              $('#search').val(ui.item.label);
-              return false;
-            },
-
-            select: function(event, ui) {
-              $('#search').val(ui.item.label);
-              $('#search_id').val(ui.item.id);
-              return false;
-            }
-          })
-
-          _renderItem = function( ul, item ) {
-            return $( "<li></li>" ).data( "ui-autocomplete", item )
-            .append( "<a>"+ ul.item.label +'</a>' ) 
-
-            .appendTo( ul ); 
-
-
-
-          };
-
+	
+        $('#search').autocomplete({
+        minLength: 2,
+        source: 
+        
+        function( request, response ) {
+        $.ajax({
+        url: "<%= controller_name%>",
+        dataType: "json",
+        data: {term: request.term},
+        success: function(data) {
+        response($.map(data, function(item) { 
+        var nom_controller = "<%=controller_name%>"
+        if (nom_controller == "users")
+        { return {
+        label: item.lastname+' '+item.name,
+        id: item.id,
+        }
+        } 
+	
+        else if (nom_controller == "tags")
+        {
+        return {
+        label: item.name,
+        id: item.id,
+        }
+        
+        }
+        else
+        { 
+        return {
+        label: item.title,
+        id: item.id,
+	
+        }}
+        }));
+        }
+        });
+        },
+	
+        focus: function(event, ui) {
+        $('#search').val(ui.item.label);
+        return false;
+        },
+	
+        select: function(event, ui) {
+        $('#search').val(ui.item.label);
+        $('#search_id').val(ui.item.id);
+        return false;
+        }
+        })
+	
+        _renderItem = function( ul, item ) {
+        return $( "<li></li>" ).data( "ui-autocomplete", item )
+        .append( "<a>"+ ul.item.label +'</a>' ) 
+	
+        .appendTo( ul ); 
+	
+	
+	
+        };
+	
         });
       </script>
 
