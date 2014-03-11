@@ -1,5 +1,7 @@
 # coding: utf-8 
 
+require 'will_paginate/array'
+
 class UsersController < ApplicationController
   include UsersHelper #inclut modele session helper
 
