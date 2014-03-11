@@ -49,7 +49,7 @@ class QuestionsController < ApplicationController
     negative_vote_count = @question.votes_against
     
     @vote_count_show =positive_vote_count-negative_vote_count
-    @answers = @question.answers
+    @answers = @question.get_sorted_answers
   end
   
   

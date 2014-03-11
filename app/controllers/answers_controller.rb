@@ -54,6 +54,8 @@ class AnswersController < ApplicationController
       render "new"
     end
   end
+
+
   
   def destroy
     answer = Answer.find( params[:id])
@@ -123,4 +125,14 @@ class AnswersController < ApplicationController
     end
 
   end
+
+  def validate
+    answer = Answer.find(params[:id])
+    answer.validate
+    redirect_to answer.question
+
+  end
+
 end
+
+

@@ -6,6 +6,7 @@ StackUnderflow::Application.routes.draw do
   resources :comment_questions, :controller => 'comments', :type => CommentQuestion.name
   resources :comment_answers, :controller => 'comments', :type => CommentAnswer.name
 
+
   root :to => 'questions#index'
   get 'session' => 'session#index'
   match '/signup', :to => 'users#new'
@@ -17,6 +18,7 @@ StackUnderflow::Application.routes.draw do
       get 'vote_for'
       get 'vote_against'
       get 'handle_tags'
+
     end
   end
 
@@ -24,6 +26,7 @@ StackUnderflow::Application.routes.draw do
     member do
       get 'vote_for'
       get 'vote_against'
+      get 'validate'
     end
   end
 

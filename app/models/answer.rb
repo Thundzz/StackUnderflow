@@ -4,4 +4,10 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
   has_many :comments
+
+  def validate
+  	self.validated = true
+  	self.save
+  end
+
 end

@@ -56,3 +56,22 @@
 	display : inline;
 	
 }
+.score-frame
+{
+	vertical-align: top; font-size:32px;
+	font-weight: bold; color: #ffffff;
+	font-family: Verdana;
+	background-color: #525756;
+	border-radius: 15px 0px 15px 0px;
+
+}
+
+.validated-answer
+{
+	border-color: #458B00;	
+}
+
+.validated
+{
+	background-color: #458B00;	
+}

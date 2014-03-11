@@ -18,7 +18,7 @@
 <h3> <%= pluralize(@answers.count, "réponse") %></h3>
 <hr />
 <% @answers.each do |answer| %>
-<div class="answer"
+<div class="answer <%= 'validated-answer' if answer.validated %>"
 style="padding:0px;">
 
 <div id="<%=answer.id%>x" class="alert alert-warning
@@ -33,10 +33,7 @@ border-collapse: separate;">
 <tbody>
 
  <tr>
-  <td style="vertical-align: top; font-size:32px;
-  font-weight: bold; color: #ffffff;
-  font-family: Verdana; background-color: #525756;
-  border-radius: 15px 0px 15px 0px;"
+  <td class="score-frame <%= 'validated' if answer.validated %>"
   width="55">
   <center id= <%=answer.id%> >
     <%= answer.votes_for-answer.votes_against %>
@@ -73,6 +70,14 @@ border-collapse: separate;">
         <% if (current_user == answer.user) %>
         | <%= link_to "Editer cette reponse",
         edit_answer_path(answer)
+        %> |
+        <%= link_to "Supprimer réponse", answer_path(answer),
+        :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
+        :method => :delete %>
+        <% end %>
+        <% if (current_user == @question.user) %>
+        | <%= link_to "Valider",
+        validate_answer_path(answer)
         %> |
         <%= link_to "Supprimer réponse", answer_path(answer),
         :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
