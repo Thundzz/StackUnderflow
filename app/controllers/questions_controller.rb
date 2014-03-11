@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   
   
   def index
-    criteria = (params[:search] !=  nil) ? (lambda{|q| q.score}) : (lambda{|q| q.created_at}) 
+    criteria = (params[:search] !=  nil) ? (lambda{|q| q.score}) : (lambda{|q| q.updated_at}) 
     @questions = Question.search(params[:search]).sort_by{|q| criteria.call(q)}.reverse.paginate(:page => params[:page], :per_page => 8)
     #je suis incapable de trouver une syntaxe pour directement trier dans l'ordre décroissant.
 

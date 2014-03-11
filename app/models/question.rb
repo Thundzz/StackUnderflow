@@ -1,3 +1,5 @@
+# coding: utf-8 
+
 class Array
   def stable_sort
     n = 0

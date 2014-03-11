@@ -1,0 +1,59 @@
+<%= require 'nokogiri' %>
+
+<table class="table">
+    <tbody>
+      <% questions.each do |question|%>
+
+      <tr class='clickableRow'> 
+
+        <td class = "question-info">
+          <div class = "q-info">
+
+            <div class="date">
+              <%=  time_ago_in_words(question.created_at) %>
+            </div>
+            <div class="score">
+             <%= pluralize(question.score, "vote") %>
+           </div>
+           <div class="answers">
+             <%=  pluralize(question.answers.count, "réponse") %>
+           </div>
+
+           <div class="views">
+            <%=  pluralize(question.views, "vue") %>
+          </div>
+
+
+
+        </div>
+      </td>
+
+
+      <td> <!-- ***************************************** -->
+
+        <%= render :partial => "shared/user_mini", :locals => {:user => question.user} %>
+        <div>
+          <h4>  <%=  link_to question.title, question_path(question) %></h4>
+          <p>
+            <%= truncate(Nokogiri::HTML(question.content).text, length: 100) %> 
+          </p>
+        </div>
+
+
+
+
+        <% unless question.tags.blank? %>
+
+        <% question.tags.each do |tag|%>
+        <u class="post-tag"><a href="<%= tag_path(tag)%>"><%= tag.name%></a></u>
+        <%end%>
+        <%end%>
+
+      </td><!-- ***************************************** -->
+
+    </tr>
+
+
+    <%end %>
+  </tbody>
+</table>

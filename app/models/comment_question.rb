@@ -1,3 +1,5 @@
+# coding: utf-8 
+
 class CommentQuestion < Comment
 	attr_accessible :question_id
 	belongs_to :question
