@@ -1,0 +1,25 @@
+<h3>Liste des badges</h3>
+
+
+<table class="table">
+
+	<TR> 
+		<TH> Badge       </TH>
+		<TH> Description </TH>
+	</TR>
+	<!-- sort_by {|badge| badge.metal} -->
+	<% @badges.each do |badge| %>
+
+	<TR> 
+		<TD>
+			<div class = "badge <%= badge.metal %>">
+				<%= badge.official_name %> 
+			</div>
+		</TD>
+		<TD>
+			<%= badge.description %>
+		</TD>
+	</TR>
+
+	<% end %>
+</table>

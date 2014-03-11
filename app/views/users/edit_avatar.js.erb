@@ -1,0 +1,24 @@
+if("<%=@test%>"=="1")
+{ 
+$(document).trigger("add-alerts", [
+    {
+
+      'message': "Vous devez indiquer votre adresse email pour pouvoir changer votre avatar!",
+      'priority': 'warning'
+    }
+  ]);
+
+}
+else if("<%=@test%>"=="2")
+{ 
+$(document).trigger("add-alerts", [
+    {
+
+      'message': "Ce n'est pas votre profil !!",
+      'priority': 'warning'
+    }
+  ]);
+
+}
+else
+{window.location.href = "https://public-api.wordpress.com/oauth2/authorize?client_id=1854&response_type=code&blog_id=0&state=964ea79a50b7366378009aead9bd340235d25c3dcad4ba1fba696b8c64acd9ea&redirect_uri=https%3A%2F%2Fen.gravatar.com%2Fconnect%2F%3Faction%3Drequest_access_token";}

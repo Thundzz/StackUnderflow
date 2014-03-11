@@ -1,85 +1,76 @@
-<style>
-  .h3{font-family: Gill Sans, Verdana;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;}
-  h1{
-  font: bold 30px "Century Schoolbook", Georgia, Times, serif;
-  color: #333;
-  line-height: 90%;
-  margin: .2em 0 .4em 0;
-  letter-spacing: -2px;
-  }
-</style>
-<h1>Page d'accueil des Questions</h1>
-<p class="h3">Cette page liste les questions posées</p>
-<p><%= link_to "Nouvelle question", new_question_path , :class=>"btn btn-info"%></p>
-<div class="question">
-  
-  <hr/>
-  
-  <% @questions.each do |question|%>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      
-      <h2 class="panel-title"> <u><%=  link_to question.title, question_path(question) %></u> par <u><%= link_to question.user.login, question.user %></u> </h2>
-    </div>
-    <div class="panel-body" style="height:30px" >
-      <% unless question.tags.blank? %>
-      <ul class="tags"> 
-	<% question.tags.each do |tag|%>
-	<li><a href="<%= tag_path(tag)%>"><%= tag.name%></a></li>
-	<%end%>
-	<%end%>
-      </ul>
-      
-    </div>
-  </div>
-  <br/>
-  <%end %>
+<h3>Toutes les questions</h3>
 
-  
-  
+<p><%= link_to "Nouvelle question", new_question_path , :class=>"btn btn-info"%></p>
+
+<div class="question-list">
+
+<%= will_paginate @questions %>
+
+  <table class="table">
+    <tbody>
+      <% @questions.each do |question|%>
+
+      <tr class='clickableRow'> 
+
+        <td class = "question-info">
+          <div class = "q-info">
+            <div class="views">
+              <%=  pluralize(question.views, "vue") %>
+            </div>
+            <div class="date">
+              <%=  time_ago_in_words(question.created_at) + " ago" %>
+            </div>
+            <div class="answers">
+             <%=  pluralize(question.answers.count, "réponse") %>
+           </div>
+
+           <div class="score">
+            Score : <%=question.score %>
+          </div>
+
+        </div>
+      </td>
+
+
+      <td> <!-- ***************************************** -->
+
+        <%= render :partial => "shared/user_mini", :locals => {:user => question.user} %>
+        <h4>  <%=  link_to question.title, question_path(question) %></h4>
+
+
+
+
+
+        <% unless question.tags.blank? %>
+
+        <% question.tags.each do |tag|%>
+        <u class="post-tag"><a href="<%= tag_path(tag)%>"><%= tag.name%></a></u>
+        <%end%>
+        <%end%>
+
+      </td><!-- ***************************************** -->
+
+    </tr>
+
+
+    <%end %>
+  </tbody>
+</table>
+<%= will_paginate @questions %>
+
 </div>
 
+
+
 <div id="stackoverflow"  >
-  <div class="navbar-form navbar-left">
-  <div class="form-group">
-  <input id="question_mark" onKeyPress="activate();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
-  <input type="button" class="btn btn-default" onClick="activate();" value="Ok"/>
-  <!-- La fonction activate est appele en tapant entree ou souris sur ok -->
+  <div class="navbar-form">
+    <div class="form-group">
+      <input id="question_mark" onKeyPress="search_on_stackoverflow();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
+      <input type="button" class="btn btn-default" onClick="search_on_stackoverflow();" value="Ok"/>
+    </div>
   </div>
-  </div>
-  
-  <script type="text/javascript">
-    function activate() {
-    var query = $("#question_mark").val();
-    <!-- il recupere ce qui a ete entre dans le champ texte -->
-    if (query.length > 3) {
-    <!-- il envoie sa requete a lapistackexchange avec ce champ et demande a recuperer le score, le title, le contenu, les tags de chaque question qui correspond a la requete et le stock dans question_list-->
-    $.getJSON("https://api.stackexchange.com/2.2/search/advanced?\
-    site=stackoverflow&accepted=true&sort=relevance&q=" + query,
-    function(questions){
-    $("#question_list").empty();
-    $.each(questions.items, function(i,item){
-    if (i <= 10) {
-             content = "<div> (" + item.score + ") " + item.title;
-             content += " <a href=" + item.link + ">(link)</a>";
-             content += " [" + item.tags.join() + "]";
-             content += "</div>";
-             $("#question_list").append(content);
-             }
-             });
-             $("#question_list").append("Number of questions : " +
-             questions.items.length);
-             });
-	     }
-	     }
-	     </script>
-  
+
   <div id="question_list">
-   <!-- sense afficher la question_list de activate? -->
-  </div>
+   <!-- Liste des questions sur StackOverflow -->
+ </div>
 </div>

@@ -4,7 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.integer :score
-
+      t.integer :views
       t.timestamps
     end
   end

@@ -1,0 +1,13 @@
+<div class="comments">
+
+
+	<% parent.comments.each do |comment|%>
+	<hr />
+	<p>
+		<%= comment.contents.html_safe %> –&nbsp;<%= link_to comment.user.login, user_path(comment.user) %>
+
+	</p>
+
+	<%end%>
+</div>
+

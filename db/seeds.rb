@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+	Badge.init_db
+	User.create(:login => "bob")
+	Question.create(:content => "I am a test question", :score=> 10, :title => "Hello ?", :user => User.find_by_login("bob"), :views => 0)
+
+
+	for i in 1..50 do
+		Post.create( :content=>" lolilolz", :title => "untitled", :user_id => 1)
+	end

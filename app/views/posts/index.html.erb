@@ -1,24 +1,10 @@
-<style>
-  .h3{font-family: Gill Sans, Verdana;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;}
-  h1{
-  font: bold 30px "Century Schoolbook", Georgia, Times, serif;
-  color: #333;
-  line-height: 90%;
-  margin: .2em 0 .4em 0;
-  letter-spacing: -2px;
-  }
-</style>
-
 <h1>Page d'accueil des Posts</h1>
 <p class="h3">Cette page liste les posts créés</p>
 
 <p><%= link_to "Nouveau post", new_post_path , :class=>"btn btn-info"%></p>
 
+
+<%= will_paginate @posts %>
 <% @posts.each do |post|%>
 <div class="post">
   <h2> <%=  link_to post.title, post_path(post) %> par <%= link_to post.user.login, post.user %> </h2>
@@ -34,3 +20,5 @@
   <hr />
 </div>
 <%end %>
+
+<%= will_paginate @posts %>

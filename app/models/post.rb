@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title, :editionNo
+  attr_accessible :content, :title, :editionNo, :user_id
   belongs_to :user
 
   validates :user_id, :presence => true
