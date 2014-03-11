@@ -23,6 +23,7 @@
     <% end %>
   </h2>
   
+
   <% unless @user.study.nil? %>
   <p>Filière : <%= (show_study @user.study).html_safe %></p>
   
@@ -42,6 +43,11 @@
     <!-- <p> Description : <%= badge.description %></p> -->
   </div>
   <% end %>
+
+  <div>
+  <span style="color:#80BFFF"><%= link_to "Editer profil",edit_user_path(@user) %>
+  </span></div>
+
 
 
 </div>
