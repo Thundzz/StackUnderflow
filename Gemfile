@@ -15,12 +15,18 @@ gem "will_paginate", "~> 3.0.5"
 
 gem 'thumbs_up'
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3' 
+  gem 'rspec-rails'
+  gem 'ffaker'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem "pry", "~> 0.9.12.6"
+  gem 'spork', '0.9.0.rc8'
+  gem 'factory_girl_rails', '4.2.1'
 end
 
 group :production do
