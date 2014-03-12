@@ -26,10 +26,58 @@
     <%= f.label :tag_tokens, "Tags :" %><br/>
     <%= f.text_field :tag_tokens, class:"form-control", "data-pre" => @question.tags.map(&:attributes).to_json %> (5 tags au max)
   </p>
-  Tag non trouvé?<%= link_to " ajouter tag", new_tag_path, target: "_blank" %>
+  Tag non trouvé?<a id="ajoutTag"> ajouter tag</a>
   <p>
     <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
   </p>
   <% end %>
   
 </div>
+
+
+<div id="black"></div>
+<div id="div8" class="style8">
+  
+  <%= form_for @tag, remote:true do |f| %>
+  <p>
+    <strong>Name :  </strong><br/>
+    <%= f.text_field :name, class:"form-control" %>
+  </p>
+  
+  <p>
+   <strong> Description :  </strong><br/>
+    <%= f.text_area :description, class:"form-control", rows:"3" %>
+  </p>
+  <p>
+    <%= f.submit "Envoyer !", class:"btn btn-default" %> <br/>
+  </p>
+  <% end %>
+  
+</div>
+
+<script type="text/javascript">
+     $('#ajoutTag').click(function()
+            {
+
+                      $('#black').attr('class',"black");
+                      $('#black').fadeIn();
+                      $('#black').stop().animate({opacity:'0.8',},1000);  
+                      $("#div8").fadeIn("slow");
+                     $("html, body").animate({ scrollTop: 0 }, "slow");
+                    
+                    
+
+            });
+
+
+
+$(document).keyup(function(e) {
+
+  if (e.keyCode == 27) { 
+    $('#black').delay(500).animate({opacity:'0',},500);
+    $('#div8').fadeOut();
+   
+    $('#black').fadeOut();
+  }   // esc
+});
+</script>

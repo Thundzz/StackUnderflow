@@ -12,6 +12,9 @@ margin-left: auto;
 position:absolute;
       z-index:19;
 border-radius:5px;
+border-style:solid;
+border-width:5px;
+border-color:#D3D3D3;
       }
 
 

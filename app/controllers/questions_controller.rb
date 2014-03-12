@@ -61,6 +61,7 @@ class QuestionsController < ApplicationController
   def edit
 
     @question = Question.find( params[:id] )
+    @tag=Tag.new()
   end
   
   
