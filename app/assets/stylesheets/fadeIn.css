@@ -4,13 +4,14 @@
       background-color:#FFF;
        left:30%;
        top:30%;
-       width:500px;
+       width:600px;
        height:400px;
        display:none;
      margin-right: auto;
 margin-left: auto;
 position:absolute;
       z-index:19;
+border-radius:5px;
       }
 
 

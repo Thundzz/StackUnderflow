@@ -42,7 +42,7 @@
 <div id="black"></div>
 <div id="div8" class="style8">
   
-  <%= form_for @tag do |f| %>
+  <%= form_for @tag, remote:true do |f| %>
   <p>
     Name : 
     <%= f.text_field :name, class:"form-control" %>

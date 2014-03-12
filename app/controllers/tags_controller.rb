@@ -61,11 +61,17 @@ class TagsController < ApplicationController
   def create
     puts(params[:tag])
     @tag = Tag.new(params[:tag])
+    
+    respond_to do |format|
     if @tag.save
-      redirect_to tags_path, :notice => "Votre tag a bien ete ajoute"
+     
+    format.html { redirect_to tags_path, :notice => "Votre tag a bien ete ajoute" }
+        format.js
+
     else
-      render "new"
+      format.html { render "new"}
     end
+end
   end
   
   # PUT /tags/1
