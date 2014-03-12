@@ -9,8 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :study
       t.integer :points
       t.string :email
-
-
+      
       t.timestamps
     end
   end
