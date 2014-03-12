@@ -2,6 +2,17 @@
 class TagsController < ApplicationController
   # GET /tags
   # GET /tags.json
+  before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+  before_filter :admin_user, only: [:edit, :update, :destroy]
+  
+  # Before filter
+  def admin_user
+    if (current_user.right != 2)
+      redirect_to tags_path, :notice => "Vous n'avez pas les droits pour supprimer un tag"
+    end
+  end
+  
+
   
   def index
     
