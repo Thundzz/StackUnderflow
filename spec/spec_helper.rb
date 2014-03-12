@@ -1,3 +1,5 @@
+require 'active_support/core_ext/class/attribute_accessors.rb'
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)

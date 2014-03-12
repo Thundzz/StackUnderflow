@@ -60,5 +60,7 @@ module StackUnderflow
     config.assets.version = '1.0'
 
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
+    config.rubycas.cas_base_url = 'https://cas.ipb.fr/'
   end
 end

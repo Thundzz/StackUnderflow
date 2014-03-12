@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rubycas-client' #gem pour le CAS
+gem 'rubycas-client-rails' #gem pour le CAS
 
 #gemme pour la pagination
 gem "will_paginate", "~> 3.0.5"
@@ -18,6 +18,7 @@ group :development, :test do
   gem 'sqlite3' 
   gem 'rspec-rails'
   gem 'ffaker'
+  gem 'activesupport', '3.2.13'
 end
 
 group :test do

@@ -12,7 +12,7 @@ before_filter CASClient::Frameworks::Rails::Filter,:except => [ :new, :create,:d
   end
 
   def create
-    user = User.authenticate(params[:session][:email],
+    user = User.authenticate(params[:session][:login],
                            params[:session][:password])
     if user.nil?
       flash.now[:error] = "Combinaison Email/Mot de passe invalide."
