@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   
   attr_accessor :password
   attr_accessible :login, :email, :lastname, :name, :points, :right, :study, :password, :password_confirmation, :badges
-  
+
   has_many :answers
   has_many :posts
   has_many :questions

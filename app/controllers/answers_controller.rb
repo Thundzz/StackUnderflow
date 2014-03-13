@@ -2,17 +2,26 @@
 
 class AnswersController < ApplicationController
   before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
-  before_filter :correct_user, only: [:edit, :update, :destroy]
+  # before_filter :admin_user, only: [:edit, :update, :destroy]
+  before_filter :correct_or_admin_user, only: [:edit, :update, :destroy]
   
   
   # Before filter
-  def correct_user
+  def correct_or_admin_user
     @answer = Answer.find( params[:id] )
-    if @answer.user != current_user
+    if (@answer.user != current_user && current_user.right != 2)
       redirect_to @answer.question, :notice => "Vous ne pouvez modifier que vos propres reponses"
     end
   end
   
+  # def admin_user
+  #   @answer = Answer.find( params[:id] )
+  #   if ()
+  #     redirect_to @answer.question, :notice => "Vous n'avez pas les droits de suppression ou modification d'une réponse"
+  #   end
+  # end
+  
+
   
   def index
     @answers = Answer.all()

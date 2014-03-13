@@ -5,13 +5,13 @@ require 'nokogiri'
 
 class QuestionsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
-  before_filter :correct_user, only: [:edit, :update, :destroy]
+  before_filter :correct_or_admin_user, only: [:edit, :update, :destroy]
   
   
   # Before filter
-  def correct_user
+  def correct_or_admin_user
     @question = Question.find( params[:id] )
-    if @question.user != current_user
+    if (@question.user != current_user && current_user.right != 2)
       redirect_to @question, :notice => "Vous ne pouvez modifier que vos propres questions"
     end
   end
