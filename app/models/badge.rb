@@ -5,7 +5,8 @@ class Badge < ActiveRecord::Base
 	attr_accessible :description, :name, :official_name, :metal
 	has_and_belongs_to_many :users
 
-	validates :name, :uniqueness => true
+	validates :name, :presence => true, :uniqueness => true
+	validates :official_name, :presence => true
 
 	@metal_values = {:bronze => "bronze", :silver => "silver", :gold => "gold"}
 

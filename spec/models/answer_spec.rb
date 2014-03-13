@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Answer do
- 	 before {
+ 	before {
   		user = User.new(login: "twinki", name: "Tinki", lastname: "Winki", email: "example@test.com", right: User::USER, study: User::ELEC, password: "greatpass", password_confirmation: "greatpass")
 		question = Question.new(title: "What question do you want to ask?", content: "I'm a great question, aren't I?", user: user)
 		@answer = Answer.new(content: "I'm the best answer in the world.", user: user, question: question)

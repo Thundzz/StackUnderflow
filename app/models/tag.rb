@@ -4,6 +4,8 @@ class Tag < ActiveRecord::Base
   attr_accessible :description, :name
   has_and_belongs_to_many :questions
 
+  validates :name, presence: true, length: { :maximum => 150 }
+
   def self.tokens(query)
     tags = where("name like ?", "%#{query}%")
     if tags.empty?
