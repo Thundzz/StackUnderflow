@@ -34,6 +34,11 @@ describe User do
     it { should be_valid }
 
 
+    describe "when login is not present" do
+      before { @user.login = ""}
+      it { should_not be_valid }
+    end
+
     describe "when login is too long" do
       before { @user.login = "a"*51 }
       it { should_not be_valid }
