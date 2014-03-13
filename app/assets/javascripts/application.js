@@ -40,10 +40,10 @@ function search_on_stackoverflow() {
           content = "<div class='panel panel-default'>\
             <div class='panel-heading'>\
               \
-              <h2 class='panel-title'><a href=" + item.link + ">" + item.title + "</a></h2>\
+              <h2 class='panel-title'><div class='score'>  "+item.score+"</div>  <a href=" + item.link + ">" + item.title + "</a></h2>\
             </div>\
             <div class='panel-body' style='height:30px' >\
-                <ul class='tags'>"
+<ul class='tags'>"
 
           $.each(item.tags, function(j, tag){
             content += "<li><a href='http://stackoverflow.com/questions/tagged/" + tag + "'>" + tag + "</a></li>"

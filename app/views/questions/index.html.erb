@@ -15,7 +15,8 @@
 <div id="stackoverflow"  >
   <div class="navbar-form">
     <div class="form-group">
-      <input id="question_mark" onKeyPress="search_on_stackoverflow();" class="form-control" placeholder="Rechercher sur StackOverflow" type="text"  />
+      <!-- event.keyCode == 13 limite l'action a la touche return -->
+      <input id="question_mark"  class="form-control" onKeyPress="{if (event.keyCode==13)search_on_stackoverflow()};"  placeholder="Rechercher sur StackOverflow" type="text"  />
       <input type="button" class="btn btn-default" onClick="search_on_stackoverflow();" value="Ok"/>
     </div>
   </div>
