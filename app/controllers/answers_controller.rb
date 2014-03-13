@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
   # Before filter
   def correct_or_admin_user
     @answer = Answer.find( params[:id] )
-    if (@answer.user != current_user && current_user.right != 2)
+    if (@answer.user != current_user && !current_user.is_admin?)
       redirect_to @answer.question, :notice => "Vous ne pouvez modifier que vos propres reponses"
     end
   end
