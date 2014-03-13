@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   OWNER = 1
   ADMIN = 2
   USER = 3
+  #BANISHED = 4
   #constantes enum filiere
   INFO = 1
   MATMECA = 2

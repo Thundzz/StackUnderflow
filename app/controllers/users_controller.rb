@@ -4,7 +4,7 @@ require 'will_paginate/array'
 
 class UsersController < ApplicationController
   include UsersHelper #inclut modele session helper
-
+  #before_filter :correct_user, only: [:index]
   before_filter :correct_user, only: [:edit, :update, :destroy]
   
   # Before filter
@@ -17,11 +17,8 @@ class UsersController < ApplicationController
   
 
   def show
-    
     @user = User.find(params[:id])
     @title = @user.name
-   
-   
   end
   
   def edit_avatar

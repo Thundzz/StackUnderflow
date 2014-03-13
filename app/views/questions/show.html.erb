@@ -75,7 +75,7 @@ border-collapse: separate;">
         :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
         :method => :delete %>
         <% end %>
-        <% if (current_user == @question.user ) %>
+        <% if (current_user == @question.user) %>
         | <%= link_to "Valider",
         validate_answer_path(answer)
         %> |
