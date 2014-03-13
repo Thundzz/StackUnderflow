@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # Before filter
   def correct_or_admin_user
     @question = Question.find( params[:id] )
-    if (@question.user != current_user && current_user.right != 2)
+    if (@question.user != current_user && !current_user.is_admin?)
       redirect_to @question, :notice => "Vous ne pouvez modifier que vos propres questions"
     end
   end

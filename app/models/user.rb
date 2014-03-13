@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_karma :questions, :as => :user, :weight => [ 1, 1]
   has_karma :answers, :as => :user, :weight => [ 1, 1]
   #expression reguliere email
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i 
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   #constantes enum right
   OWNER = 1
   ADMIN = 2
@@ -41,6 +41,10 @@ class User < ActiveRecord::Base
     self.right ||= 3; # a modifier avec systeme de points
     self.points ||=0;
   end
+
+  def is_admin?
+    self.right == ADMIN
+  end
   
   
   def has_password?(password_soumis)
@@ -51,29 +55,29 @@ class User < ActiveRecord::Base
   
   def self.authenticate(login, submitted_password)
     user = find_by_login(login)
-    return nil  if user.nil?
+    return nil if user.nil?
     return user if user.has_password?(submitted_password)
   end
   
   def self.authenticate_with_salt(id, cookie_salt)
     user = find_by_id(id)
-    return nil  if user.nil?
+    return nil if user.nil?
     return user if user.salt == cookie_salt
   end
   
   def self.search(search)
     arr = []
     if search
-      logger.info "search input :  "+search
+      logger.info "search input : "+search
       us = User.all
       us.each do |u|
         search_name = u.name + ' ' + u.lastname
-        search_name_inverse =u.lastname + ' ' + u.name 
-        logger.info "search name:  "+search_name
-        logger.info "search name_inverse:  "+search_name_inverse
+        search_name_inverse =u.lastname + ' ' + u.name
+        logger.info "search name: "+search_name
+        logger.info "search name_inverse: "+search_name_inverse
         
-        if (search_name.downcase.include? search.downcase) or (search_name_inverse.downcase.include? search.downcase) 
-          arr.push(u.id) 
+        if (search_name.downcase.include? search.downcase) or (search_name_inverse.downcase.include? search.downcase)
+          arr.push(u.id)
           logger.info "u.id : "
           logger.info u.id
         end

@@ -51,7 +51,7 @@ border-collapse: separate;">
       </td>
 
       <td style="text-align: left; padding-left: 8px">
-        <% if (current_user == question.user || current_user.right == 2) %>
+        <% if (current_user == question.user || current_user.is_admin?) %>
         | <%= link_to "Editer cette question",
         edit_question_path(question)
         %> |

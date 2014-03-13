@@ -7,7 +7,7 @@ class TagsController < ApplicationController
   
   # Before filter
   def admin_user
-    if (current_user.right != 2)
+    unless current_user.is_admin?
       redirect_to tags_path, :notice => "Vous n'avez pas les droits pour supprimer un tag"
     end
   end
