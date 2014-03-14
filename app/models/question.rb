@@ -1,24 +1,26 @@
 # coding: utf-8 
 
-class Array
-  def stable_sort
-    n = 0
-    c = lambda { |x| n+= 1; [x, n]}
-    if block_given?
-      sort { |a, b|
-        yield(c.call(a), c.call(b))
-      }
-    else
-      sort_by &c
-    end
-  end
-end
+# class Array
+#   def stable_sort
+#     n = 0
+#     c = lambda { |x| n+= 1; [x, n]}
+#     if block_given?
+#       sort { |a, b|
+#         yield(c.call(a), c.call(b))
+#       }
+#     else
+#       sort_by &c
+#     end
+#   end
+# end
 
-class FalseClass; def to_i; 0 end end
-class TrueClass; def to_i; 1 end end
+# class FalseClass; def to_i; 0 end end
+# class TrueClass; def to_i; 1 end end
 
 class Question < ActiveRecord::Base
-  
+  scope :sort_by_score, order("score")
+  scope :sort_by_updated_at, order("updated_at DESC")
+
   acts_as_voteable
   attr_accessible :content, :score, :title,:tag_tokens, :user, :views
   has_many :answers

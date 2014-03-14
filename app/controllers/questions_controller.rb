@@ -11,15 +11,24 @@ class QuestionsController < ApplicationController
   # Before filter
   def correct_or_admin_user
     @question = Question.find( params[:id] )
-    if (@question.user != current_user && !current_user.is_admin?)
+    if (@question.user != current_user && !(signed_in? && current_user.is_admin?))
       redirect_to @question, :notice => "Vous ne pouvez modifier que vos propres questions"
     end
   end
   
   
   def index
-    criteria = (params[:search] !=  nil) ? (lambda{|q| q.score}) : (lambda{|q| q.updated_at}) 
-    @questions = Question.search(params[:search]).sort_by{|q| criteria.call(q)}.reverse.paginate(:page => params[:page], :per_page => 8)
+    # criteria = (params[:search] !=  nil) ? (lambda{|q| q.score}) : (lambda{|q| q.updated_at}) 
+    # @questions = Question.search(params[:search]).sort_by{|q| criteria.call(q)}.reverse.paginate(:page => params[:page], :per_page => 8)
+   
+    if params[:search]
+      # Si on fait une recherche dans les questions, on les trie par score
+      @questions = Question.sort_by_score.search(params[:search]).paginate(:page => params[:page], :per_page => 8)
+    else
+      # Sinon, on les trie selon la dernière date de mise à jour de la question
+      @questions = Question.sort_by_updated_at.paginate(:page => params[:page], :per_page => 8)
+    end
+
     #je suis incapable de trouver une syntaxe pour directement trier dans l'ordre décroissant.
 
     

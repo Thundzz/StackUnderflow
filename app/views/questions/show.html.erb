@@ -67,7 +67,7 @@ border-collapse: separate;">
       </td>
 
       <td style="text-align: left; padding-left: 8px">
-        <% if (current_user == answer.user || current_user.is_admin?) %>
+        <% if (current_user == answer.user || (signed_in? && current_user.is_admin?)) %>
         | <%= link_to "Editer cette reponse",
         edit_answer_path(answer)
         %> |
@@ -78,10 +78,7 @@ border-collapse: separate;">
         <% if (current_user == @question.user) %>
         | <%= link_to "Valider",
         validate_answer_path(answer)
-        %> |
-        <%= link_to "Supprimer réponse", answer_path(answer),
-        :confirm => "Êtes vous sûr de vouloir supprimer cette réponse?",
-        :method => :delete %>
+        %>
         <% end %>
         | <%= link_to "Commenter", new_comment_answer_path(:parent_id => answer.id) %>
       </td>
