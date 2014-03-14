@@ -5,17 +5,6 @@
   
   <div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="2650"></div>
 
- <td><%= image_tag avatar_url(@user,125) %></td>
-<%gravatar_sign_in ="https://public-api.wordpress.com/oauth2/authorize?client_id=1854&response_type=code&blog_id=0&state=964ea79a50b7366378009aead9bd340235d25c3dcad4ba1fba696b8c64acd9ea&redirect_uri=https%3A%2F%2Fen.gravatar.com%2Fconnect%2F%3Faction%3Drequest_access_token"%>
-<div>  <%= link_to(
-      content_tag(:span, "",
-        { :class => "glyphicon glyphicon-edit" }),
-      edit_avatar_user_path(@user), {
-        :remote => true,
-        :class =>"btn btn-default btn-xs",
-        :style => "margin:0px"}) %>
-
-<span style="color:#80BFFF">Changer avatar</span></div>
  
   <h2> ~<%= @user.login %> 
     <% unless @user.name.blank? or @user.lastname.blank? %>
