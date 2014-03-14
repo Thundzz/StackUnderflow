@@ -46,8 +46,7 @@ class User < ActiveRecord::Base
   def is_admin?
     self.right == ADMIN
   end
-  
-  
+
   def has_password?(password_soumis)
     # Compare encrypted_password avec la version cryptée de
     # password_soumis.

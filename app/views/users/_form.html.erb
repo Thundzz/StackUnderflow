@@ -1,10 +1,12 @@
 <%= form_for(@user) do |f| %>
 <%= render 'shared/error_messages' %>
 
-<div class="field">
-  <%= f.label :login %><br />
-  <%= f.text_field :login , class:"form-control"%>
-</div>
+<% unless form_is_to_edit %>
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login , class:"form-control"%>
+  </div>
+<% end %>
 
 <div class="field">
   <%= f.label :prénom %><br />
