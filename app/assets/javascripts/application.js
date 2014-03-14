@@ -33,38 +33,34 @@ function search_on_stackoverflow() {
   var query = $("#question_mark").val();
   if (query.length >= 3) {
     $.getJSON("https://api.stackexchange.com/2.2/search/advanced?site=stackoverflow&accepted=true&sort=relevance&q=" + query,
-    function(questions){
-      $("#question_list").empty();
-      $.each(questions.items, function(i,item){
-        if (i <= 10) {
-          content = "<div class='panel panel-default'>\
-            <div class='panel-heading'>\
-              \
-              <table><tr>\
-                <td class='score-frame' width='55'>"+item.score+"</td>\
-                <td>\
-                  <h2 class='panel-title'><a href=" + item.link + ">" + item.title + "</a></h2>\
-                </td>\
-              </tr></table>\
-            </div>\
-            <div class='panel-body' style='height:30px' >\
-<ul class='tags'>"
+      function(questions){
+        $("#question_list").empty();
+        $("#question_list").addClass('question-list');
+        $.each(questions.items, function(i,item){
+          if (i <= 10) {
 
-          $.each(item.tags, function(j, tag){
-            content += "<li><a href='http://stackoverflow.com/questions/tagged/" + tag + "'>" + tag + "</a></li>"
-          })
+            content = "<table class='table'>\
+            <tr class='clickableRow'>\
+            <td class='question-info' width='55'><div class='q-info'> <div class='score'> "+item.score+" votes </div>\
+            <div class='answers'> "+item.answer_count+" réponses </div>\
+            <div class='views'> "+item.view_count+" vues </div></div>\
+            </td>\
+            <td>\
+            <div><h4> <a href=" + item.link + ">" + item.title + "</a></h4></div>" ;
 
-          content += "\
-                  </ul>\
-              </div>\
-            </div>\
-            <br/>"
+            $.each(item.tags, function(j, tag){
+              content += "<u class='post-tag'><a href='http://stackoverflow.com/questions/tagged/" + tag + "'>" + tag + "</a></u>"
+            });
 
-          $("#question_list").append(content);
-        }
+            content += "</td>\
+            </tr>\
+            </table>";
+
+            $("#question_list").append(content);
+          }
+        });
+        $("#question_list").append( questions.items.length + " questions");
+
       });
-
-     $("#question_list").append(questions.items.length + " questions");
-     });
   }
 }
