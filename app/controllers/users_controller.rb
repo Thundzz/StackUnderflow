@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       logger.info '**parametre term reçu**'
       logger.info params[:term]
       a=params[:term]
-      @usera = User.find(:all,:conditions => ['LOWER(name) LIKE ? or LOWER(lastname) LIKE ?', "%"+a.downcase+"%","%"+a.downcase+"%"]) 
+      @usera = User.find(:all,:conditions => ['LOWER(login) LIKE ? ', "%"+a.downcase+"%"]) 
       logger.info 'debug'
       logger.info @usera
     else
