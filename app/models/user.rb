@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_and_belongs_to_many :badges
   
+  
   validates :login, :presence => true, :length => { :maximum => 50 }, :uniqueness => true
   validates :lastname, :length => { :maximum => 50 }
   validates :email, :format => { :with => email_regex }, :uniqueness => true, :if => :email?
@@ -35,7 +36,8 @@ class User < ActiveRecord::Base
   # validates_inclusion_of :study, :in => [1,4]
   #validates :study
   validates :password, :confirmation => true, :length => { :within => 6..40 }, :allow_nil => true
-  
+  # validate :login_change, :on => :update
+
   before_save :encrypt_password, :default_values
   
   def default_values
@@ -101,6 +103,10 @@ class User < ActiveRecord::Base
       Digest::SHA2.hexdigest(string)
     end
   
+    
+    # def login_change
+    #   errors.add(:login, "cannot be changed") if self.login_changed? 
+    # end
 
 
 end

@@ -5,8 +5,7 @@
 
 <% @users.each do |user|%>
 <div class="name well">
-
-	<td><%= link_to image_tag(avatar_url(user,90)), user %> &nbsp;&nbsp; <h4 style="display:inline"><%= link_to "~"+user.login, user %></h4></td>
+	<td> <h4 style="display:inline"><%= link_to "~"+user.login, user %></h4></td>
 	<br/><br/>
 
 </div>

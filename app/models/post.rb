@@ -1,10 +1,12 @@
 # coding: utf-8 
 
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title, :editionNo, :user_id
+  attr_accessible :content, :title, :editionNo, :user
   belongs_to :user
 
-  validates :user_id, :presence => true
+  validates :user, :presence => true
+  validates :title, :presence => true
+  validates :content, :presence => true
 
   def print_content
   	"#{self.content}"
