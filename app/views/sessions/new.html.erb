@@ -1,10 +1,17 @@
 <h1>Identification</h1>
 
-<%= form_for(:session, :url => sessions_path) do |f| %>
-<div class="field">
-  <%= f.label :login, "Login" %><br />
-  <%= f.text_field :login, class:"form-control"%>
-</div>
+
+    <%= form_tag sessions_path, method: :get, :class => "navbar-form navbar-left" do %>
+
+    <%= submit_tag "Connexion avec le CAS", name: nil, class: "btn btn-default" %>
+
+    <% end %>  
+ <br /> <br />  <br /> <br />
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+    <div class="field">
+      <%= f.label :login, "Login" %><br />
+      <%= f.text_field :login, class:"form-control"%>
+    </div>
   </br>
   <div class="field">
     <%= f.label :password, "Mot de passe" %><br />
@@ -15,12 +22,4 @@
     <%= f.submit "S'identifier", class:"btn btn-default" %>
   </div>
   <% end %>
-  
-<p>Pas encore inscrit ? <%= link_to "S'inscrire !", signup_path %></p>
-
-<br></br><br></br>
-
-<%= form_tag sessions_path, method: :get, :class => "navbar-form navbar-left" do %>
-
-<%= submit_tag "Connexion avec le CAS", name: nil, class: "btn btn-default" %>
-<% end %>  
+ 

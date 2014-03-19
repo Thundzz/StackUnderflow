@@ -60,25 +60,6 @@ class UsersController < ApplicationController
     end		
   end
   
-  def new
-    if signed_in?
-      redirect_to current_user
-    end
-    @title = "S'inscrire"
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(params[:user])
-    if @user.save
-      sign_in @user
-      flash[:success] = "Inscription réussie"
-      redirect_to @user
-    else
-      @titre = "Inscription"
-      render 'new'
-    end
-  end
 
   def edit
     @title = "Editer votre profil"
