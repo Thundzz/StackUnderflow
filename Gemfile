@@ -42,3 +42,4 @@ gem "will_paginate", "~> 3.0.5" # gem pour pagination questions
 gem 'thumbs_up' # gem pour les votes
 gem 'jquery-ui-rails' # gem utile dans stylecsheets/application.css
 gem 'nokogiri' # gem pour views questions
+gem 'sass'

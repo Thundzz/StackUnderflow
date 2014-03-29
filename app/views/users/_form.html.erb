@@ -40,7 +40,7 @@
   <%= f.text_field :email , class:"form-control"%>
 </div>
 <div class="field">
-  <%= f.label :password %><br />
+  <%= f.label :password, "Mot de passe" %><br />
   <%= f.password_field :password , class:"form-control"%>
 </div>
 <div class="field">
@@ -49,6 +49,10 @@
 </div>
 </br>
 <div class="actions">
-  <%= f.submit "Inscription", class:"btn btn-default"  %>
+  <% unless form_is_to_edit %>
+    <%= f.submit "Inscription", class:"btn btn-default"  %>
+  <% else %>
+    <%= f.submit "Modifier", class:"btn btn-default"  %>
+  <% end %>
 </div>
 <% end %>
