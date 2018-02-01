@@ -19,7 +19,6 @@ class TagsController < ApplicationController
     @tagsearch = Tag.search(params[:search]) #pour la recherche
     @tagas = Tag.all
     q= params[:q]  
-    logger.info "test c++"
     logger.info q
     logger.info "string :"
     logger.info q.to_s

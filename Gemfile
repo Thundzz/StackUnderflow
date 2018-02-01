@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.22'
 gem 'rake'
 gem 'sqlite3'
 
@@ -25,8 +25,6 @@ gem "ttfunk"
 gem "ruby-rc4",   :require => "rc4"
 gem "pdf-reader"
 gem "prawn"
-
-gem "RedCloth",   :require => "redcloth"
 
 gem "net-ldap"
 
